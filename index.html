@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chandler Scout — vs Astros 6/2</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#FDB827;--gold-dim:#c99419;--panel:#15151a;--panel2:#1d1d24;--line:#2c2c36;--txt:#e9e9ee;--mut:#8a8a96}
+body{background:#0a0a0c;background-image:radial-gradient(circle at 20% 0%,#18181f 0%,#0a0a0c 55%);
+  color:var(--txt);font-family:'Barlow Condensed',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px 60px}
+header{border-bottom:2px solid var(--gold);padding:22px 0 16px;margin-bottom:4px;position:relative;overflow:hidden}
+header::before{content:'45';position:absolute;right:-10px;top:-30px;font-family:'Oswald';font-weight:700;font-size:170px;color:#fff;opacity:.025;letter-spacing:-8px}
+.eyebrow{font-family:'JetBrains Mono';font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}
+h1{font-family:'Oswald';font-weight:700;font-size:42px;letter-spacing:-.5px;line-height:1;margin:4px 0 2px;text-transform:uppercase}
+h1 span{color:var(--gold)}
+.sub{font-size:16px;color:var(--mut);letter-spacing:.5px}
+.sub b{color:var(--txt);font-weight:600}
+nav{display:flex;gap:4px;margin:18px 0 22px;flex-wrap:wrap}
+.nav-tab{font-family:'Oswald';font-weight:500;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;padding:10px 18px;background:var(--panel);border:1px solid var(--line);color:var(--mut);cursor:pointer;border-radius:3px;transition:.15s;user-select:none}
+.nav-tab:hover{color:var(--txt);border-color:#3d3d48}
+.nav-tab.active{background:var(--gold);color:#0a0a0c;border-color:var(--gold);font-weight:600}
+.page{display:none;animation:fade .3s ease}.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.cond{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.cond-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:14px 16px}
+.cond-card .lbl{font-family:'JetBrains Mono';font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.cond-card .big{font-family:'Oswald';font-weight:600;font-size:19px;margin-bottom:3px}
+.cond-card p{font-size:14px;color:var(--mut);line-height:1.4}
+.sect{font-family:'Oswald';font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin:26px 0 12px;display:flex;align-items:center;gap:10px}
+.sect::after{content:'';flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:14px;cursor:pointer;transition:.15s;position:relative}
+.card:hover{border-color:var(--gold-dim);transform:translateY(-2px);background:var(--panel2)}
+.card .ord{font-family:'Oswald';font-weight:700;font-size:13px;color:var(--mut)}
+.card .nm{font-family:'Oswald';font-weight:600;font-size:21px;line-height:1.05;margin:2px 0 1px;text-transform:uppercase}
+.card .meta{font-family:'JetBrains Mono';font-size:11px;color:var(--mut);margin-bottom:10px}
+.badge{position:absolute;top:12px;right:12px;font-family:'JetBrains Mono';font-size:9px;font-weight:600;letter-spacing:1px;padding:3px 7px;border-radius:3px;text-transform:uppercase}
+.b-elite{background:#3b0d0d;color:#ff6b6b;border:1px solid #6e1d1d}
+.b-high{background:#3a2208;color:#ffb454;border:1px solid #6b4112}
+.b-med{background:#2a2a0d;color:#e8e85a;border:1px solid #54541d}
+.b-low{background:#13261a;color:#5ed98a;border:1px solid #1d5436}
+.statline{display:flex;gap:14px;margin-top:6px}
+.stat{flex:1}.stat .v{font-family:'JetBrains Mono';font-weight:600;font-size:16px}
+.stat .k{font-size:10px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.attackchip{display:flex;gap:6px;margin-top:9px;font-family:'JetBrains Mono';font-size:10px}
+.attackchip .ac{flex:1;padding:5px 7px;border-radius:3px;text-align:center;line-height:1.3}
+.ac-go{background:#13261a;color:#7be0a4;border:1px solid #1d5436}
+.ac-no{background:#2a0e0e;color:#ff8585;border:1px solid #5e1d1d}
+.heat{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;width:84px;margin:8px 0}
+.heat.lg{width:150px;gap:3px}
+.cell{aspect-ratio:1;border-radius:2px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:9px;color:rgba(255,255,255,.85)}
+.heat.lg .cell{font-size:12px;font-weight:600}
+.detail-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+.detail-head h2{font-family:'Oswald';font-weight:700;font-size:34px;text-transform:uppercase;letter-spacing:-.5px}
+.slashbig{font-family:'JetBrains Mono';font-size:18px;color:var(--gold)}
+.dgrid{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-top:16px}
+@media(max-width:720px){.dgrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.cond{grid-template-columns:1fr}.heat.lg{width:120px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+.fambars{display:flex;flex-direction:column;gap:14px}
+.fam-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+.fam-name{font-family:'Oswald';font-weight:600;font-size:15px;letter-spacing:1px;text-transform:uppercase}
+.fam-x{font-family:'JetBrains Mono';font-size:12px;color:var(--mut)}
+.bar{height:9px;background:var(--panel2);border-radius:5px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:5px}
+.plan-box{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:16px 18px;margin-top:16px}
+.plan-box p{font-size:16px;line-height:1.55;color:#d4d4dc}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.tag{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.5px;padding:5px 10px;background:#241d08;color:var(--gold);border:1px solid var(--gold-dim);border-radius:3px}
+/* SHAPE PANEL */
+.shapebox{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin-top:16px}
+.shapehd{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.shapehd .t{font-family:'Oswald';font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+.rec{display:flex;gap:8px;flex-wrap:wrap}
+.rec .pill2{font-family:'JetBrains Mono';font-size:11px;padding:5px 10px;border-radius:3px}
+.rec .go{background:#13261a;color:#7be0a4;border:1px solid #1d5436}
+.rec .no{background:#2a0e0e;color:#ff8585;border:1px solid #5e1d1d}
+.shaperow{display:grid;grid-template-columns:130px 1fr 150px;gap:10px;align-items:center;padding:6px 0;border-bottom:1px solid #232330}
+.shaperow:last-child{border:0}
+.sr-name{display:flex;align-items:center;gap:8px;font-family:'Oswald';font-weight:600;font-size:14px;letter-spacing:.5px}
+.sr-pill{font-family:'Oswald';font-weight:700;font-size:10px;padding:2px 7px;border-radius:3px;color:#fff}
+.sr-bar{height:14px;background:var(--panel2);border-radius:4px;overflow:hidden;position:relative}
+.sr-fill{height:100%;border-radius:4px}
+.sr-stat{font-family:'JetBrains Mono';font-size:12px;color:var(--mut);text-align:right}
+.sr-stat b{color:var(--txt)}
+.thin{color:#6b6b78;font-style:italic}
+.arstable{display:flex;flex-direction:column;gap:10px}
+.ars{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:14px 16px;border-left:4px solid var(--pc)}
+.ars-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.pill{font-family:'Oswald';font-weight:700;font-size:13px;letter-spacing:1px;padding:4px 11px;border-radius:3px;color:#fff;text-transform:uppercase}
+.ars-nm{font-family:'Oswald';font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.5px}
+.ars-use{margin-left:auto;font-family:'JetBrains Mono';font-size:13px;color:var(--gold)}
+.ars-metrics{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:9px}
+@media(max-width:600px){.ars-metrics{grid-template-columns:repeat(3,1fr)}.shaperow{grid-template-columns:110px 1fr;}.sr-stat{grid-column:1/-1;text-align:left}}
+.m .mv{font-family:'JetBrains Mono';font-weight:600;font-size:16px}.m .mk{font-size:10px;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.ars p{font-size:14px;color:var(--mut);line-height:1.45}
+.counts-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-family:'JetBrains Mono';font-size:13px}
+th,td{padding:9px 10px;text-align:center;border-bottom:1px solid var(--line)}
+th{font-family:'Oswald';font-weight:500;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+td:first-child,th:first-child{text-align:left;font-family:'Oswald';font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.usecell{position:relative}.usebar{position:absolute;left:0;bottom:0;height:3px;background:var(--gold);opacity:.5}
+.gp{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:18px 20px;margin-bottom:14px}
+.gp h3{font-family:'Oswald';font-weight:600;font-size:18px;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;color:var(--gold);display:flex;align-items:center;gap:10px}
+.gp h3 .no{font-family:'JetBrains Mono';font-size:13px;background:var(--gold);color:#0a0a0c;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:600}
+.gp p{font-size:16px;line-height:1.6;color:#d4d4dc}.gp p b{color:#fff}.gp .hl{color:var(--gold);font-weight:600}
+/* SCORECARD */
+.scorecard{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:18px 20px;margin-bottom:18px}
+.scorecard .sc-row{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin-bottom:9px}
+.sc-name{display:flex;align-items:center;gap:8px;font-family:'Oswald';font-weight:600;font-size:15px}
+.sc-bar{height:20px;background:var(--panel2);border-radius:4px;overflow:hidden;position:relative}
+.sc-fill{height:100%;display:flex;align-items:center;padding-left:8px;font-family:'JetBrains Mono';font-size:11px;color:rgba(0,0,0,.6);font-weight:600}
+.sc-tag{font-family:'JetBrains Mono';font-size:10px;text-align:right;color:var(--mut)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-family:'JetBrains Mono';font-size:11px;color:var(--mut);margin:6px 0 18px}
+.legend span{display:flex;align-items:center;gap:5px}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block}
+/* BRIEFING */
+.brief-intro{background:linear-gradient(135deg,#1b1b22,#141418);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:22px 24px;margin-bottom:20px}
+.brief-intro .hi{font-family:'Oswald';font-weight:700;font-size:26px;text-transform:uppercase;letter-spacing:-.3px;margin-bottom:10px}
+.brief-intro .hi span{color:var(--gold)}
+.brief-intro p{font-size:16.5px;line-height:1.6;color:#d8d8e0;margin-bottom:10px}
+.brief-intro p:last-child{margin-bottom:0}
+.brief-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:8px}
+@media(max-width:720px){.brief-grid{grid-template-columns:1fr}}
+.brief-card{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:16px 18px}
+.brief-card h4{font-family:'Oswald';font-weight:600;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.brief-card p{font-size:15px;line-height:1.55;color:#cfcfd8}
+.brief-card .term{font-family:'JetBrains Mono';font-size:13px;color:var(--gold);font-weight:600}
+.brief-card ul{list-style:none;margin-top:4px}
+.brief-card li{font-size:15px;line-height:1.5;color:#cfcfd8;padding:5px 0;border-bottom:1px solid #232330}
+.brief-card li:last-child{border:0}
+.brief-card li b{color:#fff}
+.keys{background:#1a1407;border:1px solid var(--gold-dim);border-radius:6px;padding:20px 22px;margin:18px 0 8px}
+.keys .kh{font-family:'Oswald';font-weight:700;font-size:18px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.key{display:flex;gap:13px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #2e2410}
+.key:last-child{border:0}
+.key .kn{flex:none;font-family:'JetBrains Mono';font-weight:600;font-size:13px;background:var(--gold);color:#0a0a0c;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.key p{font-size:16px;line-height:1.5;color:#e6e6ec}.key p b{color:#fff}.key p .g{color:#7be0a4;font-weight:600}.key p .r{color:#ff8585;font-weight:600}
+.foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-family:'JetBrains Mono';font-size:11px;color:var(--mut);line-height:1.6}
+.tunnel{display:flex;gap:10px;align-items:flex-start;background:var(--panel2);border-radius:4px;padding:10px 12px;margin-top:8px;font-family:'JetBrains Mono';font-size:12px;color:var(--mut);line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Pregame Scouting Report · Pirates Analytics</div>
+  <h1>Chandler <span>Scout</span></h1>
+  <div class="sub"><b>Bubba Chandler</b> RHP #45 &nbsp;·&nbsp; vs <b>Houston Astros</b> &nbsp;·&nbsp; <b id="gdate"></b></div>
+</header>
+<nav>
+  <div class="nav-tab active" data-p="brief">Briefing</div>
+  <div class="nav-tab" data-p="overview">Overview</div>
+  <div class="nav-tab" data-p="hitters">Hitters</div>
+  <div class="nav-tab" data-p="arsenal">Arsenal</div>
+  <div class="nav-tab" data-p="plan">Game Plan</div>
+</nav>
+
+<div class="page active" id="page-brief"></div>
+
+<div class="page" id="page-overview">
+  <div class="cond" id="cond"></div>
+  <div class="sect">Astros Lineup vs RHP — tap a hitter</div>
+  <div class="legend">
+    <span><i class="dot" style="background:#ff6b6b"></i>Elite</span>
+    <span><i class="dot" style="background:#ffb454"></i>High</span>
+    <span><i class="dot" style="background:#e8e85a"></i>Medium</span>
+    <span><i class="dot" style="background:#5ed98a"></i>Low</span>
+    <span style="margin-left:auto">ATTACK/AVOID = best &amp; worst Bubba shape by xwOBA</span>
+  </div>
+  <div class="grid" id="lineup"></div>
+</div>
+
+<div class="page" id="page-hitters">
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px" id="hitter-pills"></div>
+  <div id="hitter-detail"></div>
+</div>
+
+<div class="page" id="page-arsenal">
+  <div class="sect">Current-Form Arsenal — last 3 starts (shapes) · 2026 (results)</div>
+  <div class="tunnel">🎯 <div><b style="color:#e9e9ee">The two-fastball engine:</b> 4-Seam &amp; Sinker both 98 mph off the same slot — 4-seam rides +18", sinker sinks +13" &amp; runs to the arm side for an 80% GB rate. Hitter must decide ride-vs-sink at 98.</div></div>
+  <div class="arstable" id="arsenal" style="margin-top:14px"></div>
+  <div class="sect">Usage by Count</div>
+  <div class="counts-wrap"><table id="counttable"></table></div>
+  <div class="sect">Usage by Batter Hand — current form</div>
+  <div class="counts-wrap"><table id="handtable"></table></div>
+</div>
+
+<div class="page" id="page-plan"></div>
+<div class="foot" id="foot"></div>
+</div>
+
+<script>
+const D = JSON.parse('{"pitcher":{"name":"Bubba Chandler","team":"Pittsburgh Pirates","hand":"RHP","num":"45","line2026":"15 GS \\u00b7 24.2% K \\u00b7 16.1% BB","mlbam":696149},"game":{"opp":"Houston Astros","venue":"Daikin Park","city":"Houston, TX","date":"Tuesday, June 2, 2026","time":"7:10 PM CT","roof":"Retractable roof \\u2014 likely closed (Houston June heat/humidity). Climate-controlled ~72\\u00b0F, wind neutralized.","park":"Crawford Boxes: short LF porch (315 ft) rewards RHH pull power. Deep CF (409). Plays roughly neutral overall but pull-side HR risk for RH bats is real."},"arsenal":[{"code":"FF","name":"4-Seam Fastball","usage":40.8,"velo":98.3,"ivb":18.4,"hb":-7.6,"whiff":24.7,"csw":25.1,"gb":24.4,"xwoba":0.381,"color":"#ef4444","note":"Your bread and butter. Elite ride at 98+ that plays up at the top of the zone. But it gets hit when it leaks middle (.381) \\u2014 use it to get ahead and change eye level, not to live in the zone."},{"code":"SI","name":"Sinker","usage":18.7,"velo":98.1,"ivb":13.3,"hb":-13.7,"whiff":22.7,"csw":25.9,"gb":80.0,"xwoba":0.382,"color":"#f97316","note":"Your new weapon. Same 98 off the same slot as your four-seam, but it drops 5\\" and runs to your arm side \\u2014 80% ground balls. They can\'t read ride-vs-sink until it\'s too late. Just be picky who you throw it to here (check the scorecard)."},{"code":"CH","name":"Changeup","usage":17.2,"velo":92.0,"ivb":7.8,"hb":-16.4,"whiff":28.3,"csw":27.3,"gb":46.3,"xwoba":0.27,"color":"#22c55e","note":"Your safest pitch and best swing-and-miss (.270). Big fade away from lefties \\u2014 it\'s your out-pitch to them. Death to righties who chase, but a few of these guys square it, so pick your spots."},{"code":"SL","name":"Slider","usage":11.2,"velo":90.1,"ivb":1.5,"hb":1.8,"whiff":31.1,"csw":32.1,"gb":30.0,"xwoba":0.377,"color":"#3b82f6","note":"Tight and firm at 90. High whiff. Your go-to glove-side put-away \\u2014 bury it down-and-away with two strikes."},{"code":"ST","name":"Sweeper","usage":5.2,"velo":88.0,"ivb":0.4,"hb":8.4,"whiff":32.4,"csw":31.5,"gb":50.0,"xwoba":0.214,"color":"#a855f7","note":"Your highest-whiff, lowest-damage pitch (.214). Right now you barely throw it to lefties \\u2014 and two of their lefties can\'t touch spin. That\'s free whiffs you\'re leaving on the table."},{"code":"CU","name":"Curveball","usage":5.2,"velo":87.5,"ivb":-1.9,"hb":1.9,"whiff":27.8,"csw":30.2,"gb":25.0,"xwoba":0.296,"color":"#14b8a6","note":"Your steal-a-strike pitch. Flips their timing off the 98s. Quietly one of your best options against this lineup."}],"counts":{"0-0":{"FF":48.4,"SI":8.8,"CH":16.1,"SL":12.3,"ST":7.0,"CU":6.0},"Ahead":{"FF":54.0,"SI":2.8,"CH":18.8,"SL":15.2,"ST":6.6,"CU":1.9},"Behind":{"FF":55.5,"SI":5.0,"CH":14.4,"SL":14.7,"ST":6.0,"CU":3.4},"2-Strike":{"FF":50.4,"SI":1.9,"CH":21.1,"SL":16.5,"ST":6.8,"CU":3.0}},"hand":{"RHH":{"FF":34.9,"SI":30.2,"CH":8.5,"SL":11.6,"ST":9.3,"CU":5.4},"LHH":{"FF":46.4,"SI":8.0,"CH":25.4,"SL":10.9,"ST":1.4,"CU":5.1}},"hitters":[{"order":1,"stand":"R","pos":"SS","avg":0.25,"obp":0.289,"slg":0.357,"kpct":15.6,"bbpct":3.3,"hr":2,"pa":90,"chase":34.9,"vsFB":{"n":163,"whiff":15.4,"xwoba":0.404},"vsOFF":{"n":35,"whiff":35.3,"xwoba":0.458},"vsBRK":{"n":134,"whiff":39.5,"xwoba":0.231},"zone":[[0.248,0.379,0.315],[0.455,0.343,0.287],[1.419,0.399,0.203]],"threat":"high","tags":["Sweeper + Curve ONLY","Nothing hard","Stay off the heaters"],"plan":"Don\'t give him anything hard. He punishes your four-seam (.679), your sinker (.565), and your changeup (.543) \\u2014 all of it. Your whole plan here is glove-side spin: your sweeper (.145) and curve (.177) are his kryptonite, and they\'re way better than your slider (.383). Bury sweepers, steal strikes with the curve.","name":"Jeremy Pena","shape":{"FF":{"n":13,"whiff":0.0,"xwoba":0.679,"chase":16.7},"SI":{"n":30,"whiff":20.0,"xwoba":0.565,"chase":25.0},"CH":{"n":42,"whiff":13.0,"xwoba":0.543,"chase":34.8},"SL":{"n":47,"whiff":41.4,"xwoba":0.383,"chase":50.0},"ST":{"n":39,"whiff":38.1,"xwoba":0.145,"chase":44.4},"CU":{"n":41,"whiff":54.5,"xwoba":0.177,"chase":48.0}},"best":{"code":"ST","xwoba":0.145,"thin":false},"avoid":{"code":"SI","xwoba":0.565,"thin":false}},{"order":2,"stand":"L","pos":"DH","avg":0.278,"obp":0.376,"slg":0.556,"kpct":19.5,"bbpct":13.3,"hr":13,"pa":210,"chase":27.3,"vsFB":{"n":443,"whiff":19.2,"xwoba":0.472},"vsOFF":{"n":167,"whiff":20.3,"xwoba":0.412},"vsBRK":{"n":221,"whiff":24.4,"xwoba":0.579},"zone":[[0.616,0.838,0.571],[0.222,0.795,0.382],[0.856,0.523,0.995]],"threat":"elite","tags":["No safe pitch","Pitch around w/ RISP","Never the sweeper"],"plan":"There\'s no pitch you beat him with in the zone \\u2014 he\'s .44 to .67 against everything you throw, and your sweeper is his favorite (.669), so never go there. Least-bad options are your curve (.315) and slider (.415). But the real answer isn\'t a pitch, it\'s location: nothing over the plate, and if anyone\'s on base, pitch around him. A walk beats a barrel.","name":"Yordan Alvarez","shape":{"FF":{"n":70,"whiff":27.8,"xwoba":0.437,"chase":19.4},"SI":{"n":67,"whiff":21.9,"xwoba":0.577,"chase":21.9},"CH":{"n":132,"whiff":23.7,"xwoba":0.477,"chase":36.0},"SL":{"n":53,"whiff":16.7,"xwoba":0.415,"chase":16.7},"ST":{"n":46,"whiff":9.1,"xwoba":0.669,"chase":26.9},"CU":{"n":67,"whiff":37.0,"xwoba":0.315,"chase":35.9}},"best":{"code":"CU","xwoba":0.315,"thin":false},"avoid":{"code":"ST","xwoba":0.669,"thin":false}},{"order":3,"stand":"R","pos":"1B","avg":0.246,"obp":0.3,"slg":0.507,"kpct":20.6,"bbpct":5.8,"hr":15,"pa":223,"chase":29.4,"vsFB":{"n":470,"whiff":19.3,"xwoba":0.379},"vsOFF":{"n":43,"whiff":56.2,"xwoba":0.55},"vsBRK":{"n":319,"whiff":39.3,"xwoba":0.254},"zone":[[0.721,0.521,0.434],[0.257,0.392,0.28],[0.36,0.539,0.231]],"threat":"high","tags":["Sweeper + Slider","NOT the changeup","Sinker for grounders"],"plan":"He\'ll chase your changeup but he hammers it when he connects (.532) \\u2014 don\'t lean on it. Beat him glove-side: your sweeper (.232) and slider (.249). Use your sinker (.303) to keep his pull power on the ground and off the Crawford Boxes. Keep four-seams off his inner third.","name":"Christian Walker","shape":{"FF":{"n":70,"whiff":24.4,"xwoba":0.372,"chase":30.0},"SI":{"n":116,"whiff":20.6,"xwoba":0.303,"chase":24.6},"CH":{"n":65,"whiff":21.4,"xwoba":0.532,"chase":28.1},"SL":{"n":85,"whiff":39.5,"xwoba":0.249,"chase":34.0},"ST":{"n":96,"whiff":40.5,"xwoba":0.232,"chase":32.8},"CU":{"n":94,"whiff":32.6,"xwoba":0.34,"chase":29.8}},"best":{"code":"ST","xwoba":0.232,"thin":false},"avoid":{"code":"CH","xwoba":0.532,"thin":false}},{"order":4,"stand":"L","pos":"LF","avg":0.301,"obp":0.4,"slg":0.425,"kpct":28.2,"bbpct":12.9,"hr":1,"pa":85,"chase":26.2,"vsFB":{"n":176,"whiff":25.0,"xwoba":0.375},"vsOFF":{"n":53,"whiff":23.8,"xwoba":0.257},"vsBRK":{"n":106,"whiff":59.3,"xwoba":0.197},"zone":[[null,0.06,null],[0.401,0.378,0.319],[0.405,0.493,0.353]],"threat":"med","tags":["Change + Slider + Curve","Avoid your sinker","No sweeper"],"plan":"Spin and cambio, but be specific. Your changeup (.166), curve (.184), and slider (.21) all neutralize him \\u2014 while he handles your sinker (.561) and even your sweeper (.365). He\'s a lefty, so your changeup runs away from him: ride it. Stay off the sinker.","name":"Taylor Trammell","shape":{"FF":{"n":33,"whiff":41.2,"xwoba":0.436,"chase":20.0},"SI":{"n":21,"whiff":10.0,"xwoba":0.561,"chase":18.2},"CH":{"n":44,"whiff":28.6,"xwoba":0.166,"chase":26.9},"SL":{"n":36,"whiff":52.4,"xwoba":0.21,"chase":38.5},"ST":{"n":15,"whiff":44.4,"xwoba":0.365,"chase":40.0},"CU":{"n":38,"whiff":64.7,"xwoba":0.184,"chase":21.1}},"best":{"code":"CH","xwoba":0.166,"thin":false},"avoid":{"code":"SI","xwoba":0.561,"thin":false}},{"order":5,"stand":"R","pos":"3B","avg":0.211,"obp":0.315,"slg":0.38,"kpct":19.3,"bbpct":10.2,"hr":8,"pa":197,"chase":26.1,"vsFB":{"n":526,"whiff":11.7,"xwoba":0.36},"vsOFF":{"n":76,"whiff":27.5,"xwoba":0.173},"vsBRK":{"n":310,"whiff":25.8,"xwoba":0.222},"zone":[[0.332,0.47,0.282],[0.299,0.334,0.154],[0.39,0.271,0.303]],"threat":"med","tags":["NO sinker","Curve/Slider/Change away","Pull risk"],"plan":"Do NOT throw him your sinker. He\'s an extreme pull hitter and he feasts on arm-side run (.452) \\u2014 the Crawford Boxes are made for him. Live with spin and the change away: your curve (.121), slider (.177), and changeup (.205) all kill him. Never let him extend to the pull side.","name":"Isaac Paredes","shape":{"FF":{"n":76,"whiff":12.5,"xwoba":0.247,"chase":31.2},"SI":{"n":111,"whiff":9.8,"xwoba":0.452,"chase":11.3},"CH":{"n":98,"whiff":20.0,"xwoba":0.205,"chase":34.1},"SL":{"n":83,"whiff":19.2,"xwoba":0.177,"chase":21.4},"ST":{"n":77,"whiff":25.7,"xwoba":0.288,"chase":38.3},"CU":{"n":104,"whiff":28.1,"xwoba":0.121,"chase":23.5}},"best":{"code":"CU","xwoba":0.121,"thin":false},"avoid":{"code":"SI","xwoba":0.452,"thin":false}},{"order":6,"stand":"R","pos":"RF","avg":0.244,"obp":0.332,"slg":0.392,"kpct":27.7,"bbpct":9.9,"hr":5,"pa":202,"chase":29.9,"vsFB":{"n":416,"whiff":21.4,"xwoba":0.412},"vsOFF":{"n":69,"whiff":52.9,"xwoba":0.114},"vsBRK":{"n":331,"whiff":52.4,"xwoba":0.295},"zone":[[0.251,0.902,0.978],[0.295,0.301,0.403],[0.809,0.601,0.246]],"threat":"med","tags":["4-Seam UP","Sweeper to finish","Avoid SI + CU"],"plan":"Flip what you\'d guess \\u2014 your riding four-seam up is his hole (.134), so elevate it on him. Finish with your sweeper (.216) or change (.249). Stay away from your sinker (.424) and curve (.42), the two he squares up. He\'s a rookie \\u2014 go right at him up in the zone.","name":"Cam Smith","shape":{"FF":{"n":46,"whiff":32.0,"xwoba":0.134,"chase":25.0},"SI":{"n":90,"whiff":15.7,"xwoba":0.424,"chase":25.0},"CH":{"n":95,"whiff":24.5,"xwoba":0.249,"chase":48.1},"SL":{"n":66,"whiff":53.3,"xwoba":0.377,"chase":35.3},"ST":{"n":120,"whiff":50.0,"xwoba":0.216,"chase":28.4},"CU":{"n":96,"whiff":48.7,"xwoba":0.42,"chase":34.5}},"best":{"code":"FF","xwoba":0.134,"thin":false},"avoid":{"code":"SI","xwoba":0.424,"thin":false}},{"order":7,"stand":"L","pos":"2B","avg":0.237,"obp":0.247,"slg":0.425,"kpct":14.1,"bbpct":2.4,"hr":4,"pa":85,"chase":52.6,"vsFB":{"n":144,"whiff":12.8,"xwoba":0.283},"vsOFF":{"n":50,"whiff":18.8,"xwoba":0.527},"vsBRK":{"n":75,"whiff":36.0,"xwoba":0.182},"zone":[[0.014,0.041,0.37],[0.306,0.574,0.22],[0.493,0.413,0.275]],"threat":"low","tags":["Spin everywhere","Expand the zone","No hanging changeups"],"plan":"Spin him out \\u2014 your curve (.111), slider (.17), and sweeper are all untouchable for him. Just don\'t hang the changeup (.522). He chases 53%, so expand the zone early and let him get himself out. Weakest bat in the order.","name":"Braden Shewmake","shape":{"FF":{"n":19,"whiff":14.3,"xwoba":0.371,"chase":50.0},"SI":{"n":15,"whiff":9.1,"xwoba":0.313,"chase":83.3},"CH":{"n":35,"whiff":13.0,"xwoba":0.522,"chase":57.1},"SL":{"n":23,"whiff":43.8,"xwoba":0.17,"chase":60.0},"ST":{"n":13,"whiff":66.7,"xwoba":0.0,"chase":44.4},"CU":{"n":23,"whiff":41.2,"xwoba":0.111,"chase":78.6}},"best":{"code":"CU","xwoba":0.111,"thin":false},"avoid":{"code":"CH","xwoba":0.522,"thin":false}},{"order":8,"stand":"R","pos":"CF","avg":0.23,"obp":0.284,"slg":0.324,"kpct":23.5,"bbpct":6.2,"hr":1,"pa":81,"chase":30.1,"vsFB":{"n":152,"whiff":19.4,"xwoba":0.329},"vsOFF":{"n":14,"whiff":0.0,"xwoba":0.248},"vsBRK":{"n":121,"whiff":30.2,"xwoba":0.239},"zone":[[0.232,0.202,0.003],[0.432,0.348,0.35],[0.387,0.115,0.271]],"threat":"low","tags":["Sweeper + Slider","Avoid CH + SI","Low power"],"plan":"Glove-side spin \\u2014 your sweeper (.115) and slider (.178) put him away. Stay off the changeup (.617) and sinker (.562), the two he squares up. Low power; your breakers handle him.","name":"Jake Meyers","shape":{"FF":{"n":15,"whiff":55.6,"xwoba":0.3,"chase":28.6},"SI":{"n":30,"whiff":6.2,"xwoba":0.562,"chase":31.2},"CH":{"n":28,"whiff":35.7,"xwoba":0.617,"chase":41.2},"SL":{"n":20,"whiff":25.0,"xwoba":0.178,"chase":33.3},"ST":{"n":41,"whiff":14.3,"xwoba":0.115,"chase":25.0},"CU":{"n":18,"whiff":42.9,"xwoba":0.431,"chase":36.4}},"best":{"code":"ST","xwoba":0.115,"thin":false},"avoid":{"code":"CH","xwoba":0.617,"thin":false}},{"order":9,"stand":"R","pos":"C","avg":0.25,"obp":0.318,"slg":0.375,"kpct":17.8,"bbpct":9.3,"hr":3,"pa":107,"chase":31.4,"vsFB":{"n":273,"whiff":16.5,"xwoba":0.29},"vsOFF":{"n":17,"whiff":0.0,"xwoba":0.338},"vsBRK":{"n":122,"whiff":32.6,"xwoba":0.183},"zone":[[0.13,0.378,0.0],[0.281,0.283,0.215],[0.508,0.164,0.294]],"threat":"low","tags":["Curve + Slider","Attack","Low threat"],"plan":"Spin him out \\u2014 your curve (.082) and slider (.179) are untouchable for him, and your change (.195) works too. Lowest-leverage bat in the lineup \\u2014 get the out and move on.","name":"Christian Vazquez","shape":{"FF":{"n":44,"whiff":29.2,"xwoba":0.226,"chase":36.8},"SI":{"n":53,"whiff":12.5,"xwoba":0.265,"chase":33.3},"CH":{"n":31,"whiff":5.0,"xwoba":0.195,"chase":50.0},"SL":{"n":31,"whiff":25.0,"xwoba":0.179,"chase":16.7},"ST":{"n":46,"whiff":30.0,"xwoba":0.244,"chase":27.6},"CU":{"n":35,"whiff":36.4,"xwoba":0.082,"chase":28.0}},"best":{"code":"CU","xwoba":0.082,"thin":false},"avoid":{"code":"SI","xwoba":0.265,"thin":false}}],"scorecard":{"FF":{"mean":0.356,"wmean":0.327,"nhit":9},"SI":{"mean":0.447,"wmean":0.425,"nhit":9},"CH":{"mean":0.39,"wmean":0.374,"nhit":9},"SL":{"mean":0.26,"wmean":0.273,"nhit":9},"ST":{"mean":0.253,"wmean":0.26,"nhit":9},"CU":{"mean":0.242,"wmean":0.259,"nhit":9}},"pitch_label":{"FF":"Riding 4-Seam","SI":"Power Sinker","CH":"Fading Change","SL":"Gyro Slider","ST":"Sweeper","CU":"Curve"},"min_n":18}');
+const PC = {}; D.arsenal.forEach(a=>PC[a.code]=a.color);
+const PL = D.pitch_label;
+const bcls={elite:'b-elite',high:'b-high',med:'b-med',low:'b-low'};
+const blbl={elite:'Elite',high:'High',med:'Med',low:'Low'};
+
+function heatColor(v){ if(v===null||v===undefined) return '#1a1a20';
+  const lo=.200,hi=.520; let t=Math.max(0,Math.min(1,(v-lo)/(hi-lo)));
+  return `hsl(${220-220*t},70%,${28+t*14}%)`; }
+function heatHTML(zone,big){ let h=`<div class="heat${big?' lg':''}">`;
+  zone.forEach(row=>row.forEach(c=>{h+=`<div class="cell" style="background:${heatColor(c)}">${c!==null?c.toFixed(3).slice(1):''}</div>`;}));
+  return h+'</div>'; }
+// damage scale: low xwOBA = good for Bubba = green; high = red
+function dmgColor(v){ const lo=.12,hi=.55; let t=Math.max(0,Math.min(1,(v-lo)/(hi-lo)));
+  return `hsl(${130-130*t},65%,${42-t*4}%)`; }
+
+// BRIEFING
+document.getElementById('page-brief').innerHTML = `
+  <div class="brief-intro">
+    <div class="hi">Bubba — here's your plan for <span>Houston</span></div>
+    <p>This whole report is built from <b>your actual pitches this year</b> and how these nine hitters handle pitches that move <b>exactly like yours</b>. We measured your shapes — the four-seam riding 18" at 98, the sinker that drops and runs, the sweeper, the slider, the change — then pulled every pitch each Astro has seen in 2026 that moves like that. So when it says a guy struggles with "your riding four-seam," it means four-seams that ride like yours, specifically. It's a real read, not a label.</p>
+    <p>Spend two minutes here first, then the other tabs have the detail. The <b>Game Plan</b> tab is your TL;DR.</p>
+  </div>
+
+  <div class="sect">What the numbers mean</div>
+  <div class="brief-grid">
+    <div class="brief-card"><h4>xwOBA</h4><p>The one "how much damage" number. It grades the <b>quality of contact</b> (exit velo + launch angle), whether or not it found a glove — so it cuts out luck. Quick scale: <span class="term">under .300</span> = you're winning, <span class="term">~.320</span> = league average, <span class="term">.400+</span> = they're hurting you. Low number next to a pitch = that pitch keeps them off the barrel.</p></div>
+    <div class="brief-card"><h4>Attack ▲ / Avoid ▼</h4><p><span class="term" style="color:#7be0a4">Green</span> is your <b>best</b> pitch to that hitter — the one he does least with. <span class="term" style="color:#ff8585">Red</span> is the one to stay away from. Simple rule: <b>lead with green, bury the red.</b> You'll see these chips on every hitter card and at the top of each hitter page.</p></div>
+    <div class="brief-card"><h4>The zone heatmap</h4><p>The 9-box grid is the strike zone from the <b>catcher's view</b>. <span class="term" style="color:#ff6b6b">Red boxes</span> = where he does damage, <span class="term" style="color:#5b9bd5">blue</span> = where he doesn't. Keep the ball out of the red. (Empty boxes just mean not enough balls in play there.)</p></div>
+    <div class="brief-card"><h4>Shape Scorecard</h4><p>On the Game Plan tab — it ranks <b>your six pitches</b> by how the whole Houston lineup handles them. Top of the list = lean on it tonight. Bottom = pick your spots. This is the fastest read on what to throw.</p></div>
+    <div class="brief-card"><h4>Whiff% &amp; Chase%</h4><p><b>Whiff%</b> = how often he swings and misses. <b>Chase%</b> = how often he swings at balls. High chase (like Shewmake's 53%) means expand the zone — you don't need to give him strikes.</p></div>
+    <div class="brief-card"><h4>The four tabs</h4><ul>
+      <li><b>Overview</b> — the lineup at a glance, threat level + attack/avoid per hitter.</li>
+      <li><b>Hitters</b> — tap any guy for his full shape breakdown + plan.</li>
+      <li><b>Arsenal</b> — your pitches, shapes, and how you're using them.</li>
+      <li><b>Game Plan</b> — the six keys + the scorecard. Start and end here.</li>
+    </ul></div>
+  </div>
+
+  <div class="keys">
+    <div class="kh">Your bottom line for Tuesday</div>
+    <div class="key"><span class="kn">1</span><p><b>Lead with your spin.</b> <span class="g">Curve, sweeper, slider</span> are your best pitches against this lineup, top to bottom. Let them carry the start.</p></div>
+    <div class="key"><span class="kn">2</span><p><b>Go easy on the sinker.</b> It's been your go-to lately, but it's the <span class="r">most-punished pitch</span> against these guys — and the Crawford Boxes punish the pull. Use it for a grounder when you need one, not as your base.</p></div>
+    <div class="key"><span class="kn">3</span><p><b>Four-seam up by matchup.</b> Elevate it on <span class="g">Cam Smith (.134)</span>, but never middle to <span class="r">Peña (.679)</span>. It's a weapon and a liability depending on who's hitting.</p></div>
+    <div class="key"><span class="kn">4</span><p><b>Yordan — pitch around him.</b> Nothing over the plate, ever. With anyone on base, a walk beats a barrel.</p></div>
+    <div class="key"><span class="kn">5</span><p><b>Throw strikes.</b> They're patient and your walks are the one thing that beats you. If you're spinning it, you've got to land it. Attack the bottom of the order.</p></div>
+  </div>`;
+
+document.getElementById('gdate').textContent = D.game.date;
+document.getElementById('cond').innerHTML = `
+  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.venue}</div><p>${D.game.city} · ${D.game.time} · First pitch</p></div>
+  <div class="cond-card"><div class="lbl">Roof / Weather</div><div class="big">Roof likely closed</div><p>${D.game.roof}</p></div>
+  <div class="cond-card" style="grid-column:1/-1"><div class="lbl">Park Factor — Crawford Boxes</div><div class="big">Pull-side HR risk for RH bats</div><p>${D.game.park}</p></div>`;
+
+document.getElementById('lineup').innerHTML = D.hitters.map((h,i)=>`
+  <div class="card" onclick="showHitter(${i})">
+    <span class="badge ${bcls[h.threat]}">${blbl[h.threat]}</span>
+    <div class="ord">#${h.order} HITTING</div>
+    <div class="nm">${h.name}</div>
+    <div class="meta">${h.pos} · ${h.stand}HH · ${h.pa} PA</div>
+    ${heatHTML(h.zone,false)}
+    <div class="statline"><div class="stat"><div class="v">${h.avg.toFixed(3).slice(1)}/${h.obp.toFixed(3).slice(1)}/${h.slg.toFixed(3).slice(1)}</div><div class="k">AVG/OBP/SLG vRHP</div></div></div>
+    <div class="statline">
+      <div class="stat"><div class="v">${h.hr}</div><div class="k">HR</div></div>
+      <div class="stat"><div class="v">${h.kpct}%</div><div class="k">K</div></div>
+      <div class="stat"><div class="v">${h.bbpct}%</div><div class="k">BB</div></div>
+      <div class="stat"><div class="v">${h.chase}%</div><div class="k">Chase</div></div>
+    </div>
+    <div class="attackchip">
+      <div class="ac ac-go">▲ ${PL[h.best.code]}${h.best.thin?'*':''}<br>.${String(h.best.xwoba).slice(2).padEnd(3,'0')} xwOBA</div>
+      <div class="ac ac-no">▼ ${PL[h.avoid.code]}${h.avoid.thin?'*':''}<br>.${String(h.avoid.xwoba).slice(2).padEnd(3,'0')} xwOBA</div>
+    </div>
+  </div>`).join('');
+
+document.getElementById('hitter-pills').innerHTML = D.hitters.map((h,i)=>
+  `<div class="nav-tab" data-h="${i}" onclick="showHitter(${i})" style="font-size:13px;padding:8px 12px">${h.order}. ${h.name.split(' ').slice(-1)[0]}</div>`).join('');
+
+function famBar(label,fam,color){ if(!fam) return '';
+  const w=Math.min(100,fam.whiff*1.6);
+  return `<div><div class="fam-top"><span class="fam-name" style="color:${color}">${label}</span>
+    <span class="fam-x">${fam.whiff}% whiff · ${fam.xwoba!==null?fam.xwoba.toFixed(3):'—'} xwOBA · n=${fam.n}</span></div>
+    <div class="bar"><div class="bar-fill" style="width:${w}%;background:${color}"></div></div></div>`; }
+
+function shapePanel(h){
+  // sort shapes by xwOBA ascending (best for Bubba first); skip null
+  const order=['FF','SI','CH','SL','ST','CU'];
+  const rows=order.map(c=>({c,...h.shape[c]})).filter(r=>r&&r.xwoba!==null)
+    .sort((a,b)=>a.xwoba-b.xwoba);
+  const maxX=0.62;
+  const rowHTML=rows.map(r=>{
+    const w=Math.max(6,Math.min(100,(r.xwoba/maxX)*100));
+    const thin=r.n<D.min_n;
+    return `<div class="shaperow">
+      <div class="sr-name"><span class="sr-pill" style="background:${PC[r.c]}">${r.c}</span>${PL[r.c]}</div>
+      <div class="sr-bar"><div class="sr-fill" style="width:${w}%;background:${dmgColor(r.xwoba)}"></div></div>
+      <div class="sr-stat"><b>.${String(r.xwoba.toFixed(3)).slice(2)}</b> xwOBA · ${r.whiff!==null?r.whiff+'% wh':'—'} <span class="${thin?'thin':''}">· n=${r.n}${thin?'*':''}</span></div>
+    </div>`;}).join('');
+  return `<div class="shapebox">
+    <div class="shapehd"><span class="t">How ${h.name.split(' ').slice(-1)[0]} handles Bubba's shapes</span>
+      <div class="rec">
+        <span class="pill2 go">ATTACK ▲ ${PL[h.best.code]} (.${String(h.best.xwoba).slice(2).padEnd(3,'0')})</span>
+        <span class="pill2 no">AVOID ▼ ${PL[h.avoid.code]} (.${String(h.avoid.xwoba).slice(2).padEnd(3,'0')})</span>
+      </div></div>
+    ${rowHTML}
+    <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--mut);margin-top:8px">xwOBA on contact vs RHP pitches matching Bubba's velo + movement bands · *sample under ${D.min_n}, read with caution</div>
+  </div>`;
+}
+
+function showHitter(i,nav){
+  if(nav!==false){
+    document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.classList.toggle('active',t.dataset.p==='hitters'));
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById('page-hitters').classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  document.querySelectorAll('[data-h]').forEach(t=>t.classList.toggle('active',+t.dataset.h===i));
+  const h=D.hitters[i];
+  document.getElementById('hitter-detail').innerHTML=`
+    <div class="detail-head"><h2>${h.name}</h2>
+      <span class="badge ${bcls[h.threat]}" style="position:static">${blbl[h.threat]} threat</span>
+      <span class="slashbig">${h.avg.toFixed(3).slice(1)}/${h.obp.toFixed(3).slice(1)}/${h.slg.toFixed(3).slice(1)}</span></div>
+    <div class="meta" style="font-family:'JetBrains Mono';font-size:12px;color:var(--mut)">#${h.order} · ${h.pos} · ${h.stand}HH · ${h.pa} PA vs RHP · ${h.hr} HR · ${h.kpct}% K · ${h.bbpct}% BB · ${h.chase}% chase</div>
+    <div class="dgrid">
+      <div><div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-bottom:6px">xwOBA by Zone</div>
+        ${heatHTML(h.zone,true)}
+        <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--mut);margin-top:4px">catcher view · ${h.stand==='R'?'RHH':'LHH'}</div></div>
+      <div class="fambars">
+        ${famBar('Fastballs (FF/SI)',h.vsFB,'#f59e0b')}
+        ${famBar('Changeup',h.vsOFF,'#22c55e')}
+        ${famBar('Breaking (SL/ST/CU)',h.vsBRK,'#3b82f6')}
+      </div>
+    </div>
+    ${shapePanel(h)}
+    <div class="plan-box">
+      <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px">Attack Plan</div>
+      <p>${h.plan}</p>
+      <div class="tags">${h.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+    </div>`;
+  if(nav!==false) window.scrollTo({top:0,behavior:'smooth'});
+}
+showHitter(0,false);
+
+document.getElementById('arsenal').innerHTML = D.arsenal.map(a=>`
+  <div class="ars" style="--pc:${a.color}">
+    <div class="ars-top"><span class="pill" style="background:${a.color}">${a.code}</span>
+      <span class="ars-nm">${a.name}</span><span class="ars-use">${a.usage}% usage</span></div>
+    <div class="ars-metrics">
+      <div class="m"><div class="mv">${a.velo}</div><div class="mk">MPH</div></div>
+      <div class="m"><div class="mv">${a.ivb>0?'+':''}${a.ivb}"</div><div class="mk">IVB</div></div>
+      <div class="m"><div class="mv">${a.hb>0?'+':''}${a.hb}"</div><div class="mk">HB</div></div>
+      <div class="m"><div class="mv">${a.whiff}%</div><div class="mk">Whiff</div></div>
+      <div class="m"><div class="mv">${a.gb}%</div><div class="mk">GB</div></div>
+      <div class="m"><div class="mv">${a.xwoba.toFixed(3).slice(1)}</div><div class="mk">xwOBA</div></div>
+    </div><p>${a.note}</p></div>`).join('');
+
+function buildUsageTable(obj,rowsKey){ const codes=['FF','SI','CH','SL','ST','CU'];
+  let h='<tr><th>'+rowsKey+'</th>'+codes.map(c=>`<th style="color:${PC[c]}">${c}</th>`).join('')+'</tr>';
+  Object.entries(obj).forEach(([k,v])=>{ h+=`<tr><td>${k}</td>`+codes.map(c=>{const val=v[c]||0;
+    return `<td class="usecell">${val>0?val.toFixed(1):'—'}<span class="usebar" style="width:${val}%"></span></td>`;}).join('')+'</tr>'; });
+  return h; }
+document.getElementById('counttable').innerHTML=buildUsageTable(D.counts,'Count');
+document.getElementById('handtable').innerHTML=buildUsageTable(D.hand,'Vs');
+
+// SCORECARD
+const sc=Object.entries(D.scorecard).sort((a,b)=>a[1].mean-b[1].mean);
+const scMax=0.50;
+const scHTML='<div class="scorecard">'+
+  '<div style="font-family:\'Oswald\';font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px">Shape Scorecard — lineup-avg xwOBA allowed</div>'+
+  '<div style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--mut);margin-bottom:14px">Lower = better matchup for Bubba vs this Houston lineup. Spin grades out best; the sinker is the most-punished shape.</div>'+
+  sc.map(([c,s])=>{const w=Math.max(8,(s.mean/scMax)*100);
+    return `<div class="sc-row"><div class="sc-name"><span class="sr-pill" style="background:${PC[c]}">${c}</span>${PL[c]}</div>
+      <div class="sc-bar"><div class="sc-fill" style="width:${w}%;background:${dmgColor(s.mean)}">.${String(s.mean.toFixed(3)).slice(2)}</div></div>
+      <div class="sc-tag">n-wtd .${String(s.wmean.toFixed(3)).slice(2)}</div></div>`;}).join('')+
+  '</div>';
+
+const plan=[
+ {h:'Lead with your spin — it\'s your best matchup',b:'This lineup grades worst against your three breaking shapes: <span class="hl">your curve (.242), sweeper (.253), and slider (.260)</span>. Those are also some of your <b>least-used</b> pitches. Against Houston, let your spin carry the start — this is the single biggest thing in the whole report.'},
+ {h:'Be careful with your sinker here',b:'It\'s the pitch you\'ve been leaning into more (0% → 22% over your last three starts), but it\'s the one Houston punishes most — <span class="hl">.447 across the lineup</span>. Five of these hitters\' single worst pitch is your sinker: <b>Peña, Trammell, Paredes, Cam Smith, and Vázquez</b>. And the Crawford Boxes make the pull risk worse. Use it to get a ground ball when you need one — don\'t live on it.'},
+ {h:'Your four-seam is situational, not a workhorse',b:'It\'s great up to <b>Cam Smith (.134)</b> — elevate it on him — but Peña crushes it (.679). Use the riding 98 for chase and to change eye level, picked by who\'s in the box. Don\'t pump it into the zone against a lineup that hits velocity.'},
+ {h:'Your changeup is a pick-your-spots pitch',b:'It buries the lefties and the bottom of the order (<b>Trammell .166, Vázquez .195</b>) but <b>Walker (.532), Shewmake (.522), and Meyers (.617)</b> all square it up. Use it as your out-pitch to lefties — not as a go-to against everyone, and never your first choice vs Walker.'},
+ {h:'Yordan is the no-fly zone',b:'He\'s <b>.44 to .67 against every pitch you throw</b>, with your sweeper his happiest zone (.669). There\'s nothing to beat him with in the zone — your only plan is location (change down-and-away, sinker in on his hands) and <span class="hl">pitching around him with runners on</span>.'},
+ {h:'Throw strikes — it\'s the one thing that beats you',b:'You\'re at <span class="hl">16% walks</span> this year and Houston is patient — <b>Yordan (13% BB), Trammell (13%), Paredes (10%)</b>. If you\'re going to lean on spin, you have to land it. Go right at the bottom of the order (Meyers, Vázquez, Shewmake — all spin-vulnerable) and save your bullets for the top.'},
+];
+document.getElementById('page-plan').innerHTML =
+  '<div class="sect">Shape-Matched Game Plan vs Houston</div>'+scHTML+
+  plan.map((p,i)=>`<div class="gp"><h3><span class="no">${i+1}</span>${p.h}</h3><p>${p.b}</p></div>`).join('');
+
+document.getElementById('foot').innerHTML =
+  `Data: Statcast / Baseball Savant via pybaseball · Shape bands match Bubba's current-form velo+IVB+HB to all RHP pitches each hitter saw in 2026 · Chandler form = last 3 starts (5/16–5/27), results = full 2026 · Astros = 2026 vs RHP · Lineup = most recent vs-RHP order (5/30), subject to change · *sample under ${D.min_n} pitches · Built ${new Date().toLocaleDateString()}.`;
+
+document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.addEventListener('click',()=>{
+  document.querySelectorAll('.nav-tab[data-p]').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+t.dataset.p).classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+</script>
+</body>
+</html>
