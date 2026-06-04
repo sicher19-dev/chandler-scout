@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chandler Scout — vs Astros 6/2</title>
+<title>Chandler Scout — @ Braves 6/7</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -140,14 +140,17 @@ td:first-child,th:first-child{text-align:left;font-family:'Oswald';font-weight:6
 .key p{font-size:16px;line-height:1.5;color:#e6e6ec}.key p b{color:#fff}.key p .g{color:#7be0a4;font-weight:600}.key p .r{color:#ff8585;font-weight:600}
 .foot{margin-top:30px;padding-top:16px;border-top:1px solid var(--line);font-family:'JetBrains Mono';font-size:11px;color:var(--mut);line-height:1.6}
 .tunnel{display:flex;gap:10px;align-items:flex-start;background:var(--panel2);border-radius:4px;padding:10px 12px;margin-top:8px;font-family:'JetBrains Mono';font-size:12px;color:var(--mut);line-height:1.5}
+
+header::before{content:'36' !important}
+.ac{font-weight:600}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <div class="eyebrow">Pregame Scouting Report · Pirates Analytics</div>
+  <div class="eyebrow">Pregame Scouting Report · No Brand Baseball Analytics · DRAFT — updates as start nears</div>
   <h1>Chandler <span>Scout</span></h1>
-  <div class="sub"><b>Bubba Chandler</b> RHP #45 &nbsp;·&nbsp; vs <b>Houston Astros</b> &nbsp;·&nbsp; <b id="gdate"></b></div>
+  <div class="sub"><b>Bubba Chandler</b> RHP #36 &nbsp;·&nbsp; @ <b>Atlanta Braves</b> &nbsp;·&nbsp; <b id="gdate"></b></div>
 </header>
 <nav>
   <div class="nav-tab active" data-p="brief">Briefing</div>
@@ -156,239 +159,198 @@ td:first-child,th:first-child{text-align:left;font-family:'Oswald';font-weight:6
   <div class="nav-tab" data-p="arsenal">Arsenal</div>
   <div class="nav-tab" data-p="plan">Game Plan</div>
 </nav>
-
 <div class="page active" id="page-brief"></div>
-
 <div class="page" id="page-overview">
   <div class="cond" id="cond"></div>
-  <div class="sect">Astros Lineup vs RHP — tap a hitter</div>
+  <div class="sect">Braves lineup vs RHP — tap a hitter</div>
   <div class="legend">
     <span><i class="dot" style="background:#ff6b6b"></i>Elite</span>
     <span><i class="dot" style="background:#ffb454"></i>High</span>
-    <span><i class="dot" style="background:#e8e85a"></i>Medium</span>
+    <span><i class="dot" style="background:#e8e85a"></i>Med</span>
     <span><i class="dot" style="background:#5ed98a"></i>Low</span>
-    <span style="margin-left:auto">ATTACK/AVOID = best &amp; worst Bubba shape by xwOBA</span>
+    <span style="margin-left:auto">ATTACK / AVOID = your best & worst bucket by xwOBACON</span>
   </div>
   <div class="grid" id="lineup"></div>
 </div>
-
 <div class="page" id="page-hitters">
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px" id="hitter-pills"></div>
   <div id="hitter-detail"></div>
 </div>
-
 <div class="page" id="page-arsenal">
-  <div class="sect">Current-Form Arsenal — last 3 starts (shapes) · 2026 (results)</div>
-  <div class="tunnel">🎯 <div><b style="color:#e9e9ee">The two-fastball engine:</b> 4-Seam &amp; Sinker both 98 mph off the same slot — 4-seam rides +18", sinker sinks +13" &amp; runs to the arm side for an 80% GB rate. Hitter must decide ride-vs-sink at 98.</div></div>
-  <div class="arstable" id="arsenal" style="margin-top:14px"></div>
-  <div class="sect">Usage by Count</div>
-  <div class="counts-wrap"><table id="counttable"></table></div>
-  <div class="sect">Usage by Batter Hand — current form</div>
-  <div class="counts-wrap"><table id="handtable"></table></div>
+  <div class="sect">Your arsenal — season shapes · last-3-starts form</div>
+  <div class="arstable" id="arsenal"></div>
+  <div class="sect">Your usage by batter hand</div>
+  <div id="handtable"></div>
+  <p style="font-size:13px;color:var(--mut);margin-top:8px;font-family:'JetBrains Mono'">Note: vs LHH you throw the sweeper just 1.4% — this lineup is 5 lefties, so the changeup carries that load.</p>
 </div>
-
 <div class="page" id="page-plan"></div>
 <div class="foot" id="foot"></div>
 </div>
-
 <script>
-const D = JSON.parse('{"pitcher":{"name":"Bubba Chandler","team":"Pittsburgh Pirates","hand":"RHP","num":"45","line2026":"15 GS \\u00b7 24.2% K \\u00b7 16.1% BB","mlbam":696149},"game":{"opp":"Houston Astros","venue":"Daikin Park","city":"Houston, TX","date":"Tuesday, June 2, 2026","time":"7:10 PM CT","roof":"Retractable roof \\u2014 likely closed (Houston June heat/humidity). Climate-controlled ~72\\u00b0F, wind neutralized.","park":"Crawford Boxes: short LF porch (315 ft) rewards RHH pull power. Deep CF (409). Plays roughly neutral overall but pull-side HR risk for RH bats is real."},"arsenal":[{"code":"FF","name":"4-Seam Fastball","usage":40.8,"velo":98.3,"ivb":18.4,"hb":-7.6,"whiff":24.7,"csw":25.1,"gb":24.4,"xwoba":0.381,"color":"#ef4444","note":"Your bread and butter. Elite ride at 98+ that plays up at the top of the zone. But it gets hit when it leaks middle (.381) \\u2014 use it to get ahead and change eye level, not to live in the zone."},{"code":"SI","name":"Sinker","usage":18.7,"velo":98.1,"ivb":13.3,"hb":-13.7,"whiff":22.7,"csw":25.9,"gb":80.0,"xwoba":0.382,"color":"#f97316","note":"Your new weapon. Same 98 off the same slot as your four-seam, but it drops 5\\" and runs to your arm side \\u2014 80% ground balls. They can\'t read ride-vs-sink until it\'s too late. Just be picky who you throw it to here (check the scorecard)."},{"code":"CH","name":"Changeup","usage":17.2,"velo":92.0,"ivb":7.8,"hb":-16.4,"whiff":28.3,"csw":27.3,"gb":46.3,"xwoba":0.27,"color":"#22c55e","note":"Your safest pitch and best swing-and-miss (.270). Big fade away from lefties \\u2014 it\'s your out-pitch to them. Death to righties who chase, but a few of these guys square it, so pick your spots."},{"code":"SL","name":"Slider","usage":11.2,"velo":90.1,"ivb":1.5,"hb":1.8,"whiff":31.1,"csw":32.1,"gb":30.0,"xwoba":0.377,"color":"#3b82f6","note":"Tight and firm at 90. High whiff. Your go-to glove-side put-away \\u2014 bury it down-and-away with two strikes."},{"code":"ST","name":"Sweeper","usage":5.2,"velo":88.0,"ivb":0.4,"hb":8.4,"whiff":32.4,"csw":31.5,"gb":50.0,"xwoba":0.214,"color":"#a855f7","note":"Your highest-whiff, lowest-damage pitch (.214). Right now you barely throw it to lefties \\u2014 and two of their lefties can\'t touch spin. That\'s free whiffs you\'re leaving on the table."},{"code":"CU","name":"Curveball","usage":5.2,"velo":87.5,"ivb":-1.9,"hb":1.9,"whiff":27.8,"csw":30.2,"gb":25.0,"xwoba":0.296,"color":"#14b8a6","note":"Your steal-a-strike pitch. Flips their timing off the 98s. Quietly one of your best options against this lineup."}],"counts":{"0-0":{"FF":48.4,"SI":8.8,"CH":16.1,"SL":12.3,"ST":7.0,"CU":6.0},"Ahead":{"FF":54.0,"SI":2.8,"CH":18.8,"SL":15.2,"ST":6.6,"CU":1.9},"Behind":{"FF":55.5,"SI":5.0,"CH":14.4,"SL":14.7,"ST":6.0,"CU":3.4},"2-Strike":{"FF":50.4,"SI":1.9,"CH":21.1,"SL":16.5,"ST":6.8,"CU":3.0}},"hand":{"RHH":{"FF":34.9,"SI":30.2,"CH":8.5,"SL":11.6,"ST":9.3,"CU":5.4},"LHH":{"FF":46.4,"SI":8.0,"CH":25.4,"SL":10.9,"ST":1.4,"CU":5.1}},"hitters":[{"order":1,"stand":"R","pos":"SS","avg":0.25,"obp":0.289,"slg":0.357,"kpct":15.6,"bbpct":3.3,"hr":2,"pa":90,"chase":34.9,"vsFB":{"n":163,"whiff":15.4,"xwoba":0.404},"vsOFF":{"n":35,"whiff":35.3,"xwoba":0.458},"vsBRK":{"n":134,"whiff":39.5,"xwoba":0.231},"zone":[[0.248,0.379,0.315],[0.455,0.343,0.287],[1.419,0.399,0.203]],"threat":"high","tags":["Sweeper + Curve ONLY","Nothing hard","Stay off the heaters"],"plan":"Don\'t give him anything hard. He punishes your four-seam (.679), your sinker (.565), and your changeup (.543) \\u2014 all of it. Your whole plan here is glove-side spin: your sweeper (.145) and curve (.177) are his kryptonite, and they\'re way better than your slider (.383). Bury sweepers, steal strikes with the curve.","name":"Jeremy Pena","shape":{"FF":{"n":13,"whiff":0.0,"xwoba":0.679,"chase":16.7},"SI":{"n":30,"whiff":20.0,"xwoba":0.565,"chase":25.0},"CH":{"n":42,"whiff":13.0,"xwoba":0.543,"chase":34.8},"SL":{"n":47,"whiff":41.4,"xwoba":0.383,"chase":50.0},"ST":{"n":39,"whiff":38.1,"xwoba":0.145,"chase":44.4},"CU":{"n":41,"whiff":54.5,"xwoba":0.177,"chase":48.0}},"best":{"code":"ST","xwoba":0.145,"thin":false},"avoid":{"code":"SI","xwoba":0.565,"thin":false}},{"order":2,"stand":"L","pos":"DH","avg":0.278,"obp":0.376,"slg":0.556,"kpct":19.5,"bbpct":13.3,"hr":13,"pa":210,"chase":27.3,"vsFB":{"n":443,"whiff":19.2,"xwoba":0.472},"vsOFF":{"n":167,"whiff":20.3,"xwoba":0.412},"vsBRK":{"n":221,"whiff":24.4,"xwoba":0.579},"zone":[[0.616,0.838,0.571],[0.222,0.795,0.382],[0.856,0.523,0.995]],"threat":"elite","tags":["No safe pitch","Pitch around w/ RISP","Never the sweeper"],"plan":"There\'s no pitch you beat him with in the zone \\u2014 he\'s .44 to .67 against everything you throw, and your sweeper is his favorite (.669), so never go there. Least-bad options are your curve (.315) and slider (.415). But the real answer isn\'t a pitch, it\'s location: nothing over the plate, and if anyone\'s on base, pitch around him. A walk beats a barrel.","name":"Yordan Alvarez","shape":{"FF":{"n":70,"whiff":27.8,"xwoba":0.437,"chase":19.4},"SI":{"n":67,"whiff":21.9,"xwoba":0.577,"chase":21.9},"CH":{"n":132,"whiff":23.7,"xwoba":0.477,"chase":36.0},"SL":{"n":53,"whiff":16.7,"xwoba":0.415,"chase":16.7},"ST":{"n":46,"whiff":9.1,"xwoba":0.669,"chase":26.9},"CU":{"n":67,"whiff":37.0,"xwoba":0.315,"chase":35.9}},"best":{"code":"CU","xwoba":0.315,"thin":false},"avoid":{"code":"ST","xwoba":0.669,"thin":false}},{"order":3,"stand":"R","pos":"1B","avg":0.246,"obp":0.3,"slg":0.507,"kpct":20.6,"bbpct":5.8,"hr":15,"pa":223,"chase":29.4,"vsFB":{"n":470,"whiff":19.3,"xwoba":0.379},"vsOFF":{"n":43,"whiff":56.2,"xwoba":0.55},"vsBRK":{"n":319,"whiff":39.3,"xwoba":0.254},"zone":[[0.721,0.521,0.434],[0.257,0.392,0.28],[0.36,0.539,0.231]],"threat":"high","tags":["Sweeper + Slider","NOT the changeup","Sinker for grounders"],"plan":"He\'ll chase your changeup but he hammers it when he connects (.532) \\u2014 don\'t lean on it. Beat him glove-side: your sweeper (.232) and slider (.249). Use your sinker (.303) to keep his pull power on the ground and off the Crawford Boxes. Keep four-seams off his inner third.","name":"Christian Walker","shape":{"FF":{"n":70,"whiff":24.4,"xwoba":0.372,"chase":30.0},"SI":{"n":116,"whiff":20.6,"xwoba":0.303,"chase":24.6},"CH":{"n":65,"whiff":21.4,"xwoba":0.532,"chase":28.1},"SL":{"n":85,"whiff":39.5,"xwoba":0.249,"chase":34.0},"ST":{"n":96,"whiff":40.5,"xwoba":0.232,"chase":32.8},"CU":{"n":94,"whiff":32.6,"xwoba":0.34,"chase":29.8}},"best":{"code":"ST","xwoba":0.232,"thin":false},"avoid":{"code":"CH","xwoba":0.532,"thin":false}},{"order":4,"stand":"L","pos":"LF","avg":0.301,"obp":0.4,"slg":0.425,"kpct":28.2,"bbpct":12.9,"hr":1,"pa":85,"chase":26.2,"vsFB":{"n":176,"whiff":25.0,"xwoba":0.375},"vsOFF":{"n":53,"whiff":23.8,"xwoba":0.257},"vsBRK":{"n":106,"whiff":59.3,"xwoba":0.197},"zone":[[null,0.06,null],[0.401,0.378,0.319],[0.405,0.493,0.353]],"threat":"med","tags":["Change + Slider + Curve","Avoid your sinker","No sweeper"],"plan":"Spin and cambio, but be specific. Your changeup (.166), curve (.184), and slider (.21) all neutralize him \\u2014 while he handles your sinker (.561) and even your sweeper (.365). He\'s a lefty, so your changeup runs away from him: ride it. Stay off the sinker.","name":"Taylor Trammell","shape":{"FF":{"n":33,"whiff":41.2,"xwoba":0.436,"chase":20.0},"SI":{"n":21,"whiff":10.0,"xwoba":0.561,"chase":18.2},"CH":{"n":44,"whiff":28.6,"xwoba":0.166,"chase":26.9},"SL":{"n":36,"whiff":52.4,"xwoba":0.21,"chase":38.5},"ST":{"n":15,"whiff":44.4,"xwoba":0.365,"chase":40.0},"CU":{"n":38,"whiff":64.7,"xwoba":0.184,"chase":21.1}},"best":{"code":"CH","xwoba":0.166,"thin":false},"avoid":{"code":"SI","xwoba":0.561,"thin":false}},{"order":5,"stand":"R","pos":"3B","avg":0.211,"obp":0.315,"slg":0.38,"kpct":19.3,"bbpct":10.2,"hr":8,"pa":197,"chase":26.1,"vsFB":{"n":526,"whiff":11.7,"xwoba":0.36},"vsOFF":{"n":76,"whiff":27.5,"xwoba":0.173},"vsBRK":{"n":310,"whiff":25.8,"xwoba":0.222},"zone":[[0.332,0.47,0.282],[0.299,0.334,0.154],[0.39,0.271,0.303]],"threat":"med","tags":["NO sinker","Curve/Slider/Change away","Pull risk"],"plan":"Do NOT throw him your sinker. He\'s an extreme pull hitter and he feasts on arm-side run (.452) \\u2014 the Crawford Boxes are made for him. Live with spin and the change away: your curve (.121), slider (.177), and changeup (.205) all kill him. Never let him extend to the pull side.","name":"Isaac Paredes","shape":{"FF":{"n":76,"whiff":12.5,"xwoba":0.247,"chase":31.2},"SI":{"n":111,"whiff":9.8,"xwoba":0.452,"chase":11.3},"CH":{"n":98,"whiff":20.0,"xwoba":0.205,"chase":34.1},"SL":{"n":83,"whiff":19.2,"xwoba":0.177,"chase":21.4},"ST":{"n":77,"whiff":25.7,"xwoba":0.288,"chase":38.3},"CU":{"n":104,"whiff":28.1,"xwoba":0.121,"chase":23.5}},"best":{"code":"CU","xwoba":0.121,"thin":false},"avoid":{"code":"SI","xwoba":0.452,"thin":false}},{"order":6,"stand":"R","pos":"RF","avg":0.244,"obp":0.332,"slg":0.392,"kpct":27.7,"bbpct":9.9,"hr":5,"pa":202,"chase":29.9,"vsFB":{"n":416,"whiff":21.4,"xwoba":0.412},"vsOFF":{"n":69,"whiff":52.9,"xwoba":0.114},"vsBRK":{"n":331,"whiff":52.4,"xwoba":0.295},"zone":[[0.251,0.902,0.978],[0.295,0.301,0.403],[0.809,0.601,0.246]],"threat":"med","tags":["4-Seam UP","Sweeper to finish","Avoid SI + CU"],"plan":"Flip what you\'d guess \\u2014 your riding four-seam up is his hole (.134), so elevate it on him. Finish with your sweeper (.216) or change (.249). Stay away from your sinker (.424) and curve (.42), the two he squares up. He\'s a rookie \\u2014 go right at him up in the zone.","name":"Cam Smith","shape":{"FF":{"n":46,"whiff":32.0,"xwoba":0.134,"chase":25.0},"SI":{"n":90,"whiff":15.7,"xwoba":0.424,"chase":25.0},"CH":{"n":95,"whiff":24.5,"xwoba":0.249,"chase":48.1},"SL":{"n":66,"whiff":53.3,"xwoba":0.377,"chase":35.3},"ST":{"n":120,"whiff":50.0,"xwoba":0.216,"chase":28.4},"CU":{"n":96,"whiff":48.7,"xwoba":0.42,"chase":34.5}},"best":{"code":"FF","xwoba":0.134,"thin":false},"avoid":{"code":"SI","xwoba":0.424,"thin":false}},{"order":7,"stand":"L","pos":"2B","avg":0.237,"obp":0.247,"slg":0.425,"kpct":14.1,"bbpct":2.4,"hr":4,"pa":85,"chase":52.6,"vsFB":{"n":144,"whiff":12.8,"xwoba":0.283},"vsOFF":{"n":50,"whiff":18.8,"xwoba":0.527},"vsBRK":{"n":75,"whiff":36.0,"xwoba":0.182},"zone":[[0.014,0.041,0.37],[0.306,0.574,0.22],[0.493,0.413,0.275]],"threat":"low","tags":["Spin everywhere","Expand the zone","No hanging changeups"],"plan":"Spin him out \\u2014 your curve (.111), slider (.17), and sweeper are all untouchable for him. Just don\'t hang the changeup (.522). He chases 53%, so expand the zone early and let him get himself out. Weakest bat in the order.","name":"Braden Shewmake","shape":{"FF":{"n":19,"whiff":14.3,"xwoba":0.371,"chase":50.0},"SI":{"n":15,"whiff":9.1,"xwoba":0.313,"chase":83.3},"CH":{"n":35,"whiff":13.0,"xwoba":0.522,"chase":57.1},"SL":{"n":23,"whiff":43.8,"xwoba":0.17,"chase":60.0},"ST":{"n":13,"whiff":66.7,"xwoba":0.0,"chase":44.4},"CU":{"n":23,"whiff":41.2,"xwoba":0.111,"chase":78.6}},"best":{"code":"CU","xwoba":0.111,"thin":false},"avoid":{"code":"CH","xwoba":0.522,"thin":false}},{"order":8,"stand":"R","pos":"CF","avg":0.23,"obp":0.284,"slg":0.324,"kpct":23.5,"bbpct":6.2,"hr":1,"pa":81,"chase":30.1,"vsFB":{"n":152,"whiff":19.4,"xwoba":0.329},"vsOFF":{"n":14,"whiff":0.0,"xwoba":0.248},"vsBRK":{"n":121,"whiff":30.2,"xwoba":0.239},"zone":[[0.232,0.202,0.003],[0.432,0.348,0.35],[0.387,0.115,0.271]],"threat":"low","tags":["Sweeper + Slider","Avoid CH + SI","Low power"],"plan":"Glove-side spin \\u2014 your sweeper (.115) and slider (.178) put him away. Stay off the changeup (.617) and sinker (.562), the two he squares up. Low power; your breakers handle him.","name":"Jake Meyers","shape":{"FF":{"n":15,"whiff":55.6,"xwoba":0.3,"chase":28.6},"SI":{"n":30,"whiff":6.2,"xwoba":0.562,"chase":31.2},"CH":{"n":28,"whiff":35.7,"xwoba":0.617,"chase":41.2},"SL":{"n":20,"whiff":25.0,"xwoba":0.178,"chase":33.3},"ST":{"n":41,"whiff":14.3,"xwoba":0.115,"chase":25.0},"CU":{"n":18,"whiff":42.9,"xwoba":0.431,"chase":36.4}},"best":{"code":"ST","xwoba":0.115,"thin":false},"avoid":{"code":"CH","xwoba":0.617,"thin":false}},{"order":9,"stand":"R","pos":"C","avg":0.25,"obp":0.318,"slg":0.375,"kpct":17.8,"bbpct":9.3,"hr":3,"pa":107,"chase":31.4,"vsFB":{"n":273,"whiff":16.5,"xwoba":0.29},"vsOFF":{"n":17,"whiff":0.0,"xwoba":0.338},"vsBRK":{"n":122,"whiff":32.6,"xwoba":0.183},"zone":[[0.13,0.378,0.0],[0.281,0.283,0.215],[0.508,0.164,0.294]],"threat":"low","tags":["Curve + Slider","Attack","Low threat"],"plan":"Spin him out \\u2014 your curve (.082) and slider (.179) are untouchable for him, and your change (.195) works too. Lowest-leverage bat in the lineup \\u2014 get the out and move on.","name":"Christian Vazquez","shape":{"FF":{"n":44,"whiff":29.2,"xwoba":0.226,"chase":36.8},"SI":{"n":53,"whiff":12.5,"xwoba":0.265,"chase":33.3},"CH":{"n":31,"whiff":5.0,"xwoba":0.195,"chase":50.0},"SL":{"n":31,"whiff":25.0,"xwoba":0.179,"chase":16.7},"ST":{"n":46,"whiff":30.0,"xwoba":0.244,"chase":27.6},"CU":{"n":35,"whiff":36.4,"xwoba":0.082,"chase":28.0}},"best":{"code":"CU","xwoba":0.082,"thin":false},"avoid":{"code":"SI","xwoba":0.265,"thin":false}}],"scorecard":{"FF":{"mean":0.356,"wmean":0.327,"nhit":9},"SI":{"mean":0.447,"wmean":0.425,"nhit":9},"CH":{"mean":0.39,"wmean":0.374,"nhit":9},"SL":{"mean":0.26,"wmean":0.273,"nhit":9},"ST":{"mean":0.253,"wmean":0.26,"nhit":9},"CU":{"mean":0.242,"wmean":0.259,"nhit":9}},"pitch_label":{"FF":"Riding 4-Seam","SI":"Power Sinker","CH":"Fading Change","SL":"Gyro Slider","ST":"Sweeper","CU":"Curve"},"min_n":18}');
-const PC = {}; D.arsenal.forEach(a=>PC[a.code]=a.color);
-const PL = D.pitch_label;
-const bcls={elite:'b-elite',high:'b-high',med:'b-med',low:'b-low'};
-const blbl={elite:'Elite',high:'High',med:'Med',low:'Low'};
+const D = {"pitcher": {"name": "Bubba Chandler", "hand": "RHP", "num": "36"}, "game": {"opp": "Atlanta Braves", "venue": "Truist Park", "city": "Atlanta, GA", "date": "Sunday, June 7, 2026", "time": "1:35 PM ET", "away": true, "oppsp": "Bryce Elder (RHP, 2.50 ERA)", "rec": "Braves 40\u201320 (best record in MLB)", "last": "Jun 2 @ HOU: 5.0 IP, 91 P, 5 H, 4 R (3 ER), 2 BB, 3 K, 1 HR \u2014 W"}, "hitters": [{"order": 1, "name": "Ronald Acu\u00f1a Jr.", "pos": "RF", "stand": "R", "woba": 0.396, "k": 19.3, "bb": 14.3, "chase": 27.4, "pa": 140, "FB": {"pit": 319, "swing": 170, "whiff": 38, "whiff_pct": 22.4, "xwobacon": 0.436, "bip": 65}, "FBhi96": {"pit": 90, "swing": 49, "whiff": 10, "whiff_pct": 20.4, "xwobacon": 0.381, "bip": 24}, "SPIN": {"pit": 157, "swing": 56, "whiff": 17, "whiff_pct": 30.4, "xwobacon": 0.539, "bip": 19}, "OFF": {"pit": 45, "swing": 20, "whiff": 8, "whiff_pct": 40.0, "xwobacon": 0.672, "bip": 6}, "hasdata": true, "threat": "elite", "attack": {"code": "FBhi96", "lab": "Heater 96+", "x": 0.381}, "avoid": {"code": "OFF", "lab": "Offspeed", "x": 0.672, "thin": false}, "plan": "THE EXCEPTION \u2014 ride the heater up to him all day. He's locked in (.396 wOBA, homering in bunches) and here's the counterintuitive part: he <b>crushes spin (.539) and offspeed (.672)</b>. The pitch he does the least with is your four-seam up at 96+ (.381, 20% whiff). Do not get cute and go soft 2nd time through \u2014 that's a mistake with him. Elevate, and never spin/sink one over the middle.", "tags": ["4-Seam UP all day", "NEVER soft 2nd time", "No fastball middle"]}, {"order": 2, "name": "Michael Harris II", "pos": "CF", "stand": "L", "woba": 0.382, "k": 17.6, "bb": 3.5, "chase": 46.3, "pa": 142, "FB": {"pit": 243, "swing": 143, "whiff": 22, "whiff_pct": 15.4, "xwobacon": 0.483, "bip": 51}, "FBhi96": {"pit": 84, "swing": 46, "whiff": 10, "whiff_pct": 21.7, "xwobacon": 0.518, "bip": 16}, "SPIN": {"pit": 143, "swing": 81, "whiff": 26, "whiff_pct": 32.1, "xwobacon": 0.448, "bip": 29}, "OFF": {"pit": 99, "swing": 58, "whiff": 17, "whiff_pct": 29.3, "xwobacon": 0.544, "bip": 29}, "hasdata": true, "threat": "high", "attack": {"code": "SPIN", "lab": "Spin", "x": 0.448}, "avoid": {"code": "OFF", "lab": "Offspeed", "x": 0.544, "thin": false}, "plan": "Spin him \u2014 and don't elevate. He sits on heat: <b>.518 on your 96+</b> and .483 on fastballs in general. Your spin gets him to whiff most (32%) and does the least damage (.448). He's the lefty exception to the changeup plan (.544 \u2014 he handles it). Slider/sweeper away, steal strikes with the curve.", "tags": ["Spin first & second", "Don't elevate", "Not the changeup"]}, {"order": 3, "name": "Matt Olson", "pos": "1B", "stand": "L", "woba": 0.415, "k": 22.6, "bb": 11.0, "chase": 27.7, "pa": 155, "FB": {"pit": 363, "whiff_pct": 12.2, "xwobacon": 0.543}, "FBhi96": {"pit": 112, "whiff_pct": 9.3, "xwobacon": 0.307}, "SPIN": {"pit": 197, "whiff_pct": 20.7, "xwobacon": 0.439}, "OFF": {"pit": 124, "whiff_pct": 26.9, "xwobacon": 0.279}, "hasdata": true, "threat": "elite", "attack": {"code": "OFF", "lab": "Offspeed", "x": 0.279}, "avoid": {"code": "FB", "lab": "Hittable FB", "x": 0.543, "thin": false}, "plan": "Never a hittable fastball. He mashes anything in the zone (<b>.543 on fastballs</b>) but the velo up neutralizes him \u2014 .307 on your 96+ with barely a whiff. So either climb the ladder at 96+ or go soft: your changeup (.279) fades off his barrel. Elite bat, lefty \u2014 the cambio is your friend, the middle-middle fastball is a souvenir.", "tags": ["96+ up OR changeup", "No fastball middle", "Cambio plays"]}, {"order": 4, "name": "Ozzie Albies", "pos": "2B", "stand": "L", "woba": 0.343, "k": 16.1, "bb": 10.3, "chase": 32.3, "pa": 155, "FB": {"pit": 285, "swing": 146, "whiff": 28, "whiff_pct": 19.2, "xwobacon": 0.366, "bip": 56}, "FBhi96": {"pit": 72, "swing": 37, "whiff": 8, "whiff_pct": 21.6, "xwobacon": 0.336, "bip": 12}, "SPIN": {"pit": 205, "swing": 99, "whiff": 26, "whiff_pct": 26.3, "xwobacon": 0.301, "bip": 23}, "OFF": {"pit": 120, "swing": 68, "whiff": 18, "whiff_pct": 26.5, "xwobacon": 0.227, "bip": 31}, "hasdata": true, "threat": "med", "attack": {"code": "OFF", "lab": "Offspeed", "x": 0.227}, "avoid": {"code": "FB", "lab": "Hittable FB", "x": 0.366, "thin": false}, "plan": "Changeup-forward. Switch-hitter batting lefty against you, and your offspeed (.227) and spin (.301) both beat him. Don't groove the fastball (.366). Fade the change away, mix the slider, and don't let him ambush a get-me-over heater.", "tags": ["Changeup + spin", "No grooved FB", "Expand late"]}, {"order": 5, "name": "Dominic Smith", "pos": "DH", "stand": "L", "woba": 0.374, "k": 14.9, "bb": 5.0, "chase": 37.6, "pa": 121, "FB": {"pit": 230, "swing": 119, "whiff": 10, "whiff_pct": 8.4, "xwobacon": 0.459, "bip": 55}, "FBhi96": {"pit": 58, "swing": 28, "whiff": 2, "whiff_pct": 7.1, "xwobacon": 0.654, "bip": 12}, "SPIN": {"pit": 139, "swing": 83, "whiff": 24, "whiff_pct": 28.9, "xwobacon": 0.444, "bip": 22}, "OFF": {"pit": 73, "swing": 39, "whiff": 14, "whiff_pct": 35.9, "xwobacon": 0.244, "bip": 17}, "hasdata": true, "threat": "high", "attack": {"code": "OFF", "lab": "Offspeed", "x": 0.244}, "avoid": {"code": "FBhi96", "lab": "Heater up", "x": 0.654, "thin": false}, "plan": "Changeup is the out-pitch. He whiffs 36% on offspeed and does nothing with it (.244). Stay off fastballs \u2014 small sample but he's <b>.654 on heat up</b>, so don't challenge him at the letters. Lefty: ride the change away, bury the slider.", "tags": ["Changeup = out", "Avoid heat up", "Slider away"]}, {"order": 6, "name": "Austin Riley", "pos": "3B", "stand": "R", "woba": 0.284, "k": 27.0, "bb": 6.3, "chase": 30.3, "pa": 159, "FB": {"pit": 378, "swing": 177, "whiff": 41, "whiff_pct": 23.2, "xwobacon": 0.421, "bip": 67}, "FBhi96": {"pit": 114, "swing": 56, "whiff": 12, "whiff_pct": 21.4, "xwobacon": 0.321, "bip": 21}, "SPIN": {"pit": 206, "swing": 97, "whiff": 31, "whiff_pct": 32.0, "xwobacon": 0.36, "bip": 30}, "OFF": {"pit": 42, "swing": 20, "whiff": 4, "whiff_pct": 20.0, "xwobacon": 0.368, "bip": 4}, "hasdata": true, "threat": "low", "attack": {"code": "FBhi96", "lab": "Heater 96+", "x": 0.321}, "avoid": {"code": "FB", "lab": "Hittable FB", "x": 0.421, "thin": false}, "plan": "Go right at him \u2014 he's vulnerable this year (.284, 27% K). Your 96+ up (.321) and your spin (32% whiff) both work. The one thing to skip is the hittable in-zone fastball (.421). Elevate, then spin him out.", "tags": ["96+ up + spin", "Attack \u2014 he's down", "No fastball middle"]}, {"order": 7, "name": "Mike Yastrzemski", "pos": "LF", "stand": "L", "woba": 0.342, "k": 21.6, "bb": 9.5, "chase": 27.7, "pa": 148, "FB": {"pit": 375, "swing": 162, "whiff": 33, "whiff_pct": 20.4, "xwobacon": 0.372, "bip": 60}, "FBhi96": {"pit": 121, "swing": 59, "whiff": 13, "whiff_pct": 22.0, "xwobacon": 0.339, "bip": 22}, "SPIN": {"pit": 158, "swing": 59, "whiff": 16, "whiff_pct": 27.1, "xwobacon": 0.335, "bip": 23}, "OFF": {"pit": 80, "swing": 42, "whiff": 9, "whiff_pct": 21.4, "xwobacon": 0.215, "bip": 17}, "hasdata": true, "threat": "med", "attack": {"code": "OFF", "lab": "Offspeed", "x": 0.215}, "avoid": {"code": "FB", "lab": "Hittable FB", "x": 0.372, "thin": false}, "plan": "Changeup best (.215), but he's pretty balanced \u2014 no bucket he punishes badly. Lefty, so the cambio away is the lead, mix elevated heat and spin. Patient bat (9.5% BB) \u2014 make him swing, don't nibble.", "tags": ["Changeup lead", "Elevate + spin", "Don't nibble"]}, {"order": 8, "name": "Jorge Mateo", "pos": "SS", "stand": "R", "woba": 0.373, "k": 22.6, "bb": 5.7, "chase": 36.8, "pa": 53, "FB": {"pit": 120, "swing": 58, "whiff": 9, "whiff_pct": 15.5, "xwobacon": 0.467, "bip": 21}, "FBhi96": {"pit": 26, "swing": 16, "whiff": 2, "whiff_pct": 12.5, "xwobacon": 0.388, "bip": 6}, "SPIN": {"pit": 72, "swing": 44, "whiff": 15, "whiff_pct": 34.1, "xwobacon": 0.376, "bip": 15}, "OFF": {"pit": 17, "swing": 7, "whiff": 4, "whiff_pct": 57.1, "xwobacon": 0.049, "bip": 1}, "hasdata": true, "threat": "high", "attack": {"code": "SPIN", "lab": "Spin", "x": 0.376}, "avoid": {"code": "FB", "lab": "Hittable FB", "x": 0.467, "thin": false}, "plan": "Spin and soft \u2014 small sample (53 PA) but loud: he can't touch your spin (34% whiff, .376) or offspeed. Don't feed him a fastball over the plate (.467). Bottom-third bat with swing-and-miss; expand the zone.", "tags": ["Spin / soft", "Expand zone", "No FB middle"]}, {"order": 9, "name": "Sandy Le\u00f3n", "pos": "C", "stand": "?", "woba": null, "k": null, "bb": null, "chase": null, "pa": 0, "FB": {"pit": 0}, "FBhi96": {"pit": 0}, "SPIN": {"pit": 0}, "OFF": {"pit": 0}, "hasdata": false, "threat": "low", "attack": null, "avoid": null, "plan": "Limited 2026 look against righties \u2014 and the #9 spot is fluid (Le\u00f3n / Tromp / Baldwin). Default plan: challenge early with the four-seam, get ahead, expand with spin. Lowest-leverage bat \u2014 get the out and flip the lineup.", "tags": ["Challenge early", "Spin to finish", "Low leverage"]}], "score": {"OFF": {"lab": "Changeup / Offspeed", "mean": 0.325}, "SPIN": {"lab": "Spin (SL/ST/CU)", "mean": 0.405}, "FBhi96": {"lab": "Four-Seam UP (96+)", "mean": 0.406}, "FB": {"lab": "Fastball in zone", "mean": 0.443}}, "arsenal": [{"code": "FF", "name": "4-Seam Fastball", "role": "THE HEATER", "color": "#ef4444", "usage": 49.8, "velo": 98.4, "ivb": 18.4, "hb": -7.0, "whiff": 18.8, "xwoba": 0.375, "use3": 39.5, "velo3": 98.6, "whiff3": 25.4, "note": "Your best pitch and the one this plan is built on. 98+ with 18\" of ride \u2014 up in the zone, most of this lineup can't square it (.381 on Acu\u00f1a, .307 on Olson, .321 on Riley at 96+). Last 3 starts the whiff jumped to 25.4%. Throw it MORE, and throw it FIRST."}, {"code": "SI", "name": "Sinker", "role": "CONTACT", "color": "#f97316", "usage": 6.8, "velo": 97.8, "ivb": 13.6, "hb": -13.9, "whiff": 17.2, "xwoba": 0.367, "use3": 19.2, "velo3": 98.1, "whiff3": 20.8, "note": "Your contact pitch, not your get-me-over. Usage spiked to 19.2% over your last 3 (season 6.8%) \u2014 that's the pitch you leaned on instead of the four-seam. Great for a quick grounder to a specific righty, but in-zone fastballs are exactly what this lineup punishes (.443). Pick spots."}, {"code": "CH", "name": "Changeup", "role": "LH WEAPON", "color": "#22c55e", "usage": 17.6, "velo": 92.0, "ivb": 7.3, "hb": -17.3, "whiff": 24.7, "xwoba": 0.305, "use3": 12.5, "velo3": 92.0, "whiff3": 23.5, "note": "Your answer to a lefty-heavy lineup \u2014 5 of their 9 bat left. Fades away from them and grades best across the group (.325). It's the out-pitch to Olson, Albies, Smith, Yastrzemski. Just keep it off Acu\u00f1a and Harris."}, {"code": "SL", "name": "Slider", "role": "PUT-AWAY", "color": "#3b82f6", "usage": 12.7, "velo": 89.8, "ivb": 2.2, "hb": 1.9, "whiff": 30.0, "xwoba": 0.456, "use3": 13.2, "velo3": 89.3, "whiff3": 53.8, "note": "Filthy right now \u2014 53.8% whiff over your last 3 starts. This is your 2nd-time-through weapon and your two-strike put-away to righties. Bury it."}, {"code": "ST", "name": "Sweeper", "role": "RH SPIN", "color": "#a855f7", "usage": 8.4, "velo": 87.9, "ivb": 1.0, "hb": 8.5, "whiff": 31.6, "xwoba": 0.268, "use3": 7.1, "velo3": 88.8, "whiff3": 44.4, "note": "44.4% whiff last 3 and your lowest-damage spin. You barely throw it to lefties (1.4%) \u2014 but it's a free swing-and-miss to the four righties. Use it more."}, {"code": "CU", "name": "Curveball", "role": "STEAL STRIKE", "color": "#14b8a6", "usage": 4.1, "velo": 86.3, "ivb": -2.8, "hb": 1.7, "whiff": 17.6, "xwoba": 0.337, "use3": 8.5, "velo3": 86.6, "whiff3": 27.3, "note": "Your timing-changer off the 98s. Steals a strike early and flips eye level. Quietly useful to get ahead so you can spin them out later."}], "hand": {"RHH": {"FF": 34.9, "SI": 30.2, "CH": 8.5, "SL": 11.6, "ST": 9.3, "CU": 5.4}, "LHH": {"FF": 46.4, "SI": 8.0, "CH": 25.4, "SL": 10.9, "ST": 1.4, "CU": 5.1}}, "splits": {"season_FBpct": 56.6, "june2_FBpct": 50.5, "june2_FBearly": 43.8, "june2_FBlate": 54.2}};
 
-function heatColor(v){ if(v===null||v===undefined) return '#1a1a20';
-  const lo=.200,hi=.520; let t=Math.max(0,Math.min(1,(v-lo)/(hi-lo)));
-  return `hsl(${220-220*t},70%,${28+t*14}%)`; }
-function heatHTML(zone,big){ let h=`<div class="heat${big?' lg':''}">`;
-  zone.forEach(row=>row.forEach(c=>{h+=`<div class="cell" style="background:${heatColor(c)}">${c!==null?c.toFixed(3).slice(1):''}</div>`;}));
-  return h+'</div>'; }
-// damage scale: low xwOBA = good for Bubba = green; high = red
-function dmgColor(v){ const lo=.12,hi=.55; let t=Math.max(0,Math.min(1,(v-lo)/(hi-lo)));
-  return `hsl(${130-130*t},65%,${42-t*4}%)`; }
+const FB_MIN = D.score; // unused placeholder
+function dc(v){ if(v===null||v===undefined) return '#3a3a44';
+  const lo=.22,hi=.52; let t=Math.max(0,Math.min(1,(v-lo)/(hi-lo)));
+  const r=Math.round(60+t*200), g=Math.round(190-t*150), b=Math.round(120-t*80);
+  return `rgb(${r},${g},${b})`; }
+function pct(v){ return (v===null||v===undefined)?'—':v.toFixed(0); }
+function xw(v){ return (v===null||v===undefined)?'—':v.toFixed(3).replace(/^0/,''); }
+function sn(name){ const sfx=['jr.','jr','sr.','sr','ii','iii','iv']; const p=name.trim().split(' ').filter(Boolean); while(p.length>1 && sfx.includes(p[p.length-1].toLowerCase())) p.pop(); return p[p.length-1]; }
+const BK=[['FB','Fastball (in zone)'],['FBhi96','4-Seam UP · 96+'],['SPIN','Spin · SL/ST/CU'],['OFF','Changeup / Offspeed']];
 
-// BRIEFING
+/* ---------------- BRIEFING ---------------- */
 document.getElementById('page-brief').innerHTML = `
-  <div class="brief-intro">
-    <div class="hi">Bubba — here's your plan for <span>Houston</span></div>
-    <p>This whole report is built from <b>your actual pitches this year</b> and how these nine hitters handle pitches that move <b>exactly like yours</b>. We measured your shapes — the four-seam riding 18" at 98, the sinker that drops and runs, the sweeper, the slider, the change — then pulled every pitch each Astro has seen in 2026 that moves like that. So when it says a guy struggles with "your riding four-seam," it means four-seams that ride like yours, specifically. It's a real read, not a label.</p>
-    <p>Spend two minutes here first, then the other tabs have the detail. The <b>Game Plan</b> tab is your TL;DR.</p>
-  </div>
-
-  <div class="sect">What the numbers mean</div>
-  <div class="brief-grid">
-    <div class="brief-card"><h4>xwOBA</h4><p>The one "how much damage" number. It grades the <b>quality of contact</b> (exit velo + launch angle), whether or not it found a glove — so it cuts out luck. Quick scale: <span class="term">under .300</span> = you're winning, <span class="term">~.320</span> = league average, <span class="term">.400+</span> = they're hurting you. Low number next to a pitch = that pitch keeps them off the barrel.</p></div>
-    <div class="brief-card"><h4>Attack ▲ / Avoid ▼</h4><p><span class="term" style="color:#7be0a4">Green</span> is your <b>best</b> pitch to that hitter — the one he does least with. <span class="term" style="color:#ff8585">Red</span> is the one to stay away from. Simple rule: <b>lead with green, bury the red.</b> You'll see these chips on every hitter card and at the top of each hitter page.</p></div>
-    <div class="brief-card"><h4>The zone heatmap</h4><p>The 9-box grid is the strike zone from the <b>catcher's view</b>. <span class="term" style="color:#ff6b6b">Red boxes</span> = where he does damage, <span class="term" style="color:#5b9bd5">blue</span> = where he doesn't. Keep the ball out of the red. (Empty boxes just mean not enough balls in play there.)</p></div>
-    <div class="brief-card"><h4>Shape Scorecard</h4><p>On the Game Plan tab — it ranks <b>your six pitches</b> by how the whole Houston lineup handles them. Top of the list = lean on it tonight. Bottom = pick your spots. This is the fastest read on what to throw.</p></div>
-    <div class="brief-card"><h4>Whiff% &amp; Chase%</h4><p><b>Whiff%</b> = how often he swings and misses. <b>Chase%</b> = how often he swings at balls. High chase (like Shewmake's 53%) means expand the zone — you don't need to give him strikes.</p></div>
-    <div class="brief-card"><h4>The four tabs</h4><ul>
-      <li><b>Overview</b> — the lineup at a glance, threat level + attack/avoid per hitter.</li>
-      <li><b>Hitters</b> — tap any guy for his full shape breakdown + plan.</li>
-      <li><b>Arsenal</b> — your pitches, shapes, and how you're using them.</li>
-      <li><b>Game Plan</b> — the six keys + the scorecard. Start and end here.</li>
+<div class="brief-intro">
+  <div class="hi">Get ahead with the <span>heater</span>. Put them away with <span>spin</span>.</div>
+  <p>Sunday at Truist Park you draw the best team in baseball (40&ndash;20) &mdash; a lineup that's red-hot at the top and stacks <b>five left-handed bats</b> against you. This report lays out the full plan to attack them: who to challenge, who to spin, and the one hitter who flips the script.</p>
+  <p>The shape of it is simple and built on your own data. First time through the order, <span style="color:var(--gold)">challenge with the four-seam up</span>. Second time through, <span style="color:var(--gold)">spin them</span> &mdash; your slider and sweeper are at 53.8% and 44.4% whiff over your last three. The June 2 numbers point the way: your fastball rate sat at <b>${D.splits.june2_FBpct}%</b> (season norm <b>${D.splits.season_FBpct}%</b>) and early-count fastball fell to <b>${D.splits.june2_FBearly}%</b> &mdash; re-establishing the elevated four-seam early is the lever that makes everything else play. One exception runs throughout: <b>Acuña</b>.</p>
+</div>
+<div class="sect">How to read this</div>
+<div class="brief-grid">
+  <div class="brief-card"><h4>The four buckets</h4>
+    <ul>
+      <li><b>Fastball (in zone)</b> — what they do with any heater over the plate. <span class="term">High = stay out of the zone with it.</span></li>
+      <li><b>4-Seam UP · 96+</b> — your elevated heater specifically. This is the "does the heater play" number.</li>
+      <li><b>Spin</b> — sliders, sweepers, curves.</li>
+      <li><b>Changeup / Offspeed</b> — your cambio. Your weapon vs lefties.</li>
     </ul></div>
-  </div>
+  <div class="brief-card"><h4>The numbers</h4>
+    <ul>
+      <li><span class="term">xwOBACON</span> — expected damage on contact. Lower is better for you. Under .300 is weak, .450+ is loud.</li>
+      <li><span class="term">Whiff%</span> — swings and misses. Higher = your swing-and-miss pitch vs that guy.</li>
+      <li><span class="term">wOBA</span> — overall offensive value vs RHP this year. .400+ is an All-Star bat.</li>
+      <li><span class="term">Chase%</span> — how often they swing out of the zone.</li>
+    </ul></div>
+  <div class="brief-card"><h4>First time / second time</h4>
+    <p>Times through the order. <b>First time</b> they haven't timed you — that's when you establish and challenge with the four-seam up. <b>Second time</b> they've seen the heater — that's when your spin (slider's at 53.8% whiff, sweeper 44.4% over your last 3) buries them.</p></div>
+  <div class="brief-card"><h4>This lineup in one line</h4>
+    <p>Best record in baseball (40–20), Acuña red-hot, and <b>five of nine bat left-handed</b>. That makes your changeup the most valuable pitch in the plan against the group — except to the two guys who handle it (Acuña, Harris).</p></div>
+</div>
+<div class="keys">
+  <div class="kh">Bottom line — 5 keys</div>
+  <div class="key"><div class="kn">1</div><p><b>Challenge with the four-seam UP, first time through.</b> Get early-count fastball back over your norm. Most of this lineup can't square 96+ at the top — <span class="g">Olson .307, Riley .321, Albies .336, Yastrzemski .339</span> on it.</p></div>
+  <div class="key"><div class="kn">2</div><p><b>The sinker is a tool, not a crutch.</b> It's for a quick grounder to a specific righty — not your get-me-over. The pitch this lineup punishes most is the <span class="r">fastball over the plate (.443)</span>.</p></div>
+  <div class="key"><div class="kn">3</div><p><b>Second time through, spin them.</b> Your <span class="g">slider (53.8% whiff)</span> and <span class="g">sweeper (44.4%)</span> are filthy right now. That's your put-away, especially to the four righties.</p></div>
+  <div class="key"><div class="kn">4</div><p><b>Changeup is your lefty answer.</b> It grades best against this group (<span class="g">.325</span>) and fades off Olson, Albies, Smith, Yastrzemski. <span class="r">Never to Acuña or Harris</span> — they handle it.</p></div>
+  <div class="key"><div class="kn">5</div><p><b>Acuña is the exception.</b> Ride the four-seam up to him <b>all day</b>. He crushes <span class="r">spin (.539)</span> and <span class="r">offspeed (.672)</span> — do NOT go soft second time through. The heater up (.381) is his toughest at-bat.</p></div>
+</div>`;
 
-  <div class="keys">
-    <div class="kh">Your bottom line for Tuesday</div>
-    <div class="key"><span class="kn">1</span><p><b>Lead with your spin.</b> <span class="g">Curve, sweeper, slider</span> are your best pitches against this lineup, top to bottom. Let them carry the start.</p></div>
-    <div class="key"><span class="kn">2</span><p><b>Go easy on the sinker.</b> It's been your go-to lately, but it's the <span class="r">most-punished pitch</span> against these guys — and the Crawford Boxes punish the pull. Use it for a grounder when you need one, not as your base.</p></div>
-    <div class="key"><span class="kn">3</span><p><b>Four-seam up by matchup.</b> Elevate it on <span class="g">Cam Smith (.134)</span>, but never middle to <span class="r">Peña (.679)</span>. It's a weapon and a liability depending on who's hitting.</p></div>
-    <div class="key"><span class="kn">4</span><p><b>Yordan — pitch around him.</b> Nothing over the plate, ever. With anyone on base, a walk beats a barrel.</p></div>
-    <div class="key"><span class="kn">5</span><p><b>Throw strikes.</b> They're patient and your walks are the one thing that beats you. If you're spinning it, you've got to land it. Attack the bottom of the order.</p></div>
-  </div>`;
-
-document.getElementById('gdate').textContent = D.game.date;
+/* ---------------- OVERVIEW: conditions + lineup ---------------- */
 document.getElementById('cond').innerHTML = `
-  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.venue}</div><p>${D.game.city} · ${D.game.time} · First pitch</p></div>
-  <div class="cond-card"><div class="lbl">Roof / Weather</div><div class="big">Roof likely closed</div><p>${D.game.roof}</p></div>
-  <div class="cond-card" style="grid-column:1/-1"><div class="lbl">Park Factor — Crawford Boxes</div><div class="big">Pull-side HR risk for RH bats</div><p>${D.game.park}</p></div>`;
+  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.opp}</div><p>${D.game.venue}, ${D.game.city} — <b>away</b>. ${D.game.date}, ${D.game.time}. Opp SP: ${D.game.oppsp}.</p></div>
+  <div class="cond-card"><div class="lbl">The opponent</div><div class="big">${D.game.rec}</div><p>Acuña is locked in (homered in bunches), Harris a .307 table-setter. Deep, balanced — and <b>5 of 9 bat left-handed</b> vs RHP.</p></div>
+  <div class="cond-card"><div class="lbl">Your last start</div><div class="big">5.0 IP · 91 pitches</div><p>${D.game.last}. High pitch count, low K — fell behind early (43.8% first-pitch-area fastball). The stuff was there; the sequence wasn't.</p></div>
+  <div class="cond-card"><div class="lbl">Park</div><div class="big">Truist Park — neutral+</div><p>Outdoor, ~1:35 day game. Plays roughly fair; warm June air lets the ball carry a touch. No short-porch quirk to scheme around — this is a stuff-and-sequence start.</p></div>`;
 
 document.getElementById('lineup').innerHTML = D.hitters.map((h,i)=>`
-  <div class="card" onclick="showHitter(${i})">
-    <span class="badge ${bcls[h.threat]}">${blbl[h.threat]}</span>
-    <div class="ord">#${h.order} HITTING</div>
-    <div class="nm">${h.name}</div>
-    <div class="meta">${h.pos} · ${h.stand}HH · ${h.pa} PA</div>
-    ${heatHTML(h.zone,false)}
-    <div class="statline"><div class="stat"><div class="v">${h.avg.toFixed(3).slice(1)}/${h.obp.toFixed(3).slice(1)}/${h.slg.toFixed(3).slice(1)}</div><div class="k">AVG/OBP/SLG vRHP</div></div></div>
-    <div class="statline">
-      <div class="stat"><div class="v">${h.hr}</div><div class="k">HR</div></div>
-      <div class="stat"><div class="v">${h.kpct}%</div><div class="k">K</div></div>
-      <div class="stat"><div class="v">${h.bbpct}%</div><div class="k">BB</div></div>
-      <div class="stat"><div class="v">${h.chase}%</div><div class="k">Chase</div></div>
-    </div>
+  <div class="card" onclick="showHitter(${i},true)">
+    <span class="badge b-${h.threat}">${h.threat}</span>
+    <div class="ord">${h.order}</div>
+    <div class="nm">${h.name.split(' ').slice(-2).join(' ')}</div>
+    <div class="meta">${h.stand==='?'?'—':h.stand}HH · ${h.pos} · ${h.woba?('wOBA '+xw(h.woba)):'ltd. sample'}</div>
     <div class="attackchip">
-      <div class="ac ac-go">▲ ${PL[h.best.code]}${h.best.thin?'*':''}<br>.${String(h.best.xwoba).slice(2).padEnd(3,'0')} xwOBA</div>
-      <div class="ac ac-no">▼ ${PL[h.avoid.code]}${h.avoid.thin?'*':''}<br>.${String(h.avoid.xwoba).slice(2).padEnd(3,'0')} xwOBA</div>
+      <div class="ac ac-go">ATTACK<br>${h.attack?h.attack.lab:'early / heater'}</div>
+      <div class="ac ac-no">AVOID<br>${h.avoid?h.avoid.lab:'fastball middle'}</div>
     </div>
   </div>`).join('');
 
+/* ---------------- HITTERS ---------------- */
 document.getElementById('hitter-pills').innerHTML = D.hitters.map((h,i)=>
-  `<div class="nav-tab" data-h="${i}" onclick="showHitter(${i})" style="font-size:13px;padding:8px 12px">${h.order}. ${h.name.split(' ').slice(-1)[0]}</div>`).join('');
+  `<div class="nav-tab" style="font-size:13px;padding:7px 12px" onclick="showHitter(${i},false)" id="pill-${i}">${h.order}. ${sn(h.name)}</div>`).join('');
 
-function famBar(label,fam,color){ if(!fam) return '';
-  const w=Math.min(100,fam.whiff*1.6);
-  return `<div><div class="fam-top"><span class="fam-name" style="color:${color}">${label}</span>
-    <span class="fam-x">${fam.whiff}% whiff · ${fam.xwoba!==null?fam.xwoba.toFixed(3):'—'} xwOBA · n=${fam.n}</span></div>
-    <div class="bar"><div class="bar-fill" style="width:${w}%;background:${color}"></div></div></div>`; }
-
-function shapePanel(h){
-  // sort shapes by xwOBA ascending (best for Bubba first); skip null
-  const order=['FF','SI','CH','SL','ST','CU'];
-  const rows=order.map(c=>({c,...h.shape[c]})).filter(r=>r&&r.xwoba!==null)
-    .sort((a,b)=>a.xwoba-b.xwoba);
-  const maxX=0.62;
-  const rowHTML=rows.map(r=>{
-    const w=Math.max(6,Math.min(100,(r.xwoba/maxX)*100));
-    const thin=r.n<D.min_n;
-    return `<div class="shaperow">
-      <div class="sr-name"><span class="sr-pill" style="background:${PC[r.c]}">${r.c}</span>${PL[r.c]}</div>
-      <div class="sr-bar"><div class="sr-fill" style="width:${w}%;background:${dmgColor(r.xwoba)}"></div></div>
-      <div class="sr-stat"><b>.${String(r.xwoba.toFixed(3)).slice(2)}</b> xwOBA · ${r.whiff!==null?r.whiff+'% wh':'—'} <span class="${thin?'thin':''}">· n=${r.n}${thin?'*':''}</span></div>
-    </div>`;}).join('');
-  return `<div class="shapebox">
-    <div class="shapehd"><span class="t">How ${h.name.split(' ').slice(-1)[0]} handles Bubba's shapes</span>
-      <div class="rec">
-        <span class="pill2 go">ATTACK ▲ ${PL[h.best.code]} (.${String(h.best.xwoba).slice(2).padEnd(3,'0')})</span>
-        <span class="pill2 no">AVOID ▼ ${PL[h.avoid.code]} (.${String(h.avoid.xwoba).slice(2).padEnd(3,'0')})</span>
-      </div></div>
-    ${rowHTML}
-    <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--mut);margin-top:8px">xwOBA on contact vs RHP pitches matching Bubba's velo + movement bands · *sample under ${D.min_n}, read with caution</div>
+function bkBar(label,b){
+  const x=b&&b.xwobacon, w=b&&b.whiff_pct, n=b&&b.pit;
+  const wd=(x===null||x===undefined)?0:Math.max(6,Math.min(100,(x/ .60)*100));
+  return `<div class="shaperow">
+    <div class="sr-name">${label}</div>
+    <div class="sr-bar"><div class="sr-fill" style="width:${wd}%;background:${dc(x)}"></div></div>
+    <div class="sr-stat">xwCON <b>${xw(x)}</b> · whiff ${pct(w)}% ${n?('· n'+n):''}</div>
   </div>`;
 }
-
 function showHitter(i,nav){
-  if(nav!==false){
-    document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.classList.toggle('active',t.dataset.p==='hitters'));
-    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-    document.getElementById('page-hitters').classList.add('active');
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
-  document.querySelectorAll('[data-h]').forEach(t=>t.classList.toggle('active',+t.dataset.h===i));
   const h=D.hitters[i];
+  document.querySelectorAll('[id^=pill-]').forEach(p=>p.classList.remove('active'));
+  const pill=document.getElementById('pill-'+i); if(pill) pill.classList.add('active');
+  if(nav){ document.querySelector('.nav-tab[data-p=hitters]').click(); }
+  const atk=h.attack?`<span class="pill2 go">ATTACK · ${h.attack.lab} (${xw(h.attack.x)})</span>`:`<span class="pill2 go">ATTACK · early, four-seam</span>`;
+  const avd=h.avoid?`<span class="pill2 no">AVOID · ${h.avoid.lab} (${xw(h.avoid.x)})${h.avoid.thin?' *':''}</span>`:`<span class="pill2 no">AVOID · fastball middle</span>`;
   document.getElementById('hitter-detail').innerHTML=`
-    <div class="detail-head"><h2>${h.name}</h2>
-      <span class="badge ${bcls[h.threat]}" style="position:static">${blbl[h.threat]} threat</span>
-      <span class="slashbig">${h.avg.toFixed(3).slice(1)}/${h.obp.toFixed(3).slice(1)}/${h.slg.toFixed(3).slice(1)}</span></div>
-    <div class="meta" style="font-family:'JetBrains Mono';font-size:12px;color:var(--mut)">#${h.order} · ${h.pos} · ${h.stand}HH · ${h.pa} PA vs RHP · ${h.hr} HR · ${h.kpct}% K · ${h.bbpct}% BB · ${h.chase}% chase</div>
-    <div class="dgrid">
-      <div><div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;color:var(--mut);text-transform:uppercase;margin-bottom:6px">xwOBA by Zone</div>
-        ${heatHTML(h.zone,true)}
-        <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--mut);margin-top:4px">catcher view · ${h.stand==='R'?'RHH':'LHH'}</div></div>
-      <div class="fambars">
-        ${famBar('Fastballs (FF/SI)',h.vsFB,'#f59e0b')}
-        ${famBar('Changeup',h.vsOFF,'#22c55e')}
-        ${famBar('Breaking (SL/ST/CU)',h.vsBRK,'#3b82f6')}
-      </div>
+    <div class="detail-head">
+      <h2>${h.name}</h2>
+      <span class="slashbig">${h.woba?('wOBA '+xw(h.woba)):'limited vs-RHP sample'}</span>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:var(--mut)">${h.stand==='?'?'':h.stand+'HH · '}${h.pos}${h.pa?(' · '+h.pa+' PA vs RHP'):''}${h.k?(' · '+h.k+'% K · '+h.bb+'% BB · '+h.chase+'% chase'):''}</span>
     </div>
-    ${shapePanel(h)}
-    <div class="plan-box">
-      <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px">Attack Plan</div>
-      <p>${h.plan}</p>
-      <div class="tags">${h.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-    </div>`;
-  if(nav!==false) window.scrollTo({top:0,behavior:'smooth'});
+    <div class="shapebox">
+      <div class="shapehd"><div class="t">vs your stuff — expected damage on contact</div><div class="rec">${atk} ${avd}</div></div>
+      ${h.hasdata?[['Fastball (in zone)',h.FB],['4-Seam UP · 96+',h.FBhi96],['Spin · SL/ST/CU',h.SPIN],['Changeup / Offspeed',h.OFF]].map(([l,b])=>bkBar(l,b)).join(''):'<p class="thin">Limited 2026 plate appearances against right-handers — and the #9 catcher spot is fluid (León / Tromp / Baldwin). Default to the standard bottom-of-order plan below.</p>'}
+      ${h.avoid&&h.avoid.thin?'<div class="tunnel">* smaller sample on the AVOID bucket — directionally loud, weight it lightly.</div>':''}
+    </div>
+    <div class="plan-box"><p>${h.plan}</p></div>
+    <div class="tags">${h.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
 }
-showHitter(0,false);
 
+/* ---------------- ARSENAL ---------------- */
 document.getElementById('arsenal').innerHTML = D.arsenal.map(a=>`
   <div class="ars" style="--pc:${a.color}">
-    <div class="ars-top"><span class="pill" style="background:${a.color}">${a.code}</span>
-      <span class="ars-nm">${a.name}</span><span class="ars-use">${a.usage}% usage</span></div>
+    <div class="ars-top">
+      <span class="pill" style="background:${a.color}">${a.code}</span>
+      <span class="ars-nm">${a.name}</span>
+      <span style="font-family:'JetBrains Mono';font-size:10px;letter-spacing:1px;color:var(--mut)">${a.role}</span>
+      <span class="ars-use">${a.usage}% used</span>
+    </div>
     <div class="ars-metrics">
       <div class="m"><div class="mv">${a.velo}</div><div class="mk">MPH</div></div>
-      <div class="m"><div class="mv">${a.ivb>0?'+':''}${a.ivb}"</div><div class="mk">IVB</div></div>
-      <div class="m"><div class="mv">${a.hb>0?'+':''}${a.hb}"</div><div class="mk">HB</div></div>
+      <div class="m"><div class="mv">${a.ivb>=0?'+':''}${a.ivb}"</div><div class="mk">IVB</div></div>
+      <div class="m"><div class="mv">${a.hb}"</div><div class="mk">HB</div></div>
       <div class="m"><div class="mv">${a.whiff}%</div><div class="mk">Whiff</div></div>
-      <div class="m"><div class="mv">${a.gb}%</div><div class="mk">GB</div></div>
-      <div class="m"><div class="mv">${a.xwoba.toFixed(3).slice(1)}</div><div class="mk">xwOBA</div></div>
-    </div><p>${a.note}</p></div>`).join('');
+      <div class="m"><div class="mv">${xw(a.xwoba)}</div><div class="mk">xwCON</div></div>
+      <div class="m"><div class="mv" style="color:var(--gold)">${a.whiff3}%</div><div class="mk">L3 Whiff</div></div>
+    </div>
+    <p>${a.note}</p>
+    <div class="tunnel">Last 3 starts: ${a.use3}% usage · ${a.velo3} mph · ${a.whiff3}% whiff</div>
+  </div>`).join('');
 
-function buildUsageTable(obj,rowsKey){ const codes=['FF','SI','CH','SL','ST','CU'];
-  let h='<tr><th>'+rowsKey+'</th>'+codes.map(c=>`<th style="color:${PC[c]}">${c}</th>`).join('')+'</tr>';
-  Object.entries(obj).forEach(([k,v])=>{ h+=`<tr><td>${k}</td>`+codes.map(c=>{const val=v[c]||0;
-    return `<td class="usecell">${val>0?val.toFixed(1):'—'}<span class="usebar" style="width:${val}%"></span></td>`;}).join('')+'</tr>'; });
-  return h; }
-document.getElementById('counttable').innerHTML=buildUsageTable(D.counts,'Count');
-document.getElementById('handtable').innerHTML=buildUsageTable(D.hand,'Vs');
+function handTable(obj){
+  const codes=['FF','SI','CH','SL','ST','CU'];
+  let h='<div class="counts-wrap"><table><tr><th>Vs</th>'+codes.map(c=>`<th>${c}</th>`).join('')+'</tr>';
+  for(const k in obj){ h+=`<tr><td>${k}</td>`+codes.map(c=>{const v=obj[k][c]||0;return `<td class="usecell">${v}<div class="usebar" style="width:${v*1.4}%"></div></td>`;}).join('')+'</tr>'; }
+  return h+'</table></div>';
+}
+document.getElementById('handtable').innerHTML=handTable(D.hand);
 
-// SCORECARD
-const sc=Object.entries(D.scorecard).sort((a,b)=>a[1].mean-b[1].mean);
-const scMax=0.50;
-const scHTML='<div class="scorecard">'+
-  '<div style="font-family:\'Oswald\';font-size:12px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px">Shape Scorecard — lineup-avg xwOBA allowed</div>'+
-  '<div style="font-family:\'JetBrains Mono\';font-size:11px;color:var(--mut);margin-bottom:14px">Lower = better matchup for Bubba vs this Houston lineup. Spin grades out best; the sinker is the most-punished shape.</div>'+
-  sc.map(([c,s])=>{const w=Math.max(8,(s.mean/scMax)*100);
-    return `<div class="sc-row"><div class="sc-name"><span class="sr-pill" style="background:${PC[c]}">${c}</span>${PL[c]}</div>
-      <div class="sc-bar"><div class="sc-fill" style="width:${w}%;background:${dmgColor(s.mean)}">.${String(s.mean.toFixed(3)).slice(2)}</div></div>
-      <div class="sc-tag">n-wtd .${String(s.wmean.toFixed(3)).slice(2)}</div></div>`;}).join('')+
-  '</div>';
-
-const plan=[
- {h:'Lead with your spin — it\'s your best matchup',b:'This lineup grades worst against your three breaking shapes: <span class="hl">your curve (.242), sweeper (.253), and slider (.260)</span>. Those are also some of your <b>least-used</b> pitches. Against Houston, let your spin carry the start — this is the single biggest thing in the whole report.'},
- {h:'Be careful with your sinker here',b:'It\'s the pitch you\'ve been leaning into more (0% → 22% over your last three starts), but it\'s the one Houston punishes most — <span class="hl">.447 across the lineup</span>. Five of these hitters\' single worst pitch is your sinker: <b>Peña, Trammell, Paredes, Cam Smith, and Vázquez</b>. And the Crawford Boxes make the pull risk worse. Use it to get a ground ball when you need one — don\'t live on it.'},
- {h:'Your four-seam is situational, not a workhorse',b:'It\'s great up to <b>Cam Smith (.134)</b> — elevate it on him — but Peña crushes it (.679). Use the riding 98 for chase and to change eye level, picked by who\'s in the box. Don\'t pump it into the zone against a lineup that hits velocity.'},
- {h:'Your changeup is a pick-your-spots pitch',b:'It buries the lefties and the bottom of the order (<b>Trammell .166, Vázquez .195</b>) but <b>Walker (.532), Shewmake (.522), and Meyers (.617)</b> all square it up. Use it as your out-pitch to lefties — not as a go-to against everyone, and never your first choice vs Walker.'},
- {h:'Yordan is the no-fly zone',b:'He\'s <b>.44 to .67 against every pitch you throw</b>, with your sweeper his happiest zone (.669). There\'s nothing to beat him with in the zone — your only plan is location (change down-and-away, sinker in on his hands) and <span class="hl">pitching around him with runners on</span>.'},
- {h:'Throw strikes — it\'s the one thing that beats you',b:'You\'re at <span class="hl">16% walks</span> this year and Houston is patient — <b>Yordan (13% BB), Trammell (13%), Paredes (10%)</b>. If you\'re going to lean on spin, you have to land it. Go right at the bottom of the order (Meyers, Vázquez, Shewmake — all spin-vulnerable) and save your bullets for the top.'},
-];
-document.getElementById('page-plan').innerHTML =
-  '<div class="sect">Shape-Matched Game Plan vs Houston</div>'+scHTML+
-  plan.map((p,i)=>`<div class="gp"><h3><span class="no">${i+1}</span>${p.h}</h3><p>${p.b}</p></div>`).join('');
+/* ---------------- GAME PLAN ---------------- */
+const S=D.score;
+function scRow(k){ const v=S[k].mean; const wd=Math.max(8,Math.min(100,(v/.55)*100));
+  return `<div class="sc-row"><div class="sc-name">${S[k].lab}</div>
+    <div class="sc-bar"><div class="sc-fill" style="width:${wd}%;background:${dc(v)}">${xw(v)}</div></div>
+    <div class="sc-tag">${k==='OFF'?'best for you':k==='FB'?'worst — don\'t':''}</div></div>`; }
+document.getElementById('page-plan').innerHTML = `
+  <div class="scorecard">
+    <div class="t" style="font-family:'Oswald';font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px">Lineup scorecard — avg expected damage by pitch type</div>
+    <div class="legend"><span>Lower bar = harder for them to hurt you. Average xwOBACON across the eight hitters with 2026 data.</span></div>
+    ${['OFF','SPIN','FBhi96','FB'].map(scRow).join('')}
+  </div>
+  <div class="gp"><h3><span class="no">1</span>The lever — re-establish the four-seam up</h3><p>The biggest swing available is the <b>elevated four-seam</b>. On June 2 the fastball rate sat at <span class="hl">${D.splits.june2_FBpct}%</span> (season norm <span class="hl">${D.splits.season_FBpct}%</span>) and early-count fastball was just <span class="hl">${D.splits.june2_FBearly}%</span>, with the sinker usage climbing toward ~19% and the four-seam down near ~39%. The stuff grades out fine &mdash; this is about leaning back into the best pitch, early and at the top of the zone.</p></div>
+  <div class="gp"><h3><span class="no">2</span>First time through — challenge with the heater</h3><p>Establish the <b>four-seam at the top</b> and get ahead with it. This lineup can't square 96+ up: <span class="hl">Olson .307, Riley .321, Albies .336, Yastrzemski .339, Acuña .381</span> on your elevated heater. Push early-count fastball back over your <b>56%</b> norm. Strike one with the heater changes everything that follows.</p></div>
+  <div class="gp"><h3><span class="no">3</span>Second time through — spin them</h3><p>Once they've timed the heater, <b>bury the spin</b>. Your slider is at <span class="hl">53.8% whiff</span> and your sweeper <span class="hl">44.4%</span> over the last three. Slider/sweeper to the four righties, backfoot slider to the lefties. This is the put-away half of the plan.</p></div>
+  <div class="gp"><h3><span class="no">4</span>The Acuña exception</h3><p>Invert everything for the leadoff man. He <b>crushes spin (.539) and offspeed (.672)</b> — the heater up (.381, 20% whiff) is his toughest at-bat. Ride the four-seam up to him <b>all game</b>; do not "go spin second time through" with him. Nothing soft over the middle.</p></div>
+  <div class="gp"><h3><span class="no">5</span>The lefty plan — changeup forward</h3><p>Five lefty bats vs RHP (Harris, Olson, Smith, Yastrzemski + switch-hitter Albies). The cambio fades off the four you attack with it and grades best across the group (<span class="hl">.325</span>): <span class="hl">Yastrzemski .215, Albies .227, Smith .244, Olson .279</span>. Lead lefties with it and the elevated heater. <b>Exception: Harris</b> — he handles the change (.544); spin him instead.</p></div>
+  <div class="gp"><h3><span class="no">6</span>Count logic</h3><p><b>Ahead / early:</b> heater up — challenge. <b>Two strikes:</b> spin or changeup to put away (slider to RHB, cambio to LHB). <b>Behind:</b> do not groove a sinker to get back — that in-zone fastball (.443) is exactly what they punish. Trust the four-seam up even when you're behind.</p></div>`;
 
 document.getElementById('foot').innerHTML =
-  `Data: Statcast / Baseball Savant via pybaseball · Shape bands match Bubba's current-form velo+IVB+HB to all RHP pitches each hitter saw in 2026 · Chandler form = last 3 starts (5/16–5/27), results = full 2026 · Astros = 2026 vs RHP · Lineup = most recent vs-RHP order (5/30), subject to change · *sample under ${D.min_n} pitches · Built ${new Date().toLocaleDateString()}.`;
+  `Data: Statcast / Baseball Savant 2026, vs-RHP splits through Jun 3. Buckets — Fastball = FF/SI/FC; 4-Seam UP 96+ = fastballs ≥96 mph; Spin = SL/ST/CU; Offspeed = CH/FS. Lineup is Atlanta's verified Jun 2 order vs RHP (Gausman) — the #8 SS (Mateo/Dubón/Kim) and #9 C (León/Tromp/Baldwin) are fluid and will be updated when Sunday's card posts ~2 hrs pre-game. Pitch-design and form reads describe current shapes; per the standing rule, no mechanical "fix" is credited until game evidence confirms it.`;
 
 document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.nav-tab[data-p]').forEach(x=>x.classList.remove('active'));
   t.classList.add('active');
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+t.dataset.p).classList.add('active');
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo(0,0);
 }));
+showHitter(0,false);
+const gd=document.getElementById('gdate'); if(gd) gd.textContent=D.game.date+' · '+D.game.time;
+
 </script>
 </body>
 </html>
