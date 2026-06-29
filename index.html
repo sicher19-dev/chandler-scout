@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chandler Scout — vs Mariners 6/25</title>
+<title>Chandler Scout — @ Phillies 6/30</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -158,6 +158,11 @@ header::before{content:'36' !important}
 .mixseg{display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono';font-size:10px;color:#0d0d10;font-weight:700;min-width:0}
 .mixchips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
 .mixchip{font-family:'JetBrains Mono';font-size:11px;padding:3px 9px;border-radius:4px;color:#fff}
+.bp{display:flex;gap:7px;margin:2px 0 0}
+.bp-stat{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:8px 4px;text-align:center}
+.bp-v{font-family:'JetBrains Mono';font-size:14px;font-weight:700;color:#fff}
+.bp-l{font-family:'JetBrains Mono';font-size:8.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.4px;margin-top:4px;line-height:1.25}
+.bp-note{font-size:13.5px;line-height:1.5;color:#cfcfd8;margin-top:9px;padding:9px 12px;border-left:3px solid var(--gold);background:rgba(253,184,39,.05);border-radius:4px}
 .qh{display:flex;flex-direction:column;gap:0;margin:2px 0 4px;border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .qh-row{display:flex;align-items:baseline;gap:10px;padding:9px 14px;border-bottom:1px solid rgba(255,255,255,.05)}
 .qh-row:last-child{border-bottom:none}
@@ -172,7 +177,7 @@ header::before{content:'36' !important}
 <header>
   <div class="eyebrow">Pregame Scouting Report · No Brand Baseball Analytics · DRAFT — updates as start nears</div>
   <h1>Chandler <span>Scout</span></h1>
-  <div class="sub"><b>Bubba Chandler</b> RHP #36 &nbsp;·&nbsp; vs <b>Seattle Mariners</b> <span style="color:#9aa">· PNC Park</span> &nbsp;·&nbsp; <b id="gdate"></b></div>
+  <div class="sub"><b>Bubba Chandler</b> RHP #36 &nbsp;·&nbsp; @ <b>Philadelphia Phillies</b> <span style="color:#9aa">· Citizens Bank Park</span> &nbsp;·&nbsp; <b id="gdate"></b></div>
 </header>
 <nav>
   <div class="nav-tab active" data-p="brief">Briefing</div>
@@ -184,7 +189,7 @@ header::before{content:'36' !important}
 <div class="page active" id="page-brief"></div>
 <div class="page" id="page-overview">
   <div class="cond" id="cond"></div>
-  <div class="sect">Mariners lineup vs RHP — tap a hitter</div>
+  <div class="sect">Phillies lineup vs RHP — tap a hitter</div>
   <div class="legend">
     <span><i class="dot" style="background:#ff6b6b"></i>Elite</span>
     <span><i class="dot" style="background:#ffb454"></i>High</span>
@@ -203,7 +208,7 @@ header::before{content:'36' !important}
   <div class="arstable" id="arsenal"></div>
   <div class="sect">Your usage by batter hand</div>
   <div id="handtable"></div>
-  <p style="font-size:13px;color:var(--mut);margin-top:8px;font-family:'JetBrains Mono'">Note: this lineup is lefty-heavy, so your changeup (25% to LHH) is in play all game. The key adjustment vs Seattle: <b>work down, not up</b> — trade elevated four-seams for sliders and changeups below the zone, and use the high heater only as a chase pitch out of the zone.</p>
+  <p style="font-size:13px;color:var(--mut);margin-top:8px;font-family:'JetBrains Mono'">Note: this is a balanced, lefty-heavy lineup, so your <b>changeup</b> (25% to LHH, big fade away) carries a heavy load tonight — it's the answer to Harper and Marsh. Adjust vs the righties: <b>elevate the four-seam</b> to the contact bats (Bohm, Stott, Realmuto), and keep the slider down and away from the lefty stars who crush spin.</p>
 </div>
 <div class="page" id="page-plan"></div>
 <div class="foot" id="foot"></div>
@@ -216,625 +221,343 @@ const D = {
   "num": "36"
  },
  "game": {
-  "opp": "Seattle Mariners",
-  "venue": "PNC Park",
-  "city": "Pittsburgh, PA",
-  "date": "Thursday, June 25, 2026",
-  "time": "12:35 PM ET",
-  "away": false,
+  "opp": "Philadelphia Phillies",
+  "venue": "Citizens Bank Park",
+  "city": "Philadelphia, PA",
+  "date": "Tuesday, June 30, 2026",
+  "time": "6:40 PM ET",
+  "away": true,
   "oppsp": "(TBD)",
-  "rec": "Mariners ~39–39, atop the AL West — elite pitching, powerful but strikeout-prone lineup, banged up",
-  "last": "Jun 19 @ COL (Coors): 6.0 IP, 74 P, 6 H, 2 ER, 2 BB, 1 K — adapted to altitude, pitched to contact"
+  "rec": "Phillies ~46–36, NL East contender — elite, disciplined, powerful lineup",
+  "last": "Jun 25 vs SEA: 5.1 IP, 5 H, 1 ER, 3 BB, 4 K — W, held Seattle to 1 run"
  },
  "hitters": [
   {
    "order": 1,
-   "name": "J.P. Crawford",
+   "name": "Trea Turner",
    "pos": "SS",
-   "stand": "L",
-   "woba": 0.342,
-   "k": 20.7,
-   "bb": 13.8,
-   "chase": 19.5,
-   "pa": 174,
-   "FB": {
-    "pit": 486,
-    "swing": 185,
-    "whiff": 20,
-    "whiff_pct": 10.8,
-    "xwobacon": 0.373,
-    "bip": 74
-   },
-   "FBhi96": {
-    "pit": 112,
-    "swing": 47,
-    "whiff": 9,
-    "whiff_pct": 19.1,
-    "xwobacon": 0.396,
-    "bip": 12
-   },
-   "SPIN": {
-    "pit": 139,
-    "swing": 61,
-    "whiff": 19,
-    "whiff_pct": 31.1,
-    "xwobacon": 0.351,
-    "bip": 19
-   },
-   "OFF": {
-    "pit": 115,
-    "swing": 46,
-    "whiff": 6,
-    "whiff_pct": 13.0,
-    "xwobacon": 0.392,
-    "bip": 19
-   },
-   "hasdata": true,
-   "threat": "med",
-   "attack": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.351
-   },
-   "avoid": {
-    "code": "FBhi96",
-    "lab": "Heater up",
-    "x": 0.396
-   },
-   "plan": "Disciplined leadoff bat — lowest chase on the team (19%), so he won't help you. No big hole, but his softest spots are spin (.351) and down in the zone; he handles the ball up (.469), so <b>don't elevate</b>. Spin him down, throw strikes, make him beat you — he's a grinder, not a masher.",
-   "tags": [
-    "Spin down",
-    "Don't elevate",
-    "He won't chase"
-   ],
-   "heat": {
-    "up": {
-     "pit": 104,
-     "bip": 21,
-     "xw": 0.469
-    },
-    "mid": {
-     "pit": 144,
-     "bip": 40,
-     "xw": 0.39
-    },
-    "dn": {
-     "pit": 117,
-     "bip": 32,
-     "xw": 0.383
-    }
-   },
-   "mix": [
-    {
-     "code": "SL",
-     "name": "Slider down",
-     "pct": 30,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 25,
-     "color": "#22c55e"
-    },
-    {
-     "code": "FF",
-     "name": "4-Seam (in zone)",
-     "pct": 25,
-     "color": "#ef4444"
-    },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 20,
-     "color": "#a855f7"
-    }
-   ]
-  },
-  {
-   "order": 2,
-   "name": "Cal Raleigh",
-   "pos": "C",
-   "stand": "L",
-   "woba": 0.271,
-   "k": 32.2,
-   "bb": 11.9,
-   "chase": 37.2,
-   "pa": 143,
-   "FB": {
-    "pit": 359,
-    "swing": 184,
-    "whiff": 52,
-    "whiff_pct": 28.3,
-    "xwobacon": 0.427,
-    "bip": 39
-   },
-   "FBhi96": {
-    "pit": 91,
-    "swing": 50,
-    "whiff": 18,
-    "whiff_pct": 36.0,
-    "xwobacon": 0.499,
-    "bip": 10
-   },
-   "SPIN": {
-    "pit": 163,
-    "swing": 83,
-    "whiff": 25,
-    "whiff_pct": 30.1,
-    "xwobacon": 0.367,
-    "bip": 18
-   },
-   "OFF": {
-    "pit": 118,
-    "swing": 66,
-    "whiff": 17,
-    "whiff_pct": 25.8,
-    "xwobacon": 0.435,
-    "bip": 23
-   },
-   "hasdata": true,
-   "threat": "low",
-   "attack": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.367
-   },
-   "avoid": {
-    "code": "FBhi96",
-    "lab": "Heater up",
-    "x": 0.499
-   },
-   "plan": "Their MVP-level bat and an <b>elite fastball crusher</b> — .499 on the heater up, .677 over the middle. <b>Never</b> throw him a fastball up or middle. The good news: he chases 37% and strikes out 32%, and spin (.367) is his one soft spot. Bury the slider/sweeper below the zone and let him chase himself out.",
-   "tags": [
-    "NEVER FB up/middle",
-    "Spin below zone",
-    "Let him chase"
-   ],
-   "heat": {
-    "up": {
-     "pit": 101,
-     "bip": 16,
-     "xw": 0.276
-    },
-    "mid": {
-     "pit": 92,
-     "bip": 23,
-     "xw": 0.677
-    },
-    "dn": {
-     "pit": 89,
-     "bip": 16,
-     "xw": 0.46
-    }
-   },
-   "mix": [
-    {
-     "code": "SL",
-     "name": "Slider below",
-     "pct": 35,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 25,
-     "color": "#a855f7"
-    },
-    {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 25,
-     "color": "#22c55e"
-    },
-    {
-     "code": "FF",
-     "name": "4-Seam (chase)",
-     "pct": 15,
-     "color": "#ef4444"
-    }
-   ]
-  },
-  {
-   "order": 3,
-   "name": "Julio Rodriguez",
-   "pos": "CF",
    "stand": "R",
-   "woba": 0.314,
-   "k": 22.1,
-   "bb": 6.4,
-   "chase": 38.9,
-   "pa": 249,
+   "woba": 0.283,
+   "k": 24.5,
+   "bb": 3.8,
+   "chase": 40.3,
+   "pa": 237,
    "FB": {
-    "pit": 510,
-    "swing": 273,
-    "whiff": 48,
-    "whiff_pct": 17.6,
-    "xwobacon": 0.378,
-    "bip": 109
+    "pit": 459,
+    "swing": 259,
+    "whiff": 49,
+    "whiff_pct": 18.9,
+    "xwobacon": 0.385,
+    "bip": 101
    },
    "FBhi96": {
-    "pit": 137,
-    "swing": 75,
-    "whiff": 16,
-    "whiff_pct": 21.3,
-    "xwobacon": 0.466,
-    "bip": 20
-   },
-   "SPIN": {
-    "pit": 333,
-    "swing": 165,
-    "whiff": 54,
-    "whiff_pct": 32.7,
-    "xwobacon": 0.349,
-    "bip": 51
-   },
-   "OFF": {
-    "pit": 99,
-    "swing": 54,
-    "whiff": 20,
-    "whiff_pct": 37.0,
-    "xwobacon": 0.38,
-    "bip": 15
-   },
-   "hasdata": true,
-   "threat": "low",
-   "attack": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.349
-   },
-   "avoid": {
-    "code": "FBhi96",
-    "lab": "Heater up",
-    "x": 0.466
-   },
-   "plan": "Star bat who <b>feasts on velocity up</b> (.466 on 96+, .494 up) — but he's weakest <b>down</b> (.342) and chases a ton (39%). Don't challenge him up. Bury the slider and changeup below the zone and let the chase work for you.",
-   "tags": [
-    "Don't elevate",
-    "Bury it down",
-    "Huge chaser (39%)"
-   ],
-   "heat": {
-    "up": {
-     "pit": 99,
-     "bip": 21,
-     "xw": 0.494
-    },
-    "mid": {
-     "pit": 158,
-     "bip": 45,
-     "xw": 0.376
-    },
-    "dn": {
-     "pit": 161,
-     "bip": 55,
-     "xw": 0.342
-    }
-   },
-   "mix": [
-    {
-     "code": "SL",
-     "name": "Slider below",
-     "pct": 30,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 25,
-     "color": "#22c55e"
-    },
-    {
-     "code": "FF",
-     "name": "4-Seam (down)",
-     "pct": 25,
-     "color": "#ef4444"
-    },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 20,
-     "color": "#a855f7"
-    }
-   ]
-  },
-  {
-   "order": 4,
-   "name": "Josh Naylor",
-   "pos": "1B",
-   "stand": "L",
-   "woba": 0.309,
-   "k": 11.3,
-   "bb": 7.2,
-   "chase": 35.8,
-   "pa": 222,
-   "FB": {
-    "pit": 367,
-    "swing": 204,
-    "whiff": 15,
-    "whiff_pct": 7.4,
-    "xwobacon": 0.342,
-    "bip": 111
-   },
-   "FBhi96": {
-    "pit": 87,
-    "swing": 52,
-    "whiff": 3,
-    "whiff_pct": 5.8,
-    "xwobacon": 0.273,
-    "bip": 34
-   },
-   "SPIN": {
-    "pit": 192,
-    "swing": 100,
-    "whiff": 25,
-    "whiff_pct": 25.0,
-    "xwobacon": 0.354,
+    "pit": 142,
+    "swing": 85,
+    "whiff": 19,
+    "whiff_pct": 22.4,
+    "xwobacon": 0.358,
     "bip": 28
    },
+   "SPIN": {
+    "pit": 347,
+    "swing": 174,
+    "whiff": 68,
+    "whiff_pct": 39.1,
+    "xwobacon": 0.306,
+    "bip": 55
+   },
    "OFF": {
-    "pit": 145,
-    "swing": 80,
-    "whiff": 18,
-    "whiff_pct": 22.5,
-    "xwobacon": 0.363,
-    "bip": 36
+    "pit": 68,
+    "swing": 40,
+    "whiff": 13,
+    "whiff_pct": 32.5,
+    "xwobacon": 0.338,
+    "bip": 12
    },
    "hasdata": true,
    "threat": "low",
    "attack": {
-    "code": "FBhi96",
-    "lab": "Heater 96+",
-    "x": 0.273
+    "code": "SPIN",
+    "lab": "Spin",
+    "x": 0.306
    },
    "avoid": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.363
+    "code": "FB",
+    "lab": "Hittable FB",
+    "x": 0.385
    },
-   "plan": "Elite contact (11% K) — he won't chase or miss much, so you won't strike him out easy. But he's a <b>low-ball hitter, weak UP</b> (.258 / .273 on the heater). He's the <b>one guy you elevate</b> — climb the ladder with the 98. Do not feed him spin/soft down; that's his happy zone.",
+   "plan": "Down year (.283) but still dangerous — and he <b>chases the most in this lineup (40%)</b>. His hole is spin (.306). Spin and changeup away/down and let him expand. Don't groove a fastball over the plate; he'll punish a mistake.",
    "tags": [
-    "Elevate the heater",
-    "Weak up",
-    "Don't go soft down"
+    "Spin / chase",
+    "Don't groove a FB",
+    "Expand"
    ],
    "heat": {
     "up": {
-     "pit": 111,
-     "bip": 51,
-     "xw": 0.258
-    },
-    "mid": {
-     "pit": 111,
-     "bip": 37,
-     "xw": 0.401
-    },
-    "dn": {
-     "pit": 99,
-     "bip": 36,
-     "xw": 0.461
-    }
-   },
-   "mix": [
-    {
-     "code": "FF",
-     "name": "4-Seam UP",
-     "pct": 50,
-     "color": "#ef4444"
-    },
-    {
-     "code": "SI",
-     "name": "Sinker",
-     "pct": 20,
-     "color": "#f97316"
-    },
-    {
-     "code": "SL",
-     "name": "Slider",
-     "pct": 15,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 15,
-     "color": "#22c55e"
-    }
-   ]
-  },
-  {
-   "order": 5,
-   "name": "Randy Arozarena",
-   "pos": "LF",
-   "stand": "R",
-   "woba": 0.391,
-   "k": 20.7,
-   "bb": 9.7,
-   "chase": 30.8,
-   "pa": 227,
-   "FB": {
-    "pit": 513,
-    "swing": 222,
-    "whiff": 56,
-    "whiff_pct": 25.2,
-    "xwobacon": 0.447,
-    "bip": 77
-   },
-   "FBhi96": {
-    "pit": 122,
-    "swing": 58,
-    "whiff": 17,
-    "whiff_pct": 29.3,
-    "xwobacon": 0.45,
-    "bip": 18
-   },
-   "SPIN": {
-    "pit": 282,
-    "swing": 137,
-    "whiff": 35,
-    "whiff_pct": 25.5,
-    "xwobacon": 0.392,
-    "bip": 49
-   },
-   "OFF": {
-    "pit": 110,
-    "swing": 62,
-    "whiff": 15,
-    "whiff_pct": 24.2,
-    "xwobacon": 0.288,
-    "bip": 22
-   },
-   "hasdata": true,
-   "threat": "elite",
-   "attack": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.288
-   },
-   "avoid": {
-    "code": "FBhi96",
-    "lab": "Heater up",
-    "x": 0.45
-   },
-   "plan": "Just back from the IL (hamstring) — may be rusty. Crushes fastballs everywhere (.447) and covers the zone, but the <b>changeup is the hole</b> (.288). Soft him: changeup and spin, and don't challenge him with the heater.",
-   "tags": [
-    "Changeup",
-    "Don't challenge FB",
-    "Off the IL — rusty?"
-   ],
-   "heat": {
-    "up": {
-     "pit": 128,
-     "bip": 28,
-     "xw": 0.423
+     "pit": 103,
+     "bip": 34,
+     "xw": 0.343
     },
     "mid": {
      "pit": 166,
-     "bip": 52,
-     "xw": 0.399
+     "bip": 62,
+     "xw": 0.366
     },
     "dn": {
-     "pit": 130,
-     "bip": 32,
-     "xw": 0.442
+     "pit": 146,
+     "bip": 42,
+     "xw": 0.355
     }
    },
    "mix": [
     {
+     "code": "SL",
+     "name": "Slider away",
+     "pct": 30,
+     "color": "#3b82f6"
+    },
+    {
      "code": "CH",
      "name": "Changeup",
-     "pct": 35,
+     "pct": 25,
      "color": "#22c55e"
     },
     {
-     "code": "SL",
-     "name": "Slider",
-     "pct": 30,
-     "color": "#3b82f6"
+     "code": "FF",
+     "name": "4-Seam (edge)",
+     "pct": 25,
+     "color": "#ef4444"
     },
     {
      "code": "ST",
      "name": "Sweeper",
      "pct": 20,
      "color": "#a855f7"
-    },
-    {
-     "code": "FF",
-     "name": "4-Seam (off plate)",
-     "pct": 15,
-     "color": "#ef4444"
     }
-   ]
+   ],
+   "swing": {
+    "bat_speed": 69.5,
+    "bat_speed_90": 76.1,
+    "bs_lab": "above avg",
+    "fast_pct": 15.1,
+    "attack_angle": 8.9,
+    "aa_lab": "moderate",
+    "aa_up": 9.7,
+    "aa_dn": 8.7,
+    "tilt": 25.4
+   },
+   "swingnote": "Flat, even plane by height (attack angle ~9° up, mid and down) — no location hole. Matches the book: beat him with movement (spin) and his 40% chase, not by hitting a spot."
   },
   {
-   "order": 6,
-   "name": "Dominic Canzone",
-   "pos": "RF",
+   "order": 2,
+   "name": "Kyle Schwarber",
+   "pos": "DH",
    "stand": "L",
-   "woba": 0.391,
-   "k": 19.1,
-   "bb": 7.9,
-   "chase": 33.8,
-   "pa": 178,
+   "woba": 0.398,
+   "k": 37.2,
+   "bb": 13.3,
+   "chase": 27.4,
+   "pa": 218,
    "FB": {
-    "pit": 287,
-    "swing": 152,
-    "whiff": 24,
-    "whiff_pct": 15.8,
-    "xwobacon": 0.49,
-    "bip": 68
+    "pit": 419,
+    "swing": 186,
+    "whiff": 43,
+    "whiff_pct": 23.1,
+    "xwobacon": 0.489,
+    "bip": 48
    },
    "FBhi96": {
-    "pit": 70,
-    "swing": 43,
-    "whiff": 8,
-    "whiff_pct": 18.6,
-    "xwobacon": 0.307,
-    "bip": 16
+    "pit": 145,
+    "swing": 64,
+    "whiff": 15,
+    "whiff_pct": 23.4,
+    "xwobacon": 0.557,
+    "bip": 13
    },
    "SPIN": {
-    "pit": 167,
-    "swing": 65,
-    "whiff": 21,
-    "whiff_pct": 32.3,
-    "xwobacon": 0.555,
-    "bip": 19
+    "pit": 322,
+    "swing": 152,
+    "whiff": 65,
+    "whiff_pct": 42.8,
+    "xwobacon": 0.605,
+    "bip": 31
    },
    "OFF": {
-    "pit": 205,
-    "swing": 104,
-    "whiff": 36,
-    "whiff_pct": 34.6,
-    "xwobacon": 0.339,
-    "bip": 41
+    "pit": 192,
+    "swing": 87,
+    "whiff": 32,
+    "whiff_pct": 36.8,
+    "xwobacon": 0.608,
+    "bip": 24
    },
    "hasdata": true,
    "threat": "elite",
    "attack": {
-    "code": "FBhi96",
-    "lab": "Heater 96+",
-    "x": 0.307
+    "code": "FB",
+    "lab": "Fastball",
+    "x": 0.489
+   },
+   "avoid": {
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.608
+   },
+   "plan": "The scariest power bat in baseball, in the <b>perfect park</b> for him. He crushes <b>everything</b> — spin .605, changeup .608, heat up .557. There is no safe pitch. So <b>don't give in</b>: live on the edges, expand out of the zone, and take the walk over the mistake. A walk never hurt you here; a pitch over the middle is a 3-run homer.",
+   "tags": [
+    "NO mistakes",
+    "Edges / expand",
+    "Walk &gt; homer"
+   ],
+   "heat": {
+    "up": {
+     "pit": 109,
+     "bip": 17,
+     "xw": 0.465
+    },
+    "mid": {
+     "pit": 166,
+     "bip": 43,
+     "xw": 0.575
+    },
+    "dn": {
+     "pit": 143,
+     "bip": 26,
+     "xw": 0.649
+    }
+   },
+   "mix": [
+    {
+     "code": "FF",
+     "name": "4-Seam (edges)",
+     "pct": 30,
+     "color": "#ef4444"
+    },
+    {
+     "code": "SL",
+     "name": "Slider (expand)",
+     "pct": 25,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "CH",
+     "name": "Changeup",
+     "pct": 20,
+     "color": "#22c55e"
+    },
+    {
+     "code": "ST",
+     "name": "Sweeper",
+     "pct": 15,
+     "color": "#a855f7"
+    },
+    {
+     "code": "SI",
+     "name": "Sinker",
+     "pct": 10,
+     "color": "#f97316"
+    }
+   ],
+   "swing": {
+    "bat_speed": 73.9,
+    "bat_speed_90": 80.8,
+    "bs_lab": "elite",
+    "fast_pct": 69.2,
+    "attack_angle": 14.7,
+    "aa_lab": "steep",
+    "aa_up": 12.4,
+    "aa_dn": 15.9,
+    "tilt": 29.3
+   },
+   "swingnote": "Elite bat speed (81 mph, 90th pct) and 69% 'fast' swings — the most violent, pull-tilted bat here (attack direction −9°). That's why even your riding 98 up doesn't reliably beat him, and why his pull side to the short porch is the danger. Off the middle-in; expand and live with the walk."
+  },
+  {
+   "order": 3,
+   "name": "Bryce Harper",
+   "pos": "1B",
+   "stand": "L",
+   "woba": 0.449,
+   "k": 16.7,
+   "bb": 14.3,
+   "chase": 32.1,
+   "pa": 210,
+   "FB": {
+    "pit": 375,
+    "swing": 174,
+    "whiff": 28,
+    "whiff_pct": 16.1,
+    "xwobacon": 0.537,
+    "bip": 64
+   },
+   "FBhi96": {
+    "pit": 126,
+    "swing": 57,
+    "whiff": 10,
+    "whiff_pct": 17.5,
+    "xwobacon": 0.58,
+    "bip": 16
+   },
+   "SPIN": {
+    "pit": 241,
+    "swing": 124,
+    "whiff": 53,
+    "whiff_pct": 42.7,
+    "xwobacon": 0.588,
+    "bip": 36
+   },
+   "OFF": {
+    "pit": 175,
+    "swing": 95,
+    "whiff": 27,
+    "whiff_pct": 28.4,
+    "xwobacon": 0.368,
+    "bip": 43
+   },
+   "hasdata": true,
+   "threat": "elite",
+   "attack": {
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.368
    },
    "avoid": {
     "code": "SPIN",
     "lab": "Spin",
-    "x": 0.555
+    "x": 0.588
    },
-   "plan": "Locked in (.391, 10 HR) and dangerous — he crushes fastballs (.49) and <b>especially spin (.555)</b>. Do <b>not</b> throw him a slider. His soft spots are high velocity (.307) and the changeup (.339). Beat him with the elevated 98 and the cambio — never spin.",
+   "plan": "MVP, and the short porch is built for his pull. He mashes fastballs (.537) and spin (.588) — the <b>one</b> soft spot is your changeup (.368). Cambio away, and <b>never</b> middle (.75 there). Like Schwarber: don't give in, make him beat a pitcher's pitch.",
    "tags": [
-    "No slider",
-    "Elevated 98 + changeup",
-    "Hot bat"
+    "Changeup away",
+    "NEVER middle",
+    "Don't give in"
    ],
    "heat": {
     "up": {
-     "pit": 78,
-     "bip": 26,
-     "xw": 0.539
+     "pit": 69,
+     "bip": 14,
+     "xw": 0.412
     },
     "mid": {
-     "pit": 121,
-     "bip": 38,
-     "xw": 0.41
+     "pit": 132,
+     "bip": 41,
+     "xw": 0.75
     },
     "dn": {
-     "pit": 105,
-     "bip": 30,
-     "xw": 0.564
+     "pit": 132,
+     "bip": 49,
+     "xw": 0.507
     }
    },
    "mix": [
     {
      "code": "CH",
-     "name": "Changeup",
+     "name": "Changeup away",
      "pct": 35,
      "color": "#22c55e"
     },
     {
      "code": "FF",
-     "name": "4-Seam UP",
-     "pct": 30,
+     "name": "4-Seam (away)",
+     "pct": 25,
      "color": "#ef4444"
     },
     {
@@ -842,6 +565,238 @@ const D = {
      "name": "Sinker",
      "pct": 20,
      "color": "#f97316"
+    },
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 20,
+     "color": "#3b82f6"
+    }
+   ],
+   "swing": {
+    "bat_speed": 73.9,
+    "bat_speed_90": 78.6,
+    "bs_lab": "above avg",
+    "fast_pct": 49.2,
+    "attack_angle": 13.4,
+    "aa_lab": "steep",
+    "aa_up": 4.1,
+    "aa_dn": 13.8,
+    "tilt": 37.3
+   },
+   "swingnote": "He re-shapes his swing by height: flattens UP (attack angle +4° up vs +14° down) so he covers the high heater, then stays steep DOWN to lift it (.75 middle, .51 down). Your changeup beats that low-ball plane — it dives under the barrel and fades away. That, off the plate, is the pitch."
+  },
+  {
+   "order": 4,
+   "name": "Alec Bohm",
+   "pos": "3B",
+   "stand": "R",
+   "woba": 0.308,
+   "k": 13.5,
+   "bb": 7.0,
+   "chase": 22.8,
+   "pa": 215,
+   "FB": {
+    "pit": 478,
+    "swing": 233,
+    "whiff": 30,
+    "whiff_pct": 12.9,
+    "xwobacon": 0.322,
+    "bip": 109
+   },
+   "FBhi96": {
+    "pit": 149,
+    "swing": 79,
+    "whiff": 13,
+    "whiff_pct": 16.5,
+    "xwobacon": 0.282,
+    "bip": 29
+   },
+   "SPIN": {
+    "pit": 247,
+    "swing": 99,
+    "whiff": 24,
+    "whiff_pct": 24.2,
+    "xwobacon": 0.323,
+    "bip": 44
+   },
+   "OFF": {
+    "pit": 45,
+    "swing": 21,
+    "whiff": 2,
+    "whiff_pct": 9.5,
+    "xwobacon": 0.366,
+    "bip": 12
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "FBhi96",
+    "lab": "Heater 96+",
+    "x": 0.282
+   },
+   "avoid": {
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.366
+   },
+   "plan": "Elite contact (13% K), doesn't chase (22%) — but he's <b>weak up</b> (.282) and a double-play machine. Elevate the heater, challenge him, pitch for the grounder with men on. He won't chase, so make him hit your pitch up.",
+   "tags": [
+    "Elevate",
+    "Challenge",
+    "DP candidate"
+   ],
+   "heat": {
+    "up": {
+     "pit": 103,
+     "bip": 30,
+     "xw": 0.305
+    },
+    "mid": {
+     "pit": 156,
+     "bip": 57,
+     "xw": 0.393
+    },
+    "dn": {
+     "pit": 134,
+     "bip": 46,
+     "xw": 0.269
+    }
+   },
+   "mix": [
+    {
+     "code": "FF",
+     "name": "4-Seam UP",
+     "pct": 45,
+     "color": "#ef4444"
+    },
+    {
+     "code": "SI",
+     "name": "Sinker",
+     "pct": 20,
+     "color": "#f97316"
+    },
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 20,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "CH",
+     "name": "Changeup",
+     "pct": 15,
+     "color": "#22c55e"
+    }
+   ],
+   "swing": {
+    "bat_speed": 69.4,
+    "bat_speed_90": 74.8,
+    "bs_lab": "average",
+    "fast_pct": 8.7,
+    "attack_angle": 3.7,
+    "aa_lab": "flat",
+    "aa_up": 2.3,
+    "aa_dn": 4.7,
+    "tilt": 29.5
+   },
+   "swingnote": "Flat swing (attack angle 3.7°) and low bat speed — only 9% 'fast' swings. He'll put the heater up in play but can't drive it. Elevate for weak fly balls and the double play, not whiffs."
+  },
+  {
+   "order": 5,
+   "name": "Bryson Stott",
+   "pos": "2B",
+   "stand": "L",
+   "woba": 0.297,
+   "k": 18.4,
+   "bb": 6.8,
+   "chase": 33.9,
+   "pa": 234,
+   "FB": {
+    "pit": 565,
+    "swing": 236,
+    "whiff": 33,
+    "whiff_pct": 14.0,
+    "xwobacon": 0.341,
+    "bip": 93
+   },
+   "FBhi96": {
+    "pit": 166,
+    "swing": 80,
+    "whiff": 15,
+    "whiff_pct": 18.8,
+    "xwobacon": 0.241,
+    "bip": 24
+   },
+   "SPIN": {
+    "pit": 197,
+    "swing": 94,
+    "whiff": 11,
+    "whiff_pct": 11.7,
+    "xwobacon": 0.366,
+    "bip": 43
+   },
+   "OFF": {
+    "pit": 181,
+    "swing": 85,
+    "whiff": 15,
+    "whiff_pct": 17.6,
+    "xwobacon": 0.364,
+    "bip": 37
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "FBhi96",
+    "lab": "Heater 96+",
+    "x": 0.241
+   },
+   "avoid": {
+    "code": "SPIN",
+    "lab": "Spin",
+    "x": 0.366
+   },
+   "plan": "Lefty who is <b>weak up</b> (.241) and strong down (.456). Climb the ladder with the heater — do <b>not</b> go soft down, that's his happy zone.",
+   "tags": [
+    "Elevate",
+    "Weak up",
+    "Don't go down"
+   ],
+   "heat": {
+    "up": {
+     "pit": 134,
+     "bip": 32,
+     "xw": 0.264
+    },
+    "mid": {
+     "pit": 161,
+     "bip": 49,
+     "xw": 0.358
+    },
+    "dn": {
+     "pit": 163,
+     "bip": 39,
+     "xw": 0.456
+    }
+   },
+   "mix": [
+    {
+     "code": "FF",
+     "name": "4-Seam UP",
+     "pct": 45,
+     "color": "#ef4444"
+    },
+    {
+     "code": "SI",
+     "name": "Sinker",
+     "pct": 20,
+     "color": "#f97316"
+    },
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 20,
+     "color": "#3b82f6"
     },
     {
      "code": "CU",
@@ -849,97 +804,225 @@ const D = {
      "pct": 15,
      "color": "#14b8a6"
     }
-   ]
+   ],
+   "swing": {
+    "bat_speed": 68.6,
+    "bat_speed_90": 74.2,
+    "bs_lab": "average",
+    "fast_pct": 6.3,
+    "attack_angle": 9.7,
+    "aa_lab": "moderate",
+    "aa_up": 9.0,
+    "aa_dn": 9.1,
+    "tilt": 31.1
+   },
+   "swingnote": "Same profile as Bohm — flat plane, low bat speed (6% 'fast'). Climb the ladder: he can meet the 98 up but can't damage it. Don't go soft down, where his swing works."
   },
   {
-   "order": 7,
-   "name": "Cole Young",
-   "pos": "2B",
+   "order": 6,
+   "name": "Brandon Marsh",
+   "pos": "LF",
    "stand": "L",
-   "woba": 0.321,
-   "k": 17.2,
-   "bb": 7.7,
-   "chase": 31.9,
-   "pa": 221,
+   "woba": 0.406,
+   "k": 22.1,
+   "bb": 5.0,
+   "chase": 38.4,
+   "pa": 222,
    "FB": {
-    "pit": 481,
-    "swing": 249,
-    "whiff": 39,
-    "whiff_pct": 15.7,
-    "xwobacon": 0.38,
-    "bip": 101
+    "pit": 422,
+    "swing": 234,
+    "whiff": 25,
+    "whiff_pct": 10.7,
+    "xwobacon": 0.468,
+    "bip": 90
    },
    "FBhi96": {
-    "pit": 121,
-    "swing": 69,
-    "whiff": 16,
-    "whiff_pct": 23.2,
-    "xwobacon": 0.389,
-    "bip": 16
+    "pit": 143,
+    "swing": 77,
+    "whiff": 9,
+    "whiff_pct": 11.7,
+    "xwobacon": 0.493,
+    "bip": 23
    },
    "SPIN": {
-    "pit": 174,
-    "swing": 66,
-    "whiff": 11,
-    "whiff_pct": 16.7,
-    "xwobacon": 0.459,
-    "bip": 26
+    "pit": 232,
+    "swing": 123,
+    "whiff": 29,
+    "whiff_pct": 23.6,
+    "xwobacon": 0.467,
+    "bip": 38
    },
    "OFF": {
-    "pit": 173,
+    "pit": 149,
     "swing": 83,
-    "whiff": 19,
-    "whiff_pct": 22.9,
-    "xwobacon": 0.284,
+    "whiff": 28,
+    "whiff_pct": 33.7,
+    "xwobacon": 0.379,
     "bip": 31
    },
    "hasdata": true,
-   "threat": "med",
+   "threat": "elite",
    "attack": {
     "code": "OFF",
     "lab": "Changeup",
-    "x": 0.284
+    "x": 0.379
    },
    "avoid": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.459
+    "code": "FBhi96",
+    "lab": "Heater up",
+    "x": 0.493
    },
-   "plan": "Rookie lefty having a nice year — he crushes spin (.459), so skip it. The <b>changeup is the clear hole</b> (.284). Cambio down, mix the fastball; don't spin him.",
+   "plan": "Hot bat (.406) who <b>crushes velocity</b> in the zone — but his swing chops <b>under</b> high pitches (negative attack angle up). So a 98 <b>above</b> the zone is a chase/whiff, while a 98 left <b>in</b> the zone up gets crushed. He chases 38% — beat him with the changeup (.379) and expanding off the plate.",
    "tags": [
-    "Changeup down",
-    "Don't spin",
-    "Mix the FB"
+    "Changeup / expand",
+    "98 ABOVE the zone only",
+    "Chases 38%"
    ],
    "heat": {
     "up": {
-     "pit": 130,
-     "bip": 34,
-     "xw": 0.385
+     "pit": 92,
+     "bip": 18,
+     "xw": 0.249
     },
     "mid": {
      "pit": 140,
-     "bip": 44,
-     "xw": 0.402
+     "bip": 46,
+     "xw": 0.575
     },
     "dn": {
-     "pit": 128,
-     "bip": 37,
-     "xw": 0.453
+     "pit": 148,
+     "bip": 57,
+     "xw": 0.495
     }
    },
    "mix": [
     {
      "code": "CH",
-     "name": "Changeup down",
-     "pct": 40,
+     "name": "Changeup",
+     "pct": 35,
      "color": "#22c55e"
+    },
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 25,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "ST",
+     "name": "Sweeper",
+     "pct": 20,
+     "color": "#a855f7"
     },
     {
      "code": "FF",
      "name": "4-Seam",
-     "pct": 25,
+     "pct": 20,
      "color": "#ef4444"
+    }
+   ],
+   "swing": {
+    "bat_speed": 70.1,
+    "bat_speed_90": 75.6,
+    "bs_lab": "average",
+    "fast_pct": 16.6,
+    "attack_angle": 8.3,
+    "aa_lab": "moderate",
+    "aa_up": -3.5,
+    "aa_dn": 12.3,
+    "tilt": 37.9
+   },
+   "swingnote": "His attack angle goes flat-to-NEGATIVE up (−3.5° on high pitches) — he chops under them. So a 98 ABOVE the zone is a whiff/chase pitch; just don't leave it IN the zone up, where his bat speed still catches it. Changeup and expand (he chases 38%)."
+  },
+  {
+   "order": 7,
+   "name": "J.T. Realmuto",
+   "pos": "C",
+   "stand": "R",
+   "woba": 0.311,
+   "k": 22.4,
+   "bb": 7.5,
+   "chase": 33.0,
+   "pa": 161,
+   "FB": {
+    "pit": 335,
+    "swing": 173,
+    "whiff": 29,
+    "whiff_pct": 16.8,
+    "xwobacon": 0.38,
+    "bip": 73
+   },
+   "FBhi96": {
+    "pit": 102,
+    "swing": 56,
+    "whiff": 8,
+    "whiff_pct": 14.3,
+    "xwobacon": 0.279,
+    "bip": 26
+   },
+   "SPIN": {
+    "pit": 203,
+    "swing": 79,
+    "whiff": 26,
+    "whiff_pct": 32.9,
+    "xwobacon": 0.353,
+    "bip": 32
+   },
+   "OFF": {
+    "pit": 55,
+    "swing": 35,
+    "whiff": 17,
+    "whiff_pct": 48.6,
+    "xwobacon": 0.364,
+    "bip": 4
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "FBhi96",
+    "lab": "Heater 96+",
+    "x": 0.279
+   },
+   "avoid": {
+    "code": "FB",
+    "lab": "Hittable FB",
+    "x": 0.38
+   },
+   "plan": "Veteran righty, but <b>weak up</b> (.279). Elevate the heater and challenge him; climb the ladder and let him get himself out up.",
+   "tags": [
+    "Elevate",
+    "Challenge",
+    "Weak up"
+   ],
+   "heat": {
+    "up": {
+     "pit": 77,
+     "bip": 22,
+     "xw": 0.317
+    },
+    "mid": {
+     "pit": 116,
+     "bip": 33,
+     "xw": 0.373
+    },
+    "dn": {
+     "pit": 97,
+     "bip": 21,
+     "xw": 0.497
+    }
+   },
+   "mix": [
+    {
+     "code": "FF",
+     "name": "4-Seam UP",
+     "pct": 45,
+     "color": "#ef4444"
+    },
+    {
+     "code": "SI",
+     "name": "Sinker",
+     "pct": 20,
+     "color": "#f97316"
     },
     {
      "code": "SL",
@@ -948,95 +1031,223 @@ const D = {
      "color": "#3b82f6"
     },
     {
-     "code": "SI",
-     "name": "Sinker",
+     "code": "CH",
+     "name": "Changeup",
      "pct": 15,
-     "color": "#f97316"
+     "color": "#22c55e"
     }
-   ]
+   ],
+   "swing": {
+    "bat_speed": 71.1,
+    "bat_speed_90": 78.6,
+    "bs_lab": "above avg",
+    "fast_pct": 30.2,
+    "attack_angle": 12.0,
+    "aa_lab": "steep",
+    "aa_up": 8.8,
+    "aa_dn": 13.8,
+    "tilt": 32.5
+   },
+   "swingnote": "Moderate uppercut that stays steep up (attack angle ~9° up) — the riding four-seam gets under the barrel. Elevate and challenge."
   },
   {
    "order": 8,
-   "name": "Victor Robles",
-   "pos": "DH",
-   "stand": "R",
-   "woba": 0.257,
-   "k": 6.7,
-   "bb": 6.7,
-   "chase": 31.2,
-   "pa": 30,
+   "name": "Justin Crawford",
+   "pos": "CF",
+   "stand": "L",
+   "woba": 0.308,
+   "k": 21.3,
+   "bb": 6.2,
+   "chase": 38.1,
+   "pa": 211,
    "FB": {
-    "pit": 56,
-    "swing": 33,
-    "whiff": 4,
-    "whiff_pct": 12.1,
-    "xwobacon": 0.283,
-    "bip": 17
+    "pit": 524,
+    "swing": 271,
+    "whiff": 45,
+    "whiff_pct": 16.6,
+    "xwobacon": 0.322,
+    "bip": 80
    },
    "FBhi96": {
-    "pit": 13,
-    "swing": 8,
-    "whiff": 0,
-    "whiff_pct": 0.0,
-    "xwobacon": 0.409,
-    "bip": 5
+    "pit": 175,
+    "swing": 87,
+    "whiff": 15,
+    "whiff_pct": 17.2,
+    "xwobacon": 0.411,
+    "bip": 24
    },
    "SPIN": {
-    "pit": 31,
-    "swing": 15,
-    "whiff": 3,
-    "whiff_pct": 20.0,
-    "xwobacon": 0.212,
-    "bip": 9
+    "pit": 162,
+    "swing": 89,
+    "whiff": 12,
+    "whiff_pct": 13.5,
+    "xwobacon": 0.292,
+    "bip": 40
    },
    "OFF": {
-    "pit": 4,
-    "swing": 1,
-    "whiff": 1,
-    "whiff_pct": 100.0,
-    "xwobacon": null,
-    "bip": 0
+    "pit": 113,
+    "swing": 68,
+    "whiff": 16,
+    "whiff_pct": 23.5,
+    "xwobacon": 0.3,
+    "bip": 32
    },
    "hasdata": true,
    "threat": "low",
    "attack": {
     "code": "SPIN",
     "lab": "Spin",
-    "x": 0.212
+    "x": 0.292
    },
    "avoid": {
-    "code": "FB",
-    "lab": "Hittable FB",
-    "x": 0.283
+    "code": "FBhi96",
+    "lab": "Heater up",
+    "x": 0.411
    },
-   "plan": "Light bat, small vs-RHP sample this year (.257). Weak vs spin (.212) and weak down (.107). Spin him and keep it down — low-threat, just get the out.",
+   "plan": "Rookie speed/contact bat, chases 38% and weak vs spin (.292) and changeup (.30). Bury spin and changeup below the zone — he'll chase. Don't elevate (.411).",
    "tags": [
-    "Spin / down",
-    "Low threat",
-    "Small sample"
+    "Spin / change down",
+    "He chases",
+    "Don't elevate"
    ],
    "heat": {
     "up": {
-     "pit": 10,
-     "bip": 5,
-     "xw": 0.351
+     "pit": 104,
+     "bip": 13,
+     "xw": 0.291
     },
     "mid": {
-     "pit": 11,
-     "bip": 9,
-     "xw": 0.336
+     "pit": 159,
+     "bip": 44,
+     "xw": 0.352
     },
     "dn": {
-     "pit": 22,
-     "bip": 10,
-     "xw": 0.107
+     "pit": 137,
+     "bip": 44,
+     "xw": 0.299
     }
    },
    "mix": [
     {
      "code": "SL",
      "name": "Slider down",
-     "pct": 35,
+     "pct": 30,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "CH",
+     "name": "Changeup",
+     "pct": 30,
+     "color": "#22c55e"
+    },
+    {
+     "code": "ST",
+     "name": "Sweeper",
+     "pct": 20,
+     "color": "#a855f7"
+    },
+    {
+     "code": "FF",
+     "name": "4-Seam",
+     "pct": 20,
+     "color": "#ef4444"
+    }
+   ],
+   "swing": {
+    "bat_speed": 67.3,
+    "bat_speed_90": 73.5,
+    "bs_lab": "below avg",
+    "fast_pct": 4.5,
+    "attack_angle": 2.7,
+    "aa_lab": "flat",
+    "aa_up": 0.8,
+    "aa_dn": 3.9,
+    "tilt": 29.4
+   },
+   "swingnote": "Shortest, flattest, lowest-power swing in the lineup (attack angle 2.7°, slap-and-run, oppo lean). No drive — beat him with spin and changeup down and away; he can't punish movement."
+  },
+  {
+   "order": 9,
+   "name": "Adolis Garcia",
+   "pos": "RF",
+   "stand": "R",
+   "woba": 0.232,
+   "k": 35.1,
+   "bb": 6.8,
+   "chase": 30.3,
+   "pa": 191,
+   "FB": {
+    "pit": 448,
+    "swing": 195,
+    "whiff": 51,
+    "whiff_pct": 26.2,
+    "xwobacon": 0.377,
+    "bip": 63
+   },
+   "FBhi96": {
+    "pit": 140,
+    "swing": 69,
+    "whiff": 25,
+    "whiff_pct": 36.2,
+    "xwobacon": 0.379,
+    "bip": 20
+   },
+   "SPIN": {
+    "pit": 278,
+    "swing": 129,
+    "whiff": 56,
+    "whiff_pct": 43.4,
+    "xwobacon": 0.353,
+    "bip": 33
+   },
+   "OFF": {
+    "pit": 70,
+    "swing": 39,
+    "whiff": 15,
+    "whiff_pct": 38.5,
+    "xwobacon": 0.381,
+    "bip": 10
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "SPIN",
+    "lab": "Spin",
+    "x": 0.353
+   },
+   "avoid": {
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.381
+   },
+   "plan": "Struggling (.232, 35% K) and the RF spot is <b>fluid</b> — he may sit for Derek Hill (R) or Gabriel Rincones (L). Spin him (.353) and expand; if a rookie's in instead, attack the zone — they have tiny books.",
+   "tags": [
+    "Spin",
+    "Struggling",
+    "RF is fluid"
+   ],
+   "heat": {
+    "up": {
+     "pit": 106,
+     "bip": 15,
+     "xw": 0.437
+    },
+    "mid": {
+     "pit": 128,
+     "bip": 34,
+     "xw": 0.381
+    },
+    "dn": {
+     "pit": 129,
+     "bip": 38,
+     "xw": 0.401
+    }
+   },
+   "mix": [
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 30,
      "color": "#3b82f6"
     },
     {
@@ -1048,7 +1259,7 @@ const D = {
     {
      "code": "ST",
      "name": "Sweeper",
-     "pct": 20,
+     "pct": 25,
      "color": "#a855f7"
     },
     {
@@ -1057,129 +1268,37 @@ const D = {
      "pct": 20,
      "color": "#22c55e"
     }
-   ]
-  },
-  {
-   "order": 9,
-   "name": "Colt Emerson",
-   "pos": "3B",
-   "stand": "L",
-   "woba": 0.367,
-   "k": 31.0,
-   "bb": 7.0,
-   "chase": 36.4,
-   "pa": 71,
-   "FB": {
-    "pit": 151,
-    "swing": 87,
-    "whiff": 23,
-    "whiff_pct": 26.4,
-    "xwobacon": 0.363,
-    "bip": 24
-   },
-   "FBhi96": {
-    "pit": 36,
-    "swing": 17,
-    "whiff": 9,
-    "whiff_pct": 52.9,
-    "xwobacon": 0.541,
-    "bip": 4
-   },
-   "SPIN": {
-    "pit": 79,
-    "swing": 37,
-    "whiff": 14,
-    "whiff_pct": 37.8,
-    "xwobacon": 0.203,
-    "bip": 10
-   },
-   "OFF": {
-    "pit": 55,
-    "swing": 27,
-    "whiff": 10,
-    "whiff_pct": 37.0,
-    "xwobacon": 0.205,
-    "bip": 10
-   },
-   "hasdata": true,
-   "threat": "high",
-   "attack": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.203
-   },
-   "avoid": {
-    "code": "FB",
-    "lab": "Hittable FB",
-    "x": 0.363
-   },
-   "plan": "Rookie, small book (71 PA) and a big strikeout rate (31%). Weak vs spin (.203) <b>and</b> the changeup (.205), and he chases (36%). Bury spin and changeup below the zone — he'll chase. Don't elevate.",
-   "tags": [
-    "Spin + change down",
-    "He chases",
-    "Don't elevate"
    ],
-   "heat": {
-    "up": {
-     "pit": 45,
-     "bip": 6,
-     "xw": 0.126
-    },
-    "mid": {
-     "pit": 51,
-     "bip": 12,
-     "xw": 0.388
-    },
-    "dn": {
-     "pit": 46,
-     "bip": 13,
-     "xw": 0.31
-    }
+   "swing": {
+    "bat_speed": 69.6,
+    "bat_speed_90": 76.6,
+    "bs_lab": "above avg",
+    "fast_pct": 21.2,
+    "attack_angle": 9.5,
+    "aa_lab": "moderate",
+    "aa_up": 7.6,
+    "aa_dn": 10.4,
+    "tilt": 28.9
    },
-   "mix": [
-    {
-     "code": "SL",
-     "name": "Slider below",
-     "pct": 30,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 30,
-     "color": "#22c55e"
-    },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 20,
-     "color": "#a855f7"
-    },
-    {
-     "code": "FF",
-     "name": "4-Seam",
-     "pct": 20,
-     "color": "#ef4444"
-    }
-   ]
+   "swingnote": "Average swing plane, struggling bat (.232). Spin him and expand off the plate."
   }
  ],
  "score": {
   "OFF": {
    "lab": "Changeup / Offspeed",
-   "mean": 0.336
+   "mean": 0.385
   },
   "SPIN": {
    "lab": "Spin (SL/ST/CU)",
-   "mean": 0.36
+   "mean": 0.406
   },
   "FB": {
    "lab": "Fastball in zone",
-   "mean": 0.387
+   "mean": 0.402
   },
   "FBhi96": {
    "lab": "Four-Seam UP (96+)",
-   "mean": 0.415
+   "mean": 0.398
   }
  },
  "arsenal": [
@@ -1188,96 +1307,96 @@ const D = {
    "name": "4-Seam Fastball",
    "role": "GET AHEAD",
    "color": "#ef4444",
-   "usage": 48.7,
-   "velo": 98.4,
+   "usage": 48.8,
+   "velo": 98.5,
    "ivb": 18.1,
-   "hb": -7.1,
-   "whiff": 18.2,
-   "xwoba": 0.352,
-   "use3": 44.3,
-   "velo3": 98.3,
-   "whiff3": 15.5,
-   "note": "Your get-ahead pitch — but <b>be careful up</b> here. This lineup hunts velocity: Raleigh .499 on the heater up, Julio .466, Arozarena .45, Raley .595. Live <b>down in the zone</b> early, or up-and-<b>out</b> of the zone as a chase to the free swingers. The one bat you climb the ladder on is Naylor (.273 up)."
+   "hb": -7.2,
+   "whiff": 17.8,
+   "xwoba": 0.357,
+   "use3": 42.5,
+   "velo3": 99.0,
+   "whiff3": 14.3,
+   "note": "A weapon <b>up to the righty contact guys</b> — Bohm (.282), Stott (.241), Realmuto (.279) are all weak up; climb the ladder. But <b>not</b> up to the lefty boppers (Schwarber .557, Harper .58, Marsh crush velocity). And in this park a fastball over the middle is a souvenir — keep it on the edges."
   },
   {
    "code": "SI",
    "name": "Sinker",
    "role": "GROUNDER",
    "color": "#f97316",
-   "usage": 7.2,
+   "usage": 6.9,
    "velo": 97.9,
    "ivb": 12.8,
    "hb": -13.4,
-   "whiff": 14.3,
-   "xwoba": 0.269,
-   "use3": 8.5,
-   "velo3": 98.1,
+   "whiff": 14.0,
+   "xwoba": 0.301,
+   "use3": 9.0,
+   "velo3": 98.4,
    "whiff3": 7.7,
-   "note": "Down for grounders and weak contact — fine to mix, especially to the righties. Keep it at the knees; PNC's big outfield turns their fly balls into outs."
+   "note": "Down for grounders and double plays — gold in a HR park. Especially to Bohm (DP machine) and the righties. Keep it at the knees."
   },
   {
    "code": "CH",
    "name": "Changeup",
-   "role": "THE KILL",
+   "role": "KILL vs LHB",
    "color": "#22c55e",
-   "usage": 17.1,
-   "velo": 91.8,
+   "usage": 16.9,
+   "velo": 91.9,
    "ivb": 7.1,
    "hb": -16.8,
-   "whiff": 25.0,
-   "xwoba": 0.322,
-   "use3": 15.4,
-   "velo3": 91.1,
-   "whiff3": 26.7,
-   "note": "<b>A featured weapon today.</b> Big arm-side fade (-17\" HB), 25% whiff, .322. It's the put-away on their changeup-weak bats — Arozarena (.288), Cole Young (.284), Emerson (.205) — and a chase pitch to the lefties. Keep it down."
+   "whiff": 26.6,
+   "xwoba": 0.32,
+   "use3": 13.3,
+   "velo3": 92.2,
+   "whiff3": 42.9,
+   "note": "<b>Your key weapon vs the lefties.</b> 26.6% whiff and big arm-side fade running away from LH bats. It's Harper's one hole (.368) and Marsh's (.379). Lean on it to the left-handed side — away, off the plate."
   },
   {
    "code": "SL",
    "name": "Slider",
-   "role": "CHASE / KILL",
+   "role": "CHASE",
    "color": "#3b82f6",
-   "usage": 16.1,
-   "velo": 89.7,
-   "ivb": 2.3,
-   "hb": 2.3,
-   "whiff": 37.0,
-   "xwoba": 0.386,
-   "use3": 19.9,
-   "velo3": 89.9,
-   "whiff3": 44.4,
-   "note": "<b>Your primary kill.</b> Best whiff pitch (37%, 44% last three) and this lineup chases 30–39% — below the zone it's a swing-and-miss machine. Bury it. Exceptions: <b>don't</b> spin Canzone (.555) or Cole Young (.459), who crush it."
+   "usage": 16.4,
+   "velo": 89.9,
+   "ivb": 2.4,
+   "hb": 2.2,
+   "whiff": 35.8,
+   "xwoba": 0.369,
+   "use3": 22.3,
+   "velo3": 91.0,
+   "whiff3": 40.7,
+   "note": "35.8% whiff — your put-away to the righties and rookies (Turner, J. Crawford, the RF). <b>But the lefty stars crush spin</b> (Schwarber .605, Harper .588): do not hang it to them. Down and to the chasers only."
   },
   {
    "code": "ST",
    "name": "Sweeper",
    "role": "CHASE",
    "color": "#a855f7",
-   "usage": 7.1,
+   "usage": 7.2,
    "velo": 87.7,
-   "ivb": 0.9,
-   "hb": 9.0,
-   "whiff": 27.8,
-   "xwoba": 0.293,
-   "use3": 5.3,
-   "velo3": 87.7,
-   "whiff3": 66.7,
-   "note": "Another down/chase option (28% whiff) to pair with the slider so you're not showing the same break. Below the zone only."
+   "ivb": 1.0,
+   "hb": 8.8,
+   "whiff": 25.6,
+   "xwoba": 0.29,
+   "use3": 5.6,
+   "velo3": 88.4,
+   "whiff3": 33.3,
+   "note": "Down/chase option to the right-handed bats; pair with the slider so you're not showing one shape."
   },
   {
    "code": "CU",
    "name": "Curveball",
    "role": "STEAL STRIKE",
    "color": "#14b8a6",
-   "usage": 3.3,
+   "usage": 3.2,
    "velo": 85.6,
    "ivb": -3.3,
-   "hb": 1.3,
-   "whiff": 6.2,
+   "hb": 1.2,
+   "whiff": 5.9,
    "xwoba": 0.307,
-   "use3": 6.5,
+   "use3": 7.3,
    "velo3": 86.1,
-   "whiff3": 14.3,
-   "note": "Steal-a-strike early to get ahead so you can get to the put-away. Drop it in for a called strike."
+   "whiff3": 12.5,
+   "note": "Steal-a-strike early so you can get ahead and work the edges."
   }
  ],
  "hand": {
@@ -1299,7 +1418,7 @@ const D = {
   }
  },
  "splits": {
-  "season_FBpct": 55.9
+  "season_FBpct": 55.7
  }
 };
 
@@ -1316,53 +1435,53 @@ const BK=[['FB','Fastball (in zone)'],['FBhi96','4-Seam UP · 96+'],['SPIN','Spi
 /* ---------------- BRIEFING ---------------- */
 document.getElementById('page-brief').innerHTML = `
 <div class="brief-intro">
-  <div class="hi">Seattle hunts velocity &mdash; so flip it: get ahead, then <span>bury it</span> below the zone.</div>
-  <p>You're home, and your stuff plays again. This lineup is the <b>opposite of Coors</b> &mdash; they crush the fastball, <b>especially up</b> (Raleigh .499, Julio .466, Canzone, Raley), but they <b>chase and miss a ton</b> (most of them swing at 30&ndash;39% of pitches out of the zone). So the heater is to <b>get ahead</b> &mdash; down in the zone, or up-and-<b>out</b> as a chase &mdash; not up where they do damage. Your put-away is the <b>slider and changeup below the zone</b>. They'll chase. Get ahead, then bury it. And PNC's big right field <b>smothers their lefty power</b>, so even mistakes tend to stay in the park.</p>
+  <div class="hi">Toughest lineup yet, in a bandbox. No single kill &mdash; <span>pick your spots</span> and keep it in the park.</div>
+  <p>This is a step up: a disciplined, veteran, <b>powerful</b> lineup in a <b>launching pad</b> (Citizens Bank Park, short porches both ways). Two big differences from Seattle &mdash; these guys <b>don't chase</b> as much, and they <b>crush spin</b>, so you can't just bury sliders. There's no one put-away. Your outs are in the <b>4 through 9</b>: Bohm, Stott, and Realmuto are all weak UP &mdash; <b>elevate</b> and challenge them. To the top three, <b>don't give in</b> &mdash; especially Schwarber and Harper, where a pitch over the middle is a 3-run homer. Live on the edges, lean your changeup to the lefties, and above all <b>keep the ball in the park</b>.</p>
 </div>
 <div class="sect">The game plan — three times through</div>
 <div class="tto">
   <div class="tto-card">
     <div class="tto-n">1st time through</div>
-    <div class="tto-h">Fastball to get ahead — down</div>
-    <div class="tto-p">Get strike one with the heater, but keep it <b>down in the zone</b>, not up. Find out who's chasing early (most of them will).</div>
+    <div class="tto-h">Get ahead, no pattern</div>
+    <div class="tto-p">These are veterans &mdash; don't be predictable. Get ahead with strikes on the edges, mix early, and see who's chasing (Turner, Marsh, the rookies all expand).</div>
   </div>
   <div class="tto-card">
     <div class="tto-n">2nd time through</div>
-    <div class="tto-h">Ahead &rarr; bury the spin / change</div>
-    <div class="tto-p">Once you're ahead, finish <b>below the zone</b> with the slider and changeup. This is a chase lineup &mdash; that's where your strikeouts come from.</div>
+    <div class="tto-h">Hunt your outs in the 4–9</div>
+    <div class="tto-p"><b>Elevate</b> the heater to the righty contact bats (Bohm, Stott, Realmuto &mdash; all weak up). <b>Changeup</b> the lefties (Harper, Marsh). That's where the quick innings come from.</div>
   </div>
   <div class="tto-card">
     <div class="tto-n">3rd time / late</div>
-    <div class="tto-h">Mix the look — never a fastball to extend on</div>
-    <div class="tto-p">Change the chase pitch so they can't sit on it. A 98 up <b>out of the zone</b> works as a whiff pitch &mdash; just never a heater they can extend on over the plate.</div>
+    <div class="tto-h">Don't let the top 3 beat you twice</div>
+    <div class="tto-p">Turner, Schwarber, Harper a second and third time: <b>expand</b>. Edges and chase pitches only. A walk to Schwarber or Harper is fine &mdash; a mistake middle is a souvenir.</div>
   </div>
 </div>
 <div class="keys">
-  <div class="kh">The book on Seattle, in one line</div>
-  <div class="key"><div class="kn">★</div><p>They <span class="r">crush velocity, especially up</span> &mdash; so <b>don't elevate the heater</b> (the one exception is Naylor). Get ahead, then <b>bury the slider and changeup below the zone</b>; they chase one out of three. And you're home &mdash; <span class="g">PNC smothers their lefty power</span>.</p></div>
+  <div class="kh">The book on Philly, in one line</div>
+  <div class="key"><div class="kn">★</div><p><b>Get your outs from the 4&ndash;9</b> (Bohm, Stott, Realmuto are weak UP &mdash; elevate). To the top three, <span class="r">don't give in</span> &mdash; edges, changeup away, <b>never middle</b>. And in this park, the one rule that matters most: <b>keep it in the park</b> &mdash; limit the big inning.</p></div>
 </div>
 <div class="sect">The lineup — how to beat them</div>
 <div class="qh">
-  <div class="qh-row"><div class="qh-num">1 · SS</div><div class="qh-txt"><b>Crawford (L)</b> — Disciplined, won't chase (19%). Spin down, don't elevate; make him earn it.</div></div>
-  <div class="qh-row warn"><div class="qh-num">2 · C</div><div class="qh-txt"><b>⚠ Raleigh (S)</b> — Their MVP bat. <b>Never</b> a fastball up or middle (.499 / .677). Spin below the zone — he chases 37%.</div></div>
-  <div class="qh-row warn"><div class="qh-num">3 · CF</div><div class="qh-txt"><b>⚠ Julio (R)</b> — Crushes the high heat (.466), weakest down. <b>Bury it</b> — he chases 39%.</div></div>
-  <div class="qh-row"><div class="qh-num">4 · 1B</div><div class="qh-txt"><b>Naylor (L)</b> — The <b>one you elevate</b> (.258 up). Elite contact — climb the ladder, don't go soft down.</div></div>
-  <div class="qh-row"><div class="qh-num">5 · LF</div><div class="qh-txt"><b>Arozarena (R)</b> — Just off the IL. Crushes fastballs; changeup is the hole (.288). Soft him, don't challenge.</div></div>
-  <div class="qh-row"><div class="qh-num">6 · RF</div><div class="qh-txt"><b>Canzone (L)</b> — Hot bat; <b>crushes spin (.555) — no slider</b>. Elevated 98 + changeup only.</div></div>
-  <div class="qh-row"><div class="qh-num">7 · 2B</div><div class="qh-txt"><b>Cole Young (L)</b> — Changeup is the hole (.284); don't spin him (.459).</div></div>
-  <div class="qh-row"><div class="qh-num">8 · DH</div><div class="qh-txt"><b>Robles (R)</b> — Light bat. Spin him (.212), keep it down — low threat.</div></div>
-  <div class="qh-row"><div class="qh-num">9 · 3B</div><div class="qh-txt"><b>Emerson (L)</b> — Rookie, chases (36%) & K's a lot. Bury spin + changeup; don't elevate.</div></div>
+  <div class="qh-row"><div class="qh-num">1 · SS</div><div class="qh-txt"><b>Turner (R)</b> — Chases the most (40%). Spin & changeup away, let him expand. Don't groove a fastball.</div></div>
+  <div class="qh-row warn"><div class="qh-num">2 · DH</div><div class="qh-txt"><b>⚠ Schwarber (L)</b> — Crushes <b>everything</b> (no safe pitch), in his perfect park. Edges, expand, <b>walk &gt; homer</b>.</div></div>
+  <div class="qh-row warn"><div class="qh-num">3 · 1B</div><div class="qh-txt"><b>⚠ Harper (L)</b> — MVP. Only hole is the <b>changeup</b> (.368). Cambio away, <b>never</b> middle (.75 there).</div></div>
+  <div class="qh-row"><div class="qh-num">4 · 3B</div><div class="qh-txt"><b>Bohm (R)</b> — Contact bat, <b>weak up</b> (.282). Elevate, challenge, get the DP.</div></div>
+  <div class="qh-row"><div class="qh-num">5 · 2B</div><div class="qh-txt"><b>Stott (L)</b> — <b>Weak up</b> (.241). Climb the ladder; don't go soft down.</div></div>
+  <div class="qh-row"><div class="qh-num">6 · LF</div><div class="qh-txt"><b>Marsh (L)</b> — Hot, crushes velocity. Changeup + expand (chases 38%); <b>no 98 up</b>.</div></div>
+  <div class="qh-row"><div class="qh-num">7 · C</div><div class="qh-txt"><b>Realmuto (R)</b> — <b>Weak up</b> (.279). Elevate the heater and challenge him.</div></div>
+  <div class="qh-row"><div class="qh-num">8 · CF</div><div class="qh-txt"><b>J. Crawford (L)</b> — Rookie, chases 38%. Spin & changeup down; don't elevate.</div></div>
+  <div class="qh-row"><div class="qh-num">9 · RF</div><div class="qh-txt"><b>García (R)</b> — Struggling (.232). Spin him & expand. <i>(RF spot is fluid — see below.)</i></div></div>
 </div>
 <div style="margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:5px;background:rgba(253,184,39,.06)">
-  <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px">⟳ Injury watch — card is fluid (posts ~2 hrs pre-game)</div>
-  <p style="font-size:13.5px;line-height:1.5;margin:0;color:#cfcfd8">Seattle's banged up. <b>Luke Raley</b> (L, team-high 14 HR) is day-to-day (back/flu) — if he's in, he <b>mashes fastballs (.595)</b>, so spin and soft only, never challenge. <b>Arozarena</b> is just back from the IL (may be limited or rested). <b>Raleigh</b> is on catch/DH load-management — if he DHs, <b>Mitch Garver</b> (R) catches (spin him, .334, he K's 38%). If the OF bats sit, expect more <b>Victor Robles</b> and a righty-heavier, less powerful look.</p>
+  <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px">⟳ RF watch — card posts ~2 hrs pre-game</div>
+  <p style="font-size:13.5px;line-height:1.5;margin:0;color:#cfcfd8">The right-field/9 spot rotates. García (.232) may sit for <b>Derek Hill</b> (R — very weak on the fastball, .11 up; just challenge him) or <b>Gabriel Rincones</b> (L rookie — chases, changeup down). Both are tiny samples — attack the zone. Note: Harper hit 9th in a Sunday <i>rest</i> look; expect the <b>full lineup</b> Tuesday.</p>
 </div>
-<p style="font-size:13px;color:var(--mut);font-family:'JetBrains Mono';margin-top:14px;line-height:1.6"><b style="color:var(--gold)">&rarr; Tap any hitter</b> on the <b>Hitters</b> tab for their full breakdown: a specific attack plan, a recommended pitch mix, and their heat map. Green = go, red = stay away; lower number = less damage.</p>`;
+<p style="font-size:13px;color:var(--mut);font-family:'JetBrains Mono';margin-top:14px;line-height:1.6"><b style="color:var(--gold)">&rarr; Tap any hitter</b> on the <b>Hitters</b> tab for their full breakdown: a specific attack plan, a recommended pitch mix, their heat map, and a <b>bat-path read</b> (how their swing matches up against your shapes). Green = go, red = stay away; lower number = less damage.</p>`;
 document.getElementById('cond').innerHTML = `
-  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">vs ${D.game.opp}</div><p>${D.game.venue}, Pittsburgh — <b>home</b>. ${D.game.date}, ${D.game.time}. Series finale, day game.</p></div>
-  <div class="cond-card"><div class="lbl">The opponent</div><div class="big">${D.game.rec}</div><p>A power lineup that <b>chases and strikes out a lot</b> (most bats chase 30–39%). <b>Six of nine bat left-handed</b> vs RHP. Lineup is banged-up and fluid — see the injury note on the Briefing.</p></div>
-  <div class="cond-card"><div class="lbl">Your last start</div><div class="big">Coors: 6 IP, 2 ER, 74 pitches</div><p>${D.game.last}. You adapted — pitched to contact a mile high. Back home, the whiffs come back.</p></div>
-  <div class="cond-card"><div class="lbl">Park — your edge</div><div class="big">PNC Park — pitcher-friendly</div><p>Deep right-center <b>smothers left-handed power</b>, and this lineup is lefty-heavy. The opposite of Coors: your spin bites again, and their mistakes tend to stay in the park.</p></div>`;
+  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.opp}</div><p>${D.game.venue}, Philadelphia — <b>away</b>. ${D.game.date}, ${D.game.time}. Game 2 of a four-game set.</p></div>
+  <div class="cond-card"><div class="lbl">The opponent</div><div class="big">${D.game.rec}</div><p>Your <b>toughest lineup yet</b> — disciplined and powerful. <b>Five of nine bat left-handed</b> vs RHP, and the lefty power (Schwarber, Harper, Marsh) is the danger. They crush spin, so this is pick-your-pitch, not bury-the-slider.</p></div>
+  <div class="cond-card"><div class="lbl">Your last start</div><div class="big">W — 1 ER, beat Seattle 5–1</div><p>${D.game.last}. The bury-it-down plan worked. Different challenge tonight: a better lineup in a smaller park.</p></div>
+  <div class="cond-card"><div class="lbl">Park — the warning</div><div class="big">Citizens Bank Park — a bandbox</div><p>Short porches both ways, <b>boosts homers</b> — the opposite of PNC. Lefty pull power to right is the max danger. Keep the ball down and out of the middle; <b>limit the big inning</b>.</p></div>`;
 
 document.getElementById('lineup').innerHTML = D.hitters.map((h,i)=>`
   <div class="card" onclick="showHitter(${i},true)">
@@ -1405,6 +1524,18 @@ function mixRow(h){
   const chips=m.map(p=>`<span class="mixchip" style="background:${p.color}">${p.name} ${p.pct}%</span>`).join('');
   return `<div class="subhd">Recommended mix</div><div class="mixbar">${bar}</div><div class="mixchips">${chips}</div>`;
 }
+function batPath(h){
+  const s=h.swing; if(!s) return '';
+  const bsColor = s.bat_speed_90>=79?'#ef4444':s.bat_speed_90>=76?'#f59e0b':'#22c55e';
+  return `<div class="subhd">Bat path <span style="color:var(--mut);font-weight:400">— swing tracking vs RHP</span></div>
+   <div class="bp">
+     <div class="bp-stat"><div class="bp-v" style="color:${bsColor}">${s.bat_speed_90}</div><div class="bp-l">bat speed<br>90th %ile</div></div>
+     <div class="bp-stat"><div class="bp-v">${s.fast_pct}%</div><div class="bp-l">"fast"<br>swings</div></div>
+     <div class="bp-stat"><div class="bp-v">${s.attack_angle}&deg;</div><div class="bp-l">attack<br>angle</div></div>
+     <div class="bp-stat"><div class="bp-v">${s.aa_up}&deg;/${s.aa_dn}&deg;</div><div class="bp-l">angle<br>up / down</div></div>
+   </div>
+   <div class="bp-note">${h.swingnote||''}</div>`;
+}
 function showHitter(i,nav){
   const h=D.hitters[i];
   document.querySelectorAll('[id^=pill-]').forEach(p=>p.classList.remove('active'));
@@ -1424,6 +1555,7 @@ function showHitter(i,nav){
       ${h.avoid&&h.avoid.thin?'<div class="tunnel">* smaller sample on the AVOID bucket — directionally loud, weight it lightly.</div>':''}
     </div>
     ${heatStrip(h)}
+    ${batPath(h)}
     ${mixRow(h)}
     <div class="plan-box"><p>${h.plan}</p></div>
     <div class="tags">${h.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>`;
@@ -1463,23 +1595,23 @@ const S=D.score;
 function scRow(k){ const v=S[k].mean; const wd=Math.max(8,Math.min(100,(v/.55)*100));
   return `<div class="sc-row"><div class="sc-name">${S[k].lab}</div>
     <div class="sc-bar"><div class="sc-fill" style="width:${wd}%;background:${dc(v)}">${xw(v)}</div></div>
-    <div class="sc-tag">${k==='OFF'?'your kill (down)':k==='FBhi96'?'they CRUSH it — don\'t elevate':''}</div></div>`; }
+    <div class="sc-tag">${k==='OFF'?'most useful (to LHB)':k==='SPIN'?'they CRUSH it — careful':''}</div></div>`; }
 document.getElementById('page-plan').innerHTML = `
   <div class="scorecard">
     <div class="t" style="font-family:'Oswald';font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px">Lineup scorecard — avg expected damage by pitch type</div>
-    <div class="legend"><span>Average xwOBACON vs RHP. The shape tells the whole story: they <b>crush the fastball, especially up</b> (the 96+ bar is their best by far), and their weakness is <b>spin and the changeup down</b>. Get ahead, then bury it.</span></div>
-    ${['OFF','SPIN','FB','FBhi96'].map(scRow).join('')}
+    <div class="legend"><span>Average xwOBACON vs RHP. Notice it's <b>hot everywhere</b> (~.39–.41) — this is a great lineup, there's no easy pitch type. So it's about <b>location and per-hitter execution</b>, not a go-to pitch. The changeup is your most consistent weapon (the lefty stars' relative hole); spin grades out as their <b>best</b>, so don't lean on it to the top of the order.</span></div>
+    ${['OFF','FBhi96','FB','SPIN'].map(scRow).join('')}
   </div>
-  <div class="gp"><h3><span class="no">1</span>The book — flip your usual plan</h3><p>Most nights your engine is the four-seam up. <b>Not against Seattle.</b> This lineup hunts velocity and crushes the high heater (Raleigh <span class="r">.499</span>, Julio <span class="r">.466</span>, Arozarena .45). But they <b>chase and miss a ton</b> — 30 to 39% chase across the order. So: get ahead with the fastball <b>down</b>, then <b>bury the slider and changeup below the zone</b> and let them get themselves out.</p></div>
-  <div class="gp"><h3><span class="no">2</span>1st time through — get ahead, down</h3><p>Strike one with the heater, but keep it <b>at the knees or off the plate</b>, not up. You're at PNC — the big right field eats their lefty fly balls, so you can pitch in the zone without fearing the carry. Find the chasers early; most of them will expand.</p></div>
-  <div class="gp"><h3><span class="no">3</span>2nd time through — bury the put-away</h3><p>Ahead in the count, go <b>below the zone</b>: slider (<span class="hl">37% whiff, 44% last three</span>) is your primary kill, changeup (<span class="hl">25% whiff</span>) the secondary. This is where your strikeouts live against a chase-happy lineup. <b>Two exceptions:</b> don't spin Canzone (.555) or Cole Young (.459) — changeup them instead.</p></div>
-  <div class="gp"><h3><span class="no">4</span>3rd time / late — mix the chase</h3><p>Change which pitch you chase them with so they can't sit on it. A <b>98 up out of the zone</b> is a great whiff pitch late — that's the <b>only</b> time the high heater is your friend here. Never a fastball over the plate they can extend on.</p></div>
-  <div class="gp"><h3><span class="no">5</span>The exceptions — know these four</h3><p><b>Naylor</b> (#4): elite contact but weak UP (.273) — the one bat you <b>elevate</b>. <b>Canzone</b> (#6): crushes spin — <b>elevated 98 + changeup, no slider</b>. <b>Arozarena</b> (#5, off the IL) & <b>Cole Young</b> (#7): changeup is the hole (.288 / .284). Everyone else: bury the spin.</p></div>
-  <div class="gp"><h3><span class="no">6</span>The one to respect — Raleigh (#2)</h3><p>Switch-hitting MVP bat and a fastball assassin — <span class="r">.499</span> on the heater up, <span class="r">.677</span> over the middle. <b>Never</b> a fastball up or middle to him. He chases 37% and K's 32%, so spin and changeup <b>below the zone</b>, every time. Make him chase; don't give in over the plate.</p></div>
-  <div class="gp"><h3><span class="no">7</span>Count logic</h3><p><b>Ahead/early:</b> fastball down to get strike one. <b>Two strikes:</b> bury the slider or changeup below the zone — they chase. <b>Behind:</b> don't groove a fastball (this lineup makes you pay for the heart of the plate); throw a strike with the slider or a sinker down instead. The mistake that hurts here is a fastball up over the plate.</p></div>`;
+  <div class="gp"><h3><span class="no">1</span>The park — read this first</h3><p>Citizens Bank Park is a <b>launching pad</b> — short porches both ways, and it boosts home runs. The opposite of PNC. The mistake that hurts is anything a left-handed bat can pull in the air to right. So: keep the ball <b>down and out of the middle</b>, work the edges, and <b>limit the big inning</b>. One solo shot won't beat you; a three-run mistake will.</p></div>
+  <div class="gp"><h3><span class="no">2</span>1st time through — get ahead, no pattern</h3><p>These are veterans who punish predictability. Get strike one on the <b>edges</b>, mix your shapes early, and read who's expanding (Turner chases 40%, Marsh 38%, the rookies chase too). Don't fall behind — but don't groove a get-me-over fastball either.</p></div>
+  <div class="gp"><h3><span class="no">3</span>2nd time through — hunt outs in the 4–9</h3><p>This is where your quick innings live. <b>Elevate</b> the heater to the righty contact bats — <span class="hl">Bohm .282, Stott .241, Realmuto .279</span> are all weak up. <b>Changeup</b> the lefties — it's Harper's one hole (.368) and Marsh's (.379). Bury spin and changeup to the rookie J. Crawford (he chases).</p></div>
+  <div class="gp"><h3><span class="no">4</span>3rd time / late — don't let the top 3 beat you twice</h3><p>Turner, Schwarber, Harper a second and third time through: <b>expand</b>. Edges and chase pitches only, nothing they can extend on. A walk to Schwarber or Harper is a fine outcome — make the guys behind them beat you instead.</p></div>
+  <div class="gp"><h3><span class="no">5</span>The two to fear — Schwarber (#2) & Harper (#3)</h3><p><b>Schwarber</b> crushes everything (spin .605, change .608, heat up .557) — there is no safe pitch, so live off the plate and take the walk. <b>Harper</b> mashes fastballs and spin; the <b>only</b> soft spot is the changeup away (.368), and <b>never</b> middle (.75). To both: don't give in. The homers they hit here are the ones that beat you.</p></div>
+  <div class="gp"><h3><span class="no">6</span>The kill menu — by hitter</h3><p><b>Elevate</b> → Bohm, Stott, Realmuto (weak up). <b>Changeup away</b> → Harper, Marsh (and the LH side generally). <b>Spin / chase</b> → Turner, J. Crawford, the RF (they expand). <b>Don't hang spin</b> to Schwarber, Harper, or Marsh — they crush it.</p></div>
+  <div class="gp"><h3><span class="no">7</span>Count logic</h3><p><b>Ahead:</b> elevate the righties, changeup the lefties, expand the chasers. <b>Two strikes:</b> off the plate — they have the power to punish a strike-zone mistake. <b>Behind:</b> to the 4–9, throw your strike; to the top 3, you can live with the walk. The cardinal sin tonight is a fastball over the middle of the plate.</p></div>`;
 
 document.getElementById('foot').innerHTML =
-  `Data: Statcast / Baseball Savant 2026, vs-RHP splits through Jun 22. Buckets — Fastball = FF/SI/FC; 4-Seam UP 96+ = fastballs ≥96 mph; Spin = SL/ST/CU; Changeup = CH/FS. Lineup is a projected vs-RHP nine; Seattle is banged up (Arozarena just off the IL, Raley day-to-day, Raleigh on catch/DH management) and the official card posts ~2 hrs pre-game — see the Briefing injury note. Small samples flagged: Robles (30 PA), Emerson (71 PA). Reads describe current tendencies; per the standing rule, no mechanical "fix" is credited until game evidence confirms it.`;
+  `Data: Statcast / Baseball Savant 2026, vs-RHP splits through Jun 28. Buckets — Fastball = FF/SI/FC; 4-Seam UP 96+ = fastballs ≥96 mph; Spin = SL/ST/CU; Changeup = CH/FS. Lineup is the Phillies' projected vs-RHP nine (Castellanos is no longer with the club; Adolis García nominally starts in RF but that spot rotates with Derek Hill and Gabriel Rincones — see the RF watch on the Briefing). Official card posts ~2 hrs pre-game. Small samples flagged: García's RF alternates (Hill, Rincones) have ~40 PA each. Reads describe current tendencies; per the standing rule, no mechanical "fix" is credited until game evidence confirms it.`;
 
 document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.nav-tab[data-p]').forEach(x=>x.classList.remove('active'));
