@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chandler Scout — @ Yankees 7/20</title>
+<title>Chandler Scout — @ Yankees 7/21</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -224,8 +224,8 @@ const D = {
   "opp": "New York Yankees",
   "venue": "Yankee Stadium",
   "city": "Bronx, NY",
-  "date": "Monday, July 20, 2026",
-  "time": "7:05 PM ET · series runs Mon–Wed",
+  "date": "Tuesday, July 21, 2026",
+  "time": "7:05 PM ET · game 2 of the series",
   "away": true,
   "oppsp": "(TBD)",
   "rec": "Yankees ~53–42, 2nd AL East — wounded (no Judge, no Stanton) and slumping into the break",
@@ -1468,11 +1468,11 @@ document.getElementById('page-brief').innerHTML = `
 </div>
 <div style="margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:5px;background:rgba(253,184,39,.06)">
   <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px">⟳ Lineup &amp; series watch — card posts ~2 hrs pre-game</div>
-  <p style="font-size:13.5px;line-height:1.5;margin:0;color:#cfcfd8"><b>Judge and Stanton will not be back for this series</b> (both eyeing August). Rotating spots: <b>Goldschmidt</b> (R, slumping .264, chases 40% — spin him below) cycles in at 1B; the SS job is a timeshare — if <b>Volpe</b> (R) plays, challenge with velocity (.255/.262 vs FB) but <b>no changeups</b> (.767); <b>Rosario</b> (R) mashes spin (.538) and chases 45% — velocity and cambio, never a breaker. Catching rotates (Wells/Escarra/Sánchez — all light). Exact start day may shift with the post-break rotation (series runs Mon–Wed); the plan holds either way.</p>
+  <p style="font-size:13.5px;line-height:1.5;margin:0;color:#cfcfd8"><b>Judge and Stanton will not be back for this series</b> (both eyeing August). Rotating spots: <b>Goldschmidt</b> (R, slumping .264, chases 40% — spin him below) cycles in at 1B; the SS job is a timeshare — if <b>Volpe</b> (R) plays, challenge with velocity (.255/.262 vs FB) but <b>no changeups</b> (.767); <b>Rosario</b> (R) mashes spin (.538) and chases 45% — velocity and cambio, never a breaker. Catching rotates (Wells/Escarra/Sánchez — all light). Bonus of the extra day: <b>Monday night's game shows you their current nine</b> — the plan holds; re-verify the card ~2 hrs before first pitch Tuesday.</p>
 </div>
 <p style="font-size:13px;color:var(--mut);font-family:'JetBrains Mono';margin-top:14px;line-height:1.6"><b style="color:var(--gold)">&rarr; Tap any hitter</b> on the <b>Hitters</b> tab for their full breakdown: a specific attack plan, a recommended pitch mix, their heat map, and a <b>bat-path read</b> (how their swing matches up against your shapes). Green = go, red = stay away; lower number = less damage.</p>`;
 document.getElementById('cond').innerHTML = `
-  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.opp}</div><p>${D.game.venue}, the Bronx — <b>away</b>. Series runs <b>Mon–Wed, July 20–22</b>; exact start day locks with the post-break rotation. First start of the second half on the road.</p></div>
+  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.opp}</div><p>${D.game.venue}, the Bronx — <b>away</b>. <b>Tuesday, July 21, 7:05 PM ET</b> — game 2 of the series (pushed back a day). First start of the second half, on the road.</p></div>
   <div class="cond-card"><div class="lbl">The opponent</div><div class="big">${D.game.rec}</div><p><b>No Judge (rib), no Stanton (calf)</b> — both out until August. They stumbled into the break 2–8, 23rd in runs over the last 30 days. <b>Seven of nine bat left-handed</b>; Ben Rice (.453) is the bat that matters now.</p></div>
   <div class="cond-card"><div class="lbl">Your last start</div><div class="big">W vs the NL Central leaders</div><p>${D.game.last}. Honest read: the K's returned but the strike-one project isn't done — two straight season-low zone rates. Keep attacking; this report is built on it.</p></div>
   <div class="cond-card"><div class="lbl">Park — the one rule</div><div class="big">Yankee Stadium — 314 to right</div><p>The short porch turns any elevated, pull-side mistake to a lefty into a homer — and they run out seven lefties. Live <b>down and away</b>; elevate only off the ladder list. Everything else about the park plays fair.</p></div>`;
@@ -1605,7 +1605,7 @@ document.getElementById('page-plan').innerHTML = `
   <div class="gp"><h3><span class="no">7</span>Count logic</h3><p><b>Ahead/early:</b> fastball down-away and sinkers for strike one; steal 0-1 on the takers (Grisham, Rice, Schuemann). <b>Two strikes:</b> changeup away to the lefties, spin below to McMahon/Domínguez, ladder the green-light list. <b>Behind:</b> throw the strike down-away — this lineup slugs mistakes but doesn't grind counts like Milwaukee did. The cardinal sin tonight: anything hard, up, to the pull side of Rice, McMahon, or Chisholm.</p></div>`;
 
 document.getElementById('foot').innerHTML =
-  `Data: Statcast / Baseball Savant 2026, vs-RHP splits through Jul 12. Buckets — Fastball = FF/SI/FC; 4-Seam UP 96+ = fastballs ≥96 mph; Spin = SL/ST/CU; Changeup = CH/FS. Bat-path panel uses Statcast swing tracking (bat speed, attack angle by height, tilt). Lineup is New York's confirmed Jul 12 vs-RHP card (their last before the break); Judge (rib) and Stanton (calf) are on the IL and not expected back for this series per MLB.com's Jul 9 injury report. Rotating spots (1B/SS/C) covered in the watch box. Exact start day within the Jul 20–22 series locks with the post-break rotation; official card posts ~2 hrs pre-game. Small samples flagged: Schuemann (38 PA), Volpe changeup read (25 pitches). Command reads (zone%, mix drift) are from Bubba's own pitch logs; per the standing rule, no "fix" is credited until game evidence confirms it — and the strike-one project is explicitly not yet confirmed.`;
+  `Data: Statcast / Baseball Savant 2026, vs-RHP splits through Jul 12. Buckets — Fastball = FF/SI/FC; 4-Seam UP 96+ = fastballs ≥96 mph; Spin = SL/ST/CU; Changeup = CH/FS. Bat-path panel uses Statcast swing tracking (bat speed, attack angle by height, tilt). Lineup is New York's confirmed Jul 12 vs-RHP card (their last before the break); Judge (rib) and Stanton (calf) are on the IL and not expected back for this series per MLB.com's Jul 9 injury report. Rotating spots (1B/SS/C) covered in the watch box. Start pushed to Tuesday, Jul 21; official card posts ~2 hrs pre-game. Small samples flagged: Schuemann (38 PA), Volpe changeup read (25 pitches). Command reads (zone%, mix drift) are from Bubba's own pitch logs; per the standing rule, no "fix" is credited until game evidence confirms it — and the strike-one project is explicitly not yet confirmed.`;
 
 document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.nav-tab[data-p]').forEach(x=>x.classList.remove('active'));
