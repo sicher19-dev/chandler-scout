@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chandler Scout — @ Padres 8/26</title>
+<title>Chandler Scout — vs Giants 9/2</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -177,7 +177,7 @@ header::before{content:'36' !important}
 <header>
   <div class="eyebrow">Pregame Scouting Report · No Brand Baseball Analytics · DRAFT — updates as start nears</div>
   <h1>Chandler <span>Scout</span></h1>
-  <div class="sub"><b>Bubba Chandler</b> RHP #36 &nbsp;·&nbsp; @ <b>San Diego Padres</b> <span style="color:#9aa">· Petco Park</span> &nbsp;·&nbsp; <b id="gdate"></b></div>
+  <div class="sub"><b>Bubba Chandler</b> RHP #36 &nbsp;·&nbsp; vs <b>San Francisco Giants</b> <span style="color:#9aa">· PNC Park</span> &nbsp;·&nbsp; <b id="gdate"></b></div>
 </header>
 <nav>
   <div class="nav-tab active" data-p="brief">Briefing</div>
@@ -189,7 +189,7 @@ header::before{content:'36' !important}
 <div class="page active" id="page-brief"></div>
 <div class="page" id="page-overview">
   <div class="cond" id="cond"></div>
-  <div class="sect">Padres lineup vs RHP — tap a hitter</div>
+  <div class="sect">Giants lineup vs RHP — tap a hitter</div>
   <div class="legend">
     <span><i class="dot" style="background:#ff6b6b"></i>Elite</span>
     <span><i class="dot" style="background:#ffb454"></i>High</span>
@@ -208,10 +208,9 @@ header::before{content:'36' !important}
   <div class="arstable" id="arsenal"></div>
   <div class="sect">Your usage by batter hand</div>
   <div id="handtable"></div>
-  <p style="font-size:13px;color:var(--mut);margin-top:8px;font-family:'JetBrains Mono'">Note: four lefty bats, so the changeup (25% to LHH) fits naturally — but tonight it should go well beyond that, because it's also the pitch for Bogaerts and Machado on the right side. <b>Get the usage back above your 15.4% season rate; it has been under 9% the last two starts.</b> The slider is aimed almost entirely at Machado and Campusano, below the zone. And the four-seam changes role: down and on the edges to get ahead, above the zone only with two strikes.</p>
+  <p style="font-size:13px;color:var(--mut);margin-top:8px;font-family:'JetBrains Mono'">Note: five lefty bats, and your changeup already runs 25% to left-handers — that is the natural home for the biggest change in this plan. <b>Get the changeup back above its 15.2% season rate, and keep the curveball near the 11.6% you threw it at over the last three starts.</b> Both are missing bats at 40%. Pull the slider back toward chase usage below the zone (7% whiff over the last three), and let the four-seam get you ahead rather than get you outs.</p>
 </div>
 <div class="page" id="page-plan"></div>
-<div class="foot" id="foot"></div>
 </div>
 <script>
 const D = {
@@ -221,99 +220,215 @@ const D = {
   "num": "36"
  },
  "game": {
-  "opp": "San Diego Padres",
-  "venue": "Petco Park",
-  "city": "San Diego, CA",
-  "date": "Wednesday, August 26, 2026",
-  "time": "4:10 PM ET / 1:10 PM PT",
-  "away": true,
+  "opp": "San Francisco Giants",
+  "venue": "PNC Park",
+  "city": "Pittsburgh, PA",
+  "date": "Wednesday, September 2, 2026",
+  "time": "6:40 PM ET",
+  "away": false,
   "oppsp": "(TBD)",
-  "rec": "Padres — a balanced, dangerous lineup, but in the best pitcher's park you'll throw in all year",
-  "last": "Aug 21 @ LAD: 4.0 IP, 88 P, 4 H, 4 ER, 2 BB, 6 K — the strikeouts came back; the elevated fastball is what hurt you"
+  "rec": "Giants — gutted by injuries, running a Triple-A lineup around three real bats",
+  "last": "Aug 26 @ SD: 5.2 IP, 4 H, 1 ER, 2 BB, 3 K on 83 pitches — and seven days of rest since"
  },
  "hitters": [
   {
    "order": 1,
-   "name": "Fernando Tatis Jr.",
-   "pos": "RF",
-   "stand": "R",
-   "woba": 0.35,
-   "k": 17.7,
-   "bb": 7.5,
-   "chase": 28.0,
-   "pa": 441,
+   "name": "Drew Gilbert",
+   "pos": "CF",
+   "stand": "L",
+   "woba": 0.368,
+   "k": 15.3,
+   "bb": 9.9,
+   "chase": 23.5,
+   "pa": 294,
    "FB": {
-    "pit": 884,
-    "swing": 418,
-    "whiff": 69,
-    "whiff_pct": 16.5,
-    "xwobacon": 0.413,
-    "bip": 203
+    "pit": 634,
+    "swing": 254,
+    "whiff": 34,
+    "whiff_pct": 13.4,
+    "xwobacon": 0.385,
+    "bip": 121
    },
    "FBhi96": {
-    "pit": 284,
-    "swing": 152,
-    "whiff": 25,
-    "whiff_pct": 16.4,
-    "xwobacon": 0.435,
-    "bip": 72
+    "pit": 195,
+    "swing": 78,
+    "whiff": 13,
+    "whiff_pct": 16.7,
+    "xwobacon": 0.36,
+    "bip": 33
    },
    "SPIN": {
-    "pit": 491,
-    "swing": 235,
-    "whiff": 74,
-    "whiff_pct": 31.5,
-    "xwobacon": 0.445,
-    "bip": 91
+    "pit": 290,
+    "swing": 118,
+    "whiff": 28,
+    "whiff_pct": 23.7,
+    "xwobacon": 0.383,
+    "bip": 49
    },
    "OFF": {
-    "pit": 161,
-    "swing": 74,
-    "whiff": 28,
-    "whiff_pct": 37.8,
-    "xwobacon": 0.45,
-    "bip": 25
+    "pit": 204,
+    "swing": 95,
+    "whiff": 26,
+    "whiff_pct": 27.4,
+    "xwobacon": 0.311,
+    "bip": 37
    },
    "hasdata": true,
    "threat": "high",
    "attack": {
-    "code": "FB",
-    "lab": "Fastball",
-    "x": 0.413
-   },
-   "avoid": {
     "code": "OFF",
     "lab": "Changeup",
-    "x": 0.45
+    "x": 0.311
    },
-   "plan": "<b>The bat to respect</b> — and he's locked in (4-for-5 with two homers Sunday). <b>81.6 mph bat speed with 58% max-effort swings</b>, the most violent swing in this lineup, and his damage is <b>even across the whole zone</b> (.482 up / .476 middle / .451 down). <i>(Note: the ATTACK line reads fastball at .413 — that's simply his lowest number, and it's still damage. There is no green light on this card.)</i> The one usable trait: he <b>whiffs on 38% of the changeups he swings at</b> — but crushes the ones he squares (.450). So the cambio is a chase pitch <b>below the zone only</b>, never in it. Otherwise: edges, and don't be a hero.",
+   "avoid": {
+    "code": "FB",
+    "lab": "Hittable FB",
+    "x": 0.385
+   },
+   "plan": "Low bat speed (74.3, only 6% max-effort swings) and a plane that goes <b>negative up</b> (&minus;3.7&deg;) &mdash; but his damage is still up in the zone (.412), so that's contact, not power. The <b>changeup is the clear hole (.311, 27% whiff on 204 pitches)</b>. He doesn't chase much (23.5%), so you'll have to throw it for strikes. Cambio down and away; keep the fastball out of the top of the zone.",
    "tags": [
-    "Changeup BELOW zone only",
-    "No cold zone",
-    "Edges — don't give in"
+    "Changeup (.311)",
+    "No power (6% fast)",
+    "Won't chase"
    ],
    "heat": {
     "up": {
-     "pit": 200,
-     "bip": 60,
-     "xw": 0.482
+     "pit": 147,
+     "bip": 33,
+     "xw": 0.412
     },
     "mid": {
-     "pit": 282,
-     "bip": 113,
-     "xw": 0.476
+     "pit": 202,
+     "bip": 78,
+     "xw": 0.385
     },
     "dn": {
-     "pit": 250,
-     "bip": 85,
-     "xw": 0.451
+     "pit": 201,
+     "bip": 65,
+     "xw": 0.377
     }
    },
    "mix": [
     {
      "code": "CH",
-     "name": "Changeup (below)",
+     "name": "Changeup",
+     "pct": 40,
+     "color": "#22c55e"
+    },
+    {
+     "code": "SI",
+     "name": "Sinker",
      "pct": 25,
+     "color": "#f97316"
+    },
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 20,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "CU",
+     "name": "Curve",
+     "pct": 15,
+     "color": "#14b8a6"
+    }
+   ],
+   "swing": {
+    "bat_speed": 67.8,
+    "bat_speed_90": 74.3,
+    "bs_lab": "average",
+    "fast_pct": 6.3,
+    "attack_angle": 2.9,
+    "aa_lab": "flat",
+    "aa_up": -3.7,
+    "aa_dn": 5.3,
+    "tilt": 28.5
+   },
+   "swingnote": "74.3 bat speed with just <b>6.3% max-effort swings</b> and a plane that goes <b>negative up</b> (&minus;3.7&deg;). He gets under high pitches but has no force behind the swing, so what looks like up-zone damage (.412) is contact, not thump. The changeup dives beneath a flat path that can't adjust &mdash; 27% whiff on 204 pitches."
+  },
+  {
+   "order": 2,
+   "name": "Rafael Devers",
+   "pos": "1B",
+   "stand": "L",
+   "woba": 0.408,
+   "k": 24.3,
+   "bb": 10.2,
+   "chase": 29.1,
+   "pa": 382,
+   "FB": {
+    "pit": 971,
+    "swing": 437,
+    "whiff": 119,
+    "whiff_pct": 27.2,
+    "xwobacon": 0.466,
+    "bip": 134
+   },
+   "FBhi96": {
+    "pit": 308,
+    "swing": 154,
+    "whiff": 51,
+    "whiff_pct": 33.1,
+    "xwobacon": 0.501,
+    "bip": 37
+   },
+   "SPIN": {
+    "pit": 308,
+    "swing": 152,
+    "whiff": 41,
+    "whiff_pct": 27.0,
+    "xwobacon": 0.439,
+    "bip": 48
+   },
+   "OFF": {
+    "pit": 262,
+    "swing": 126,
+    "whiff": 23,
+    "whiff_pct": 18.3,
+    "xwobacon": 0.384,
+    "bip": 62
+   },
+   "hasdata": true,
+   "threat": "elite",
+   "attack": {
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.384
+   },
+   "avoid": {
+    "code": "FBhi96",
+    "lab": "Heater up",
+    "x": 0.501
+   },
+   "plan": "<b>The bat. Everything else on this card is a rounding error next to him.</b> .408 wOBA and there is no cold zone &mdash; .472 up, <b>.525 middle</b>, .481 down. <i>(Note: the ATTACK line reads changeup, but .384 is only his least-bad number &mdash; that would be damage for anyone else. There is no green light on this card.)</i> There <i>is</i> a lever, though: he <b>whiffs on 33% of premium velocity</b> (308 pitches) while slugging .501 on what he squares. So the 98 is a <b>chase pitch above the zone, never a strike in it</b>. Work the edges, expand, and take the walk.",
+   "tags": [
+    "98 ABOVE zone only",
+    "33% whiff on velo",
+    "No green light"
+   ],
+   "heat": {
+    "up": {
+     "pit": 210,
+     "bip": 43,
+     "xw": 0.472
+    },
+    "mid": {
+     "pit": 288,
+     "bip": 66,
+     "xw": 0.525
+    },
+    "dn": {
+     "pit": 221,
+     "bip": 58,
+     "xw": 0.481
+    }
+   },
+   "mix": [
+    {
+     "code": "CH",
+     "name": "Changeup (edges)",
+     "pct": 30,
      "color": "#22c55e"
     },
     {
@@ -323,120 +438,120 @@ const D = {
      "color": "#f97316"
     },
     {
-     "code": "SL",
-     "name": "Slider (below)",
-     "pct": 25,
-     "color": "#3b82f6"
+     "code": "CU",
+     "name": "Curve",
+     "pct": 20,
+     "color": "#14b8a6"
     },
     {
      "code": "FF",
-     "name": "4-Seam (edges)",
+     "name": "4-Seam (above zone)",
      "pct": 25,
      "color": "#ef4444"
     }
    ],
    "swing": {
-    "bat_speed": 73.1,
-    "bat_speed_90": 81.6,
-    "bs_lab": "elite",
-    "fast_pct": 57.5,
-    "attack_angle": 6.3,
+    "bat_speed": 71.6,
+    "bat_speed_90": 77.2,
+    "bs_lab": "above avg",
+    "fast_pct": 23.9,
+    "attack_angle": 9.6,
     "aa_lab": "moderate",
-    "aa_up": 3.4,
-    "aa_dn": 7.3,
-    "tilt": 29.4
+    "aa_up": 8.8,
+    "aa_dn": 10.1,
+    "tilt": 30.9
    },
-   "swingnote": "<b>81.6 mph bat speed with 58% max-effort swings</b> — the most force in this lineup by a clear margin, on a fairly level plane (6.3&deg;) that lets him cover the whole zone: .482 up, .476 middle, .451 down. There is no location answer. The only crack is the changeup diving off that level path — he misses 38% of them, but squares the rest (.450). Below the zone or not at all."
+   "swingnote": "77.2 bat speed with an even 9.6&deg; plane that barely changes by height (8.8&deg; up, 10.1&deg; down) &mdash; which is exactly why there's no cold zone: .472 up, .525 middle, .481 down. The crack is the <b>33% whiff rate on premium velocity</b> paired with a 29% chase. He'll expand; he just won't miss anything you leave over the plate."
   },
   {
-   "order": 2,
-   "name": "Jake Cronenworth",
-   "pos": "2B",
+   "order": 3,
+   "name": "Jung Hoo Lee",
+   "pos": "RF",
    "stand": "L",
-   "woba": 0.289,
-   "k": 23.9,
-   "bb": 10.9,
-   "chase": 27.8,
-   "pa": 238,
+   "woba": 0.353,
+   "k": 8.5,
+   "bb": 5.4,
+   "chase": 29.5,
+   "pa": 351,
    "FB": {
-    "pit": 604,
-    "swing": 265,
-    "whiff": 33,
-    "whiff_pct": 12.5,
-    "xwobacon": 0.361,
-    "bip": 102
+    "pit": 772,
+    "swing": 368,
+    "whiff": 34,
+    "whiff_pct": 9.2,
+    "xwobacon": 0.342,
+    "bip": 171
    },
    "FBhi96": {
-    "pit": 169,
-    "swing": 81,
-    "whiff": 10,
-    "whiff_pct": 12.3,
-    "xwobacon": 0.325,
-    "bip": 28
+    "pit": 201,
+    "swing": 112,
+    "whiff": 7,
+    "whiff_pct": 6.2,
+    "xwobacon": 0.29,
+    "bip": 50
    },
    "SPIN": {
-    "pit": 195,
-    "swing": 79,
-    "whiff": 28,
-    "whiff_pct": 35.4,
-    "xwobacon": 0.311,
-    "bip": 21
+    "pit": 365,
+    "swing": 163,
+    "whiff": 17,
+    "whiff_pct": 10.4,
+    "xwobacon": 0.319,
+    "bip": 79
    },
    "OFF": {
-    "pit": 167,
-    "swing": 89,
-    "whiff": 33,
-    "whiff_pct": 37.1,
-    "xwobacon": 0.207,
-    "bip": 26
+    "pit": 187,
+    "swing": 93,
+    "whiff": 12,
+    "whiff_pct": 12.9,
+    "xwobacon": 0.378,
+    "bip": 44
    },
    "hasdata": true,
-   "threat": "low",
+   "threat": "high",
    "attack": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.207
+    "code": "FBhi96",
+    "lab": "Heater 96+",
+    "x": 0.29
    },
    "avoid": {
-    "code": "FB",
-    "lab": "Hittable FB",
-    "x": 0.361
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.378
    },
-   "plan": "<b>Your best matchup in the top half.</b> His swing goes <b>&minus;5&deg; on pitches up</b> — he chops badly under them — and it shows: <b>.289 up in the zone</b>. He's also beaten by the <b>changeup (.207, and he misses 37% of them)</b>. Both plans work: elevate the fastball <i>or</i> bury the cambio. Struggling year (.289), so attack him.",
+   "plan": "<b>Elite contact &mdash; 8.5% strikeout rate</b>, the lowest you'll face all year. He will put almost anything in play, so stop hunting a whiff. The good news: he has <b>no power</b> (73.2 bat speed, 4% max-effort swings) and <b>premium velocity beats him for weak contact (.290)</b> &mdash; but he only misses 6% of it, so it's an out pitch, not a strikeout pitch. Elevate, let him hit it, and let PNC's outfield finish it. <b>No changeups</b> (.378).",
    "tags": [
-    "Elevate (.289 up)",
-    "Changeup (.207)",
-    "Attack — struggling"
+    "Elevate for contact",
+    "Not a K bat (8.5%)",
+    "No changeup"
    ],
    "heat": {
     "up": {
-     "pit": 145,
-     "bip": 34,
-     "xw": 0.289
+     "pit": 170,
+     "bip": 56,
+     "xw": 0.338
     },
     "mid": {
-     "pit": 183,
-     "bip": 60,
-     "xw": 0.364
+     "pit": 265,
+     "bip": 100,
+     "xw": 0.346
     },
     "dn": {
-     "pit": 135,
-     "bip": 34,
+     "pit": 228,
+     "bip": 83,
      "xw": 0.379
     }
    },
    "mix": [
     {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 35,
-     "color": "#22c55e"
-    },
-    {
      "code": "FF",
      "name": "4-Seam UP",
-     "pct": 30,
+     "pct": 45,
      "color": "#ef4444"
+    },
+    {
+     "code": "CU",
+     "name": "Curve",
+     "pct": 20,
+     "color": "#14b8a6"
     },
     {
      "code": "SL",
@@ -452,461 +567,345 @@ const D = {
     }
    ],
    "swing": {
-    "bat_speed": 69.2,
-    "bat_speed_90": 76.1,
-    "bs_lab": "above avg",
-    "fast_pct": 21.0,
-    "attack_angle": 5.9,
+    "bat_speed": 67.3,
+    "bat_speed_90": 73.2,
+    "bs_lab": "below avg",
+    "fast_pct": 4.2,
+    "attack_angle": 3.1,
     "aa_lab": "flat",
-    "aa_up": -5.2,
-    "aa_dn": 9.9,
-    "tilt": 30.4
+    "aa_up": -4.0,
+    "aa_dn": 6.0,
+    "tilt": 38.9
    },
-   "swingnote": "His attack angle goes <b>&minus;5.2&deg; on pitches up</b> — the steepest downward chop in this lineup — which is exactly why he's at .289 in the upper third. Below-average bat speed behind it. The elevated four-seam and the changeup both attack the same weakness from opposite directions."
-  },
-  {
-   "order": 3,
-   "name": "Manny Machado",
-   "pos": "3B",
-   "stand": "R",
-   "woba": 0.324,
-   "k": 22.2,
-   "bb": 11.4,
-   "chase": 29.7,
-   "pa": 414,
-   "FB": {
-    "pit": 923,
-    "swing": 434,
-    "whiff": 75,
-    "whiff_pct": 17.3,
-    "xwobacon": 0.453,
-    "bip": 166
-   },
-   "FBhi96": {
-    "pit": 344,
-    "swing": 170,
-    "whiff": 34,
-    "whiff_pct": 20.0,
-    "xwobacon": 0.397,
-    "bip": 61
-   },
-   "SPIN": {
-    "pit": 581,
-    "swing": 281,
-    "whiff": 97,
-    "whiff_pct": 34.5,
-    "xwobacon": 0.243,
-    "bip": 86
-   },
-   "OFF": {
-    "pit": 115,
-    "swing": 59,
-    "whiff": 18,
-    "whiff_pct": 30.5,
-    "xwobacon": 0.338,
-    "bip": 17
-   },
-   "hasdata": true,
-   "threat": "med",
-   "attack": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.243
-   },
-   "avoid": {
-    "code": "FB",
-    "lab": "Hittable FB",
-    "x": 0.453
-   },
-   "plan": "<b>The cleanest read on the card.</b> Spin destroys him — <b>.243 with a 34.5% whiff rate on 581 pitches</b>, one of the largest and clearest samples you'll ever get. And his damage is <b>up (.416) and middle (.445)</b>, so the fastball has nowhere safe to live. Slider and sweeper, down and away, all night. Don't challenge him with the heater.",
-   "tags": [
-    "SPIN (.243, 34% whiff)",
-    "Never up or middle",
-    "Cleanest matchup here"
-   ],
-   "heat": {
-    "up": {
-     "pit": 203,
-     "bip": 46,
-     "xw": 0.416
-    },
-    "mid": {
-     "pit": 312,
-     "bip": 108,
-     "xw": 0.445
-    },
-    "dn": {
-     "pit": 257,
-     "bip": 59,
-     "xw": 0.273
-    }
-   },
-   "mix": [
-    {
-     "code": "SL",
-     "name": "Slider (down/away)",
-     "pct": 45,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 25,
-     "color": "#a855f7"
-    },
-    {
-     "code": "CH",
-     "name": "Changeup",
-     "pct": 15,
-     "color": "#22c55e"
-    },
-    {
-     "code": "SI",
-     "name": "Sinker",
-     "pct": 15,
-     "color": "#f97316"
-    }
-   ],
-   "swing": {
-    "bat_speed": 72.7,
-    "bat_speed_90": 78.7,
-    "bs_lab": "above avg",
-    "fast_pct": 41.3,
-    "attack_angle": 7.4,
-    "aa_lab": "moderate",
-    "aa_up": 5.4,
-    "aa_dn": 9.1,
-    "tilt": 26.1
-   },
-   "swingnote": "Moderate uppercut (7.4&deg;) with real bat speed (78.7) that squares fastballs (.453) — but breaking balls fall off that plane completely: <b>.243 with a 34.5% whiff rate</b>. His damage is up (.416) and middle (.445) and drops to .273 down. Spin, down and away, is the entire at-bat."
+   "swingnote": "<b>The lowest-effort swing in this lineup</b> &mdash; 73.2 bat speed, 4.2% max-effort, and an 8.5% strikeout rate. His plane goes negative up (&minus;4.0&deg;) and he still only whiffs 6% against 96+, so this is a bat-to-ball machine with no power. Premium velocity produces .290 contact. Elevate, let him put it in play, trust the outfield."
   },
   {
    "order": 4,
-   "name": "Ty France",
-   "pos": "1B",
-   "stand": "R",
-   "woba": 0.385,
-   "k": 20.5,
-   "bb": 5.6,
-   "chase": 32.3,
-   "pa": 268,
+   "name": "Bryce Eldridge",
+   "pos": "DH",
+   "stand": "L",
+   "woba": 0.349,
+   "k": 26.1,
+   "bb": 13.8,
+   "chase": 26.1,
+   "pa": 261,
    "FB": {
-    "pit": 645,
-    "swing": 338,
-    "whiff": 76,
-    "whiff_pct": 22.5,
-    "xwobacon": 0.386,
-    "bip": 111
+    "pit": 528,
+    "swing": 258,
+    "whiff": 44,
+    "whiff_pct": 17.1,
+    "xwobacon": 0.44,
+    "bip": 91
    },
    "FBhi96": {
-    "pit": 211,
-    "swing": 117,
-    "whiff": 32,
-    "whiff_pct": 27.4,
-    "xwobacon": 0.345,
-    "bip": 32
+    "pit": 132,
+    "swing": 75,
+    "whiff": 14,
+    "whiff_pct": 18.7,
+    "xwobacon": 0.488,
+    "bip": 25
    },
    "SPIN": {
-    "pit": 333,
-    "swing": 179,
-    "whiff": 42,
-    "whiff_pct": 23.5,
-    "xwobacon": 0.335,
-    "bip": 60
+    "pit": 366,
+    "swing": 130,
+    "whiff": 40,
+    "whiff_pct": 30.8,
+    "xwobacon": 0.349,
+    "bip": 31
    },
    "OFF": {
-    "pit": 66,
-    "swing": 40,
-    "whiff": 9,
-    "whiff_pct": 22.5,
-    "xwobacon": 0.392,
-    "bip": 13
+    "pit": 219,
+    "swing": 99,
+    "whiff": 40,
+    "whiff_pct": 40.4,
+    "xwobacon": 0.43,
+    "bip": 33
    },
    "hasdata": true,
    "threat": "high",
    "attack": {
     "code": "SPIN",
     "lab": "Spin",
-    "x": 0.335
+    "x": 0.349
    },
    "avoid": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.392
+    "code": "FBhi96",
+    "lab": "Heater up",
+    "x": 0.488
    },
-   "plan": "Hot bat (.385) but a clear location hole: <b>weak up (.276)</b> and strong down (.456). He also <b>chases 32%</b>. Climb the ladder and expand above the zone; spin (.335) is the secondary. <b>Do not sink it to him</b> — the bottom of the zone is where he does his damage.",
+   "plan": "<b>Their hottest bat</b> &mdash; just back from bereavement leave and immediately went 4-for-5 with four RBI Saturday. Real power (77.5 bat speed, 34% max-effort swings) on a <b>steep 12&deg; uppercut that reaches 18&deg; down</b>, and it shows: his damage is <b>down (.467)</b> and he's weakest <b>up (.341)</b>. <b>Spin is the out (.349 with a 31% whiff rate on 366 pitches)</b>. Elevate and spin; never let one get to the bottom of the zone.",
    "tags": [
-    "Elevate (.276 up)",
-    "Nothing down (.456)",
-    "Chases 32%"
+    "Spin (31% whiff)",
+    "Elevate — weak up",
+    "NOTHING down (.467)"
    ],
    "heat": {
     "up": {
-     "pit": 158,
-     "bip": 30,
-     "xw": 0.276
+     "pit": 126,
+     "bip": 32,
+     "xw": 0.341
     },
     "mid": {
-     "pit": 202,
-     "bip": 74,
-     "xw": 0.409
+     "pit": 177,
+     "bip": 50,
+     "xw": 0.391
     },
     "dn": {
-     "pit": 136,
-     "bip": 49,
+     "pit": 202,
+     "bip": 46,
+     "xw": 0.467
+    }
+   },
+   "mix": [
+    {
+     "code": "SL",
+     "name": "Slider",
+     "pct": 30,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "CU",
+     "name": "Curve",
+     "pct": 25,
+     "color": "#14b8a6"
+    },
+    {
+     "code": "FF",
+     "name": "4-Seam UP",
+     "pct": 25,
+     "color": "#ef4444"
+    },
+    {
+     "code": "ST",
+     "name": "Sweeper",
+     "pct": 20,
+     "color": "#a855f7"
+    }
+   ],
+   "swing": {
+    "bat_speed": 72.5,
+    "bat_speed_90": 77.5,
+    "bs_lab": "above avg",
+    "fast_pct": 33.5,
+    "attack_angle": 12.0,
+    "aa_lab": "steep",
+    "aa_up": 4.7,
+    "aa_dn": 18.0,
+    "tilt": 37.6
+   },
+   "swingnote": "Real thump &mdash; 77.5 bat speed, <b>33.5% max-effort swings</b> &mdash; on a <b>steep 12&deg; uppercut that reaches 18&deg; on pitches down</b>. That plane is built for the bottom of the zone (.467) and comes up short above the barrel (.341). It also can't stay on breaking balls: <b>31% whiff against spin on a 366-pitch sample</b>. Elevate and spin."
+  },
+  {
+   "order": 5,
+   "name": "Christian Koss",
+   "pos": "SS",
+   "stand": "R",
+   "woba": 0.26,
+   "k": 30.8,
+   "bb": 5.5,
+   "chase": 38.9,
+   "pa": 91,
+   "FB": {
+    "pit": 193,
+    "swing": 106,
+    "whiff": 26,
+    "whiff_pct": 24.5,
+    "xwobacon": 0.327,
+    "bip": 36
+   },
+   "FBhi96": {
+    "pit": 64,
+    "swing": 30,
+    "whiff": 8,
+    "whiff_pct": 26.7,
+    "xwobacon": 0.296,
+    "bip": 6
+   },
+   "SPIN": {
+    "pit": 96,
+    "swing": 48,
+    "whiff": 15,
+    "whiff_pct": 31.2,
+    "xwobacon": 0.305,
+    "bip": 16
+   },
+   "OFF": {
+    "pit": 14,
+    "swing": 10,
+    "whiff": 4,
+    "whiff_pct": 40.0,
+    "xwobacon": null,
+    "bip": 0
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "FBhi96",
+    "lab": "Heater 96+",
+    "x": 0.296
+   },
+   "avoid": {
+    "code": "FB",
+    "lab": "Hittable FB",
+    "x": 0.327
+   },
+   "plan": "Everyday shortstop only because Adames is hurt. <b>30.8% strikeout rate, chases 38.9%</b>, and no power (6.9% max-effort swings). <i>(Note: the ATTACK line reads heater — that's true as a pitch type (.296), but not as a location. His damage is concentrated <b>up in the zone (.436)</b>; he falls apart <b>down (.308)</b>. Velocity yes, elevation no.)</i> So: <b>keep it at the knees</b>, mix the sinker and slider below, and expand with two strikes. He'll chase himself out of the at-bat.",
+   "tags": [
+    "Keep it DOWN (.308)",
+    "Velocity yes, elevation no",
+    "Chases 38.9%"
+   ],
+   "heat": {
+    "up": {
+     "pit": 45,
+     "bip": 7,
+     "xw": 0.436
+    },
+    "mid": {
+     "pit": 49,
+     "bip": 19,
+     "xw": 0.326
+    },
+    "dn": {
+     "pit": 55,
+     "bip": 15,
+     "xw": 0.308
+    }
+   },
+   "mix": [
+    {
+     "code": "SI",
+     "name": "Sinker down",
+     "pct": 30,
+     "color": "#f97316"
+    },
+    {
+     "code": "SL",
+     "name": "Slider (expand)",
+     "pct": 30,
+     "color": "#3b82f6"
+    },
+    {
+     "code": "CH",
+     "name": "Changeup",
+     "pct": 20,
+     "color": "#22c55e"
+    },
+    {
+     "code": "CU",
+     "name": "Curve",
+     "pct": 20,
+     "color": "#14b8a6"
+    }
+   ],
+   "swing": {
+    "bat_speed": 66.5,
+    "bat_speed_90": 73.9,
+    "bs_lab": "below avg",
+    "fast_pct": 6.9,
+    "attack_angle": 8.1,
+    "aa_lab": "moderate",
+    "aa_up": 2.6,
+    "aa_dn": 10.7,
+    "tilt": 27.3
+   },
+   "swingnote": "73.9 bat speed, 6.9% max-effort &mdash; no drive at all. Steep down (10.7&deg;) which is why the bottom of the zone gives him nothing (.308), while his contact damage sits up (.436). Pair the low-ball weakness with a 38.9% chase and the at-bat writes itself."
+  },
+  {
+   "order": 6,
+   "name": "Shay Whitcomb",
+   "pos": "3B",
+   "stand": "R",
+   "woba": 0.191,
+   "k": 36.1,
+   "bb": 2.8,
+   "chase": 42.3,
+   "pa": 36,
+   "FB": {
+    "pit": 69,
+    "swing": 38,
+    "whiff": 9,
+    "whiff_pct": 23.7,
+    "xwobacon": 0.296,
+    "bip": 13
+   },
+   "FBhi96": {
+    "pit": 29,
+    "swing": 15,
+    "whiff": 4,
+    "whiff_pct": 26.7,
+    "xwobacon": 0.482,
+    "bip": 6
+   },
+   "SPIN": {
+    "pit": 47,
+    "swing": 24,
+    "whiff": 9,
+    "whiff_pct": 37.5,
+    "xwobacon": 0.373,
+    "bip": 6
+   },
+   "OFF": {
+    "pit": 11,
+    "swing": 7,
+    "whiff": 6,
+    "whiff_pct": 85.7,
+    "xwobacon": 0.285,
+    "bip": 1
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "FB",
+    "lab": "Fastball",
+    "x": 0.296
+   },
+   "avoid": {
+    "code": "FBhi96",
+    "lab": "Heater up",
+    "x": 0.482
+   },
+   "plan": "Waiver claim getting everyday at-bats out of necessity, and the only numbers worth trusting are the big ones: <b>.191 wOBA, a 36.1% strikeout rate, and a lineup-high 42.3% chase</b>. <i>(Every location and pitch-type split on his card rests on one to six batted balls &mdash; read them as noise, not a plan. Don't over-think him.)</i> <b>Attack the zone, get ahead, and expand with two strikes.</b> He'll swing at anything, and he can't punish a mistake the way the top four can.",
+   "tags": [
+    "Attack + expand",
+    "42% chase, 36% K",
+    "Splits are noise"
+   ],
+   "heat": {
+    "up": {
+     "pit": 9,
+     "bip": 1,
+     "xw": 0.008
+    },
+    "mid": {
+     "pit": 27,
+     "bip": 11,
      "xw": 0.456
+    },
+    "dn": {
+     "pit": 21,
+     "bip": 4,
+     "xw": 0.245
     }
    },
    "mix": [
     {
      "code": "FF",
-     "name": "4-Seam UP",
-     "pct": 45,
+     "name": "4-Seam (attack)",
+     "pct": 35,
      "color": "#ef4444"
     },
     {
      "code": "SL",
-     "name": "Slider",
-     "pct": 25,
+     "name": "Slider (expand)",
+     "pct": 30,
      "color": "#3b82f6"
     },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 15,
-     "color": "#a855f7"
-    },
-    {
-     "code": "CU",
-     "name": "Curve",
-     "pct": 15,
-     "color": "#14b8a6"
-    }
-   ],
-   "swing": {
-    "bat_speed": 70.3,
-    "bat_speed_90": 76.6,
-    "bs_lab": "above avg",
-    "fast_pct": 19.8,
-    "attack_angle": 9.8,
-    "aa_lab": "moderate",
-    "aa_up": 4.7,
-    "aa_dn": 12.0,
-    "tilt": 33.9
-   },
-   "swingnote": "Steepens down (12&deg; low) and flattens up (4.7&deg;) — a swing built for the bottom of the zone (.456 down) that comes up empty above the barrel (.276 up). Climb the ladder; the 32% chase means you can keep going above it."
-  },
-  {
-   "order": 5,
-   "name": "Jackson Merrill",
-   "pos": "CF",
-   "stand": "L",
-   "woba": 0.321,
-   "k": 23.3,
-   "bb": 6.9,
-   "chase": 38.0,
-   "pa": 390,
-   "FB": {
-    "pit": 860,
-    "swing": 485,
-    "whiff": 114,
-    "whiff_pct": 23.5,
-    "xwobacon": 0.464,
-    "bip": 128
-   },
-   "FBhi96": {
-    "pit": 279,
-    "swing": 167,
-    "whiff": 47,
-    "whiff_pct": 28.1,
-    "xwobacon": 0.403,
-    "bip": 36
-   },
-   "SPIN": {
-    "pit": 326,
-    "swing": 188,
-    "whiff": 55,
-    "whiff_pct": 29.3,
-    "xwobacon": 0.426,
-    "bip": 63
-   },
-   "OFF": {
-    "pit": 326,
-    "swing": 179,
-    "whiff": 45,
-    "whiff_pct": 25.1,
-    "xwobacon": 0.362,
-    "bip": 70
-   },
-   "hasdata": true,
-   "threat": "med",
-   "attack": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.362
-   },
-   "avoid": {
-    "code": "FB",
-    "lab": "Hittable FB",
-    "x": 0.464
-   },
-   "plan": "<b>Chases the most of any regular here (38%)</b> — that's the whole at-bat. But be careful in the zone: he's hot everywhere in it (<b>.514 up, .485 middle</b>), so don't throw him strikes to get ahead. Changeup (.362) and expand off the plate; make him get himself out.",
-   "tags": [
-    "Expand — chases 38%",
-    "Hot in the zone (.514 up)",
-    "Changeup / off the plate"
-   ],
-   "heat": {
-    "up": {
-     "pit": 212,
-     "bip": 42,
-     "xw": 0.514
-    },
-    "mid": {
-     "pit": 244,
-     "bip": 83,
-     "xw": 0.485
-    },
-    "dn": {
-     "pit": 211,
-     "bip": 64,
-     "xw": 0.408
-    }
-   },
-   "mix": [
     {
      "code": "CH",
-     "name": "Changeup (expand)",
-     "pct": 35,
+     "name": "Changeup",
+     "pct": 20,
      "color": "#22c55e"
-    },
-    {
-     "code": "SL",
-     "name": "Slider (below)",
-     "pct": 25,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "SI",
-     "name": "Sinker",
-     "pct": 20,
-     "color": "#f97316"
-    },
-    {
-     "code": "CU",
-     "name": "Curve",
-     "pct": 20,
-     "color": "#14b8a6"
-    }
-   ],
-   "swing": {
-    "bat_speed": 71.5,
-    "bat_speed_90": 77.7,
-    "bs_lab": "above avg",
-    "fast_pct": 28.1,
-    "attack_angle": 8.7,
-    "aa_lab": "moderate",
-    "aa_up": 4.3,
-    "aa_dn": 10.8,
-    "tilt": 38.1
-   },
-   "swingnote": "Above-average bat speed (77.7) on a moderate plane, and he does damage everywhere <b>in</b> the zone (.514 up / .485 middle). The exploitable trait is discipline, not the swing — a <b>38% chase</b>, highest among their regulars. Win the at-bat off the plate, not in it."
-  },
-  {
-   "order": 6,
-   "name": "Luis Campusano",
-   "pos": "C",
-   "stand": "R",
-   "woba": 0.419,
-   "k": 20.9,
-   "bb": 13.2,
-   "chase": 28.7,
-   "pa": 129,
-   "FB": {
-    "pit": 272,
-    "swing": 130,
-    "whiff": 21,
-    "whiff_pct": 16.2,
-    "xwobacon": 0.372,
-    "bip": 47
-   },
-   "FBhi96": {
-    "pit": 81,
-    "swing": 48,
-    "whiff": 9,
-    "whiff_pct": 18.8,
-    "xwobacon": 0.419,
-    "bip": 15
-   },
-   "SPIN": {
-    "pit": 205,
-    "swing": 90,
-    "whiff": 35,
-    "whiff_pct": 38.9,
-    "xwobacon": 0.299,
-    "bip": 27
-   },
-   "OFF": {
-    "pit": 54,
-    "swing": 29,
-    "whiff": 6,
-    "whiff_pct": 20.7,
-    "xwobacon": 0.638,
-    "bip": 7
-   },
-   "hasdata": true,
-   "threat": "elite",
-   "attack": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.299
-   },
-   "avoid": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.638
-   },
-   "plan": "Red-hot (.419 wOBA) but a small book (129 PA). <b>Spin is the hole (.299)</b> and his damage falls off <b>down (.297)</b>. Critically: <b>no changeups</b> — he's crushed them, though on a small sample. Slider and sweeper below the zone; keep everything out of the middle (.483).",
-   "tags": [
-    "Spin down (.299)",
-    "NO changeup",
-    "Hot — small book"
-   ],
-   "heat": {
-    "up": {
-     "pit": 66,
-     "bip": 19,
-     "xw": 0.412
-    },
-    "mid": {
-     "pit": 107,
-     "bip": 32,
-     "xw": 0.483
-    },
-    "dn": {
-     "pit": 76,
-     "bip": 14,
-     "xw": 0.297
-    }
-   },
-   "mix": [
-    {
-     "code": "SL",
-     "name": "Slider (below)",
-     "pct": 40,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "ST",
-     "name": "Sweeper",
-     "pct": 25,
-     "color": "#a855f7"
-    },
-    {
-     "code": "SI",
-     "name": "Sinker down",
-     "pct": 20,
-     "color": "#f97316"
     },
     {
      "code": "CU",
@@ -917,480 +916,480 @@ const D = {
    ],
    "swing": {
     "bat_speed": 69.2,
-    "bat_speed_90": 78.0,
-    "bs_lab": "above avg",
-    "fast_pct": 24.5,
-    "attack_angle": 10.3,
+    "bat_speed_90": 74.8,
+    "bs_lab": "average",
+    "fast_pct": 10.8,
+    "attack_angle": 9.8,
     "aa_lab": "moderate",
-    "aa_up": 6.5,
-    "aa_dn": 12.8,
-    "tilt": 24.7
+    "aa_up": 0.9,
+    "aa_dn": 11.8,
+    "tilt": 29.8
    },
-   "swingnote": "Steep, strongly pull-tilted swing (10.3&deg;, &minus;7.8&deg; direction) that punishes anything up or middle (.412 / .483) but falls apart down (.297) and against spin (.299). Keep it below the belt and away from his pull side."
+   "swingnote": "Modest bat (74.8) with a flat plane up (0.9&deg;) that produces <b>essentially zero damage in the upper third (.008)</b> and little down (.245) &mdash; but a real hot spot over the middle (.456). A 36% strikeout rate and a lineup-high 42.3% chase mean two-strike expansion works every time."
   },
   {
    "order": 7,
-   "name": "Gavin Sheets",
-   "pos": "DH",
+   "name": "Grant McCray",
+   "pos": "LF",
    "stand": "L",
-   "woba": 0.338,
-   "k": 19.2,
-   "bb": 12.9,
-   "chase": 31.0,
-   "pa": 333,
+   "woba": 0.249,
+   "k": 26.1,
+   "bb": 8.7,
+   "chase": 25.2,
+   "pa": 46,
    "FB": {
-    "pit": 742,
-    "swing": 343,
-    "whiff": 39,
-    "whiff_pct": 11.4,
-    "xwobacon": 0.379,
-    "bip": 121
-   },
-   "FBhi96": {
-    "pit": 249,
-    "swing": 120,
-    "whiff": 14,
-    "whiff_pct": 11.7,
-    "xwobacon": 0.349,
-    "bip": 44
-   },
-   "SPIN": {
-    "pit": 380,
-    "swing": 123,
-    "whiff": 37,
-    "whiff_pct": 30.1,
-    "xwobacon": 0.384,
-    "bip": 39
-   },
-   "OFF": {
-    "pit": 311,
-    "swing": 142,
-    "whiff": 31,
-    "whiff_pct": 21.8,
-    "xwobacon": 0.261,
-    "bip": 59
-   },
-   "hasdata": true,
-   "threat": "med",
-   "attack": {
-    "code": "OFF",
-    "lab": "Changeup",
-    "x": 0.261
-   },
-   "avoid": {
-    "code": "SPIN",
-    "lab": "Spin",
-    "x": 0.384
-   },
-   "plan": "Real power (79.0 bat speed, <b>44% max-effort swings</b>) and hot over the middle (.480). The <b>changeup is the hole (.261)</b> on a big sample. Cambio away, stay off the middle of the plate, and don't let him extend.",
-   "tags": [
-    "Changeup (.261)",
-    "Never middle (.480)",
-    "Real power"
-   ],
-   "heat": {
-    "up": {
-     "pit": 164,
-     "bip": 42,
-     "xw": 0.41
-    },
-    "mid": {
-     "pit": 218,
-     "bip": 49,
-     "xw": 0.48
-    },
-    "dn": {
-     "pit": 257,
-     "bip": 54,
-     "xw": 0.397
-    }
-   },
-   "mix": [
-    {
-     "code": "CH",
-     "name": "Changeup away",
-     "pct": 40,
-     "color": "#22c55e"
-    },
-    {
-     "code": "SI",
-     "name": "Sinker",
-     "pct": 25,
-     "color": "#f97316"
-    },
-    {
-     "code": "SL",
-     "name": "Slider",
-     "pct": 20,
-     "color": "#3b82f6"
-    },
-    {
-     "code": "CU",
-     "name": "Curve",
-     "pct": 15,
-     "color": "#14b8a6"
-    }
-   ],
-   "swing": {
-    "bat_speed": 72.3,
-    "bat_speed_90": 79.0,
-    "bs_lab": "elite",
-    "fast_pct": 43.8,
-    "attack_angle": 7.5,
-    "aa_lab": "moderate",
-    "aa_up": 3.0,
-    "aa_dn": 9.4,
-    "tilt": 28.3
-   },
-   "swingnote": "<b>79.0 bat speed and 44% max-effort swings</b> — genuine power, pull-tilted (&minus;5.1&deg;), and the middle of the plate is a .480. The changeup is the pitch that beats the timing (.261 on a large sample)."
-  },
-  {
-   "order": 8,
-   "name": "Xander Bogaerts",
-   "pos": "SS",
-   "stand": "R",
-   "woba": 0.313,
-   "k": 19.3,
-   "bb": 12.2,
-   "chase": 22.5,
-   "pa": 368,
-   "FB": {
-    "pit": 822,
-    "swing": 347,
-    "whiff": 45,
-    "whiff_pct": 13.0,
-    "xwobacon": 0.346,
-    "bip": 167
-   },
-   "FBhi96": {
-    "pit": 266,
-    "swing": 122,
-    "whiff": 20,
-    "whiff_pct": 16.4,
-    "xwobacon": 0.345,
-    "bip": 47
-   },
-   "SPIN": {
-    "pit": 501,
-    "swing": 200,
-    "whiff": 61,
-    "whiff_pct": 30.5,
-    "xwobacon": 0.348,
-    "bip": 72
-   },
-   "OFF": {
     "pit": 110,
-    "swing": 44,
-    "whiff": 21,
-    "whiff_pct": 47.7,
-    "xwobacon": 0.163,
-    "bip": 5
+    "swing": 43,
+    "whiff": 11,
+    "whiff_pct": 25.6,
+    "xwobacon": 0.357,
+    "bip": 15
+   },
+   "FBhi96": {
+    "pit": 23,
+    "swing": 9,
+    "whiff": 4,
+    "whiff_pct": 44.4,
+    "xwobacon": 0.36,
+    "bip": 2
+   },
+   "SPIN": {
+    "pit": 48,
+    "swing": 30,
+    "whiff": 12,
+    "whiff_pct": 40.0,
+    "xwobacon": 0.526,
+    "bip": 8
+   },
+   "OFF": {
+    "pit": 29,
+    "swing": 8,
+    "whiff": 2,
+    "whiff_pct": 25.0,
+    "xwobacon": 0.14,
+    "bip": 3
    },
    "hasdata": true,
    "threat": "low",
    "attack": {
-    "code": "FBhi96",
-    "lab": "Heater 96+",
-    "x": 0.345
+    "code": "FB",
+    "lab": "Fastball",
+    "x": 0.357
    },
    "avoid": {
     "code": "SPIN",
     "lab": "Spin",
-    "x": 0.348
+    "x": 0.526
    },
-   "plan": "The most <b>strikeout-able</b> bat on this card, and it's one pitch: he <b>swings through 48% of the changeups he sees</b> — the highest whiff rate against any pitch by any hitter in this lineup. Bury it. <i>(Note: the ATTACK line reads heater-up because his changeup contact sample is too small to grade — the 48% whiff rate on 110 pitches is the reliable signal. And be careful with that heater: his damage in the upper third of the zone is a .500.)</i> Two cautions: <b>don't elevate into the zone</b>, and he <b>won't chase (22.5%)</b>, so you have to work near the plate to set the changeup up.",
+   "plan": "Recent call-up with the <b>most extreme pull tilt in the lineup</b> (&minus;11.2&deg;) &mdash; a committed swing that leaves him nothing up (.126) and nothing down (.268) while the middle is his one hot spot (.482). <b>Stay off the heart of the plate.</b> On spin, read it carefully: he <b>misses 40% of the breaking balls he swings at but crushes the ones he squares</b>, so it's a <b>chase pitch below the zone, never a strike</b>. The changeup shows an early edge on a small book.",
    "tags": [
-    "Changeup — 48% whiff",
-    "DON'T elevate (.500)",
-    "Won't chase"
+    "NEVER middle (.482)",
+    "Spin BELOW zone only",
+    "Changeup — early signal"
    ],
    "heat": {
     "up": {
-     "pit": 153,
-     "bip": 58,
-     "xw": 0.5
+     "pit": 23,
+     "bip": 4,
+     "xw": 0.126
     },
     "mid": {
-     "pit": 293,
-     "bip": 98,
-     "xw": 0.291
+     "pit": 39,
+     "bip": 11,
+     "xw": 0.482
     },
     "dn": {
-     "pit": 250,
-     "bip": 48,
-     "xw": 0.293
+     "pit": 22,
+     "bip": 7,
+     "xw": 0.268
     }
    },
    "mix": [
     {
      "code": "CH",
      "name": "Changeup",
-     "pct": 45,
+     "pct": 35,
      "color": "#22c55e"
+    },
+    {
+     "code": "FF",
+     "name": "4-Seam (edges)",
+     "pct": 30,
+     "color": "#ef4444"
     },
     {
      "code": "SI",
      "name": "Sinker",
-     "pct": 25,
+     "pct": 20,
      "color": "#f97316"
     },
     {
      "code": "SL",
-     "name": "Slider",
-     "pct": 20,
+     "name": "Slider (below)",
+     "pct": 15,
      "color": "#3b82f6"
-    },
-    {
-     "code": "FF",
-     "name": "4-Seam (never up)",
-     "pct": 10,
-     "color": "#ef4444"
     }
    ],
    "swing": {
-    "bat_speed": 69.8,
-    "bat_speed_90": 78.1,
+    "bat_speed": 65.2,
+    "bat_speed_90": 76.7,
     "bs_lab": "above avg",
-    "fast_pct": 25.8,
-    "attack_angle": 10.0,
-    "aa_lab": "moderate",
-    "aa_up": 6.0,
-    "aa_dn": 13.8,
-    "tilt": 32.4
+    "fast_pct": 22.5,
+    "attack_angle": 4.1,
+    "aa_lab": "flat",
+    "aa_up": null,
+    "aa_dn": 8.8,
+    "tilt": 33.8
    },
-   "swingnote": "Steep plane (10&deg;, 13.8&deg; down) that handles the upper third (.500 up) but collapses against offspeed — he <b>swings through 48% of changeups</b>, the single highest whiff rate on this card. He won't chase (22.5%), so you have to work near the zone to earn it."
+   "swingnote": "<b>&minus;11.2&deg; attack direction &mdash; the most extreme pull tilt in the lineup.</b> That commitment leaves him nothing up (.126) and nothing down (.268) while the middle plays to his strength (.482). Location alone beats him: stay off the heart of the plate."
   },
   {
-   "order": 9,
-   "name": "Luis Rengifo",
-   "pos": "LF",
-   "stand": "L",
-   "woba": 0.328,
-   "k": 9.5,
-   "bb": 10.5,
-   "chase": 26.6,
-   "pa": 210,
+   "order": 8,
+   "name": "Osleivis Basabe",
+   "pos": "2B",
+   "stand": "R",
+   "woba": 0.337,
+   "k": 18.2,
+   "bb": 0.0,
+   "chase": 36.8,
+   "pa": 55,
    "FB": {
-    "pit": 491,
-    "swing": 231,
-    "whiff": 34,
-    "whiff_pct": 14.7,
-    "xwobacon": 0.263,
-    "bip": 94
+    "pit": 111,
+    "swing": 58,
+    "whiff": 7,
+    "whiff_pct": 12.1,
+    "xwobacon": 0.336,
+    "bip": 26
    },
    "FBhi96": {
-    "pit": 107,
-    "swing": 55,
-    "whiff": 6,
-    "whiff_pct": 10.9,
-    "xwobacon": 0.378,
-    "bip": 23
+    "pit": 37,
+    "swing": 18,
+    "whiff": 1,
+    "whiff_pct": 5.6,
+    "xwobacon": 0.435,
+    "bip": 8
    },
    "SPIN": {
-    "pit": 207,
-    "swing": 83,
-    "whiff": 12,
-    "whiff_pct": 14.5,
-    "xwobacon": 0.337,
-    "bip": 37
+    "pit": 67,
+    "swing": 29,
+    "whiff": 10,
+    "whiff_pct": 34.5,
+    "xwobacon": 0.365,
+    "bip": 14
    },
    "OFF": {
-    "pit": 124,
-    "swing": 67,
-    "whiff": 18,
-    "whiff_pct": 26.9,
-    "xwobacon": 0.364,
-    "bip": 30
+    "pit": 11,
+    "swing": 5,
+    "whiff": 0,
+    "whiff_pct": 0.0,
+    "xwobacon": 0.463,
+    "bip": 3
    },
    "hasdata": true,
    "threat": "med",
    "attack": {
     "code": "FB",
     "lab": "Fastball",
-    "x": 0.263
+    "x": 0.336
    },
    "avoid": {
     "code": "FBhi96",
     "lab": "Heater up",
-    "x": 0.378
+    "x": 0.435
    },
-   "plan": "Elite contact — <b>9.5% strikeout rate</b>, he'll put nearly anything in play — but almost no power behind it (75.0 bat speed, 10% max-effort swings). <b>He can't do anything with a fastball (.263 on a big sample)</b>, and his softest location is the upper third (.235). <i>(One nuance: he handles premium velocity a bit better than ordinary heat (.378 on 96+) and he rarely misses — 11% whiff. So this isn't a strikeout at-bat; don't try to blow him away.)</i> Just throw strikes, let him hit it, and let Petco's outfield do the rest. Don't turn the 9-hole into a baserunner.",
+   "plan": "Utility infielder pressed into everyday duty. Decent bat speed (77.2) and he <b>chases 36.8%</b>. His damage is <b>up (.374) and middle (.433)</b>, and he drops off <b>down (.288)</b>. Sinkers and spin at the knees, then expand. Careful elevating &mdash; the early sample says he handles velocity, and he rarely misses it.",
    "tags": [
-    "Throw strikes (.263 FB)",
-    "Not a strikeout at-bat",
-    "Weak contact — take it"
+    "Keep it down (.288)",
+    "Chases 36.8%",
+    "Careful elevating"
    ],
    "heat": {
     "up": {
-     "pit": 121,
-     "bip": 36,
-     "xw": 0.235
+     "pit": 30,
+     "bip": 11,
+     "xw": 0.374
     },
     "mid": {
-     "pit": 158,
-     "bip": 59,
-     "xw": 0.332
+     "pit": 37,
+     "bip": 14,
+     "xw": 0.433
     },
     "dn": {
-     "pit": 116,
-     "bip": 37,
-     "xw": 0.302
+     "pit": 32,
+     "bip": 9,
+     "xw": 0.288
     }
    },
    "mix": [
     {
-     "code": "FF",
-     "name": "4-Seam (strikes, upper third)",
-     "pct": 40,
-     "color": "#ef4444"
-    },
-    {
      "code": "SI",
-     "name": "Sinker",
-     "pct": 25,
+     "name": "Sinker down",
+     "pct": 30,
      "color": "#f97316"
     },
     {
      "code": "SL",
-     "name": "Slider",
-     "pct": 20,
+     "name": "Slider (expand)",
+     "pct": 30,
      "color": "#3b82f6"
     },
     {
      "code": "CH",
      "name": "Changeup",
-     "pct": 15,
+     "pct": 20,
      "color": "#22c55e"
+    },
+    {
+     "code": "CU",
+     "name": "Curve",
+     "pct": 20,
+     "color": "#14b8a6"
     }
    ],
    "swing": {
-    "bat_speed": 68.6,
-    "bat_speed_90": 75.0,
-    "bs_lab": "average",
-    "fast_pct": 10.5,
-    "attack_angle": 4.6,
+    "bat_speed": 69.4,
+    "bat_speed_90": 77.2,
+    "bs_lab": "above avg",
+    "fast_pct": 28.7,
+    "attack_angle": 5.8,
     "aa_lab": "flat",
-    "aa_up": -0.7,
-    "aa_dn": 5.1,
-    "tilt": 33.7
+    "aa_up": 8.1,
+    "aa_dn": 2.9,
+    "tilt": 24.0
    },
-   "swingnote": "75.0 bat speed with just <b>10.5% max-effort swings</b> and a flat plane that goes slightly negative up (&minus;0.7&deg;). Elite contact (9.5% K, 11&ndash;15% whiff on fastballs) with no thump — he'll put the ball in play wherever you throw it, and the upper third is where he does the least with it (.235). The out comes from contact quality, not swing-and-miss."
+   "swingnote": "Decent bat speed (77.2, 28.7% max-effort) on a shallow plane that flattens down (2.9&deg;) &mdash; which is why the bottom of the zone is his weak spot (.288) while up and middle play (.374 / .433). He chases 36.8%; work down and expand."
+  },
+  {
+   "order": 9,
+   "name": "Drew Cavanaugh",
+   "pos": "C",
+   "stand": "L",
+   "woba": 0.289,
+   "k": 24.0,
+   "bb": 12.5,
+   "chase": 27.6,
+   "pa": 104,
+   "FB": {
+    "pit": 225,
+    "swing": 121,
+    "whiff": 18,
+    "whiff_pct": 14.9,
+    "xwobacon": 0.396,
+    "bip": 38
+   },
+   "FBhi96": {
+    "pit": 53,
+    "swing": 28,
+    "whiff": 6,
+    "whiff_pct": 21.4,
+    "xwobacon": 0.406,
+    "bip": 8
+   },
+   "SPIN": {
+    "pit": 108,
+    "swing": 44,
+    "whiff": 11,
+    "whiff_pct": 25.0,
+    "xwobacon": 0.442,
+    "bip": 15
+   },
+   "OFF": {
+    "pit": 59,
+    "swing": 26,
+    "whiff": 7,
+    "whiff_pct": 26.9,
+    "xwobacon": 0.388,
+    "bip": 10
+   },
+   "hasdata": true,
+   "threat": "low",
+   "attack": {
+    "code": "OFF",
+    "lab": "Changeup",
+    "x": 0.388
+   },
+   "avoid": {
+    "code": "SPIN",
+    "lab": "Spin",
+    "x": 0.442
+   },
+   "plan": "Backup catcher getting the bulk of the work. <b>Almost no bat speed (73.4, 5.4% max-effort swings)</b> &mdash; he cannot drive the ball. His damage is <b>down (.466)</b> and against <b>spin (.442)</b>; he's softest <b>up (.388)</b> and on the changeup (.388). So: <b>elevate and change speeds, no breaking balls, nothing at the knees.</b> Throw strikes and take the quick out.",
+   "tags": [
+    "Elevate + changeup",
+    "No spin (.442)",
+    "Nothing down (.466)"
+   ],
+   "heat": {
+    "up": {
+     "pit": 54,
+     "bip": 7,
+     "xw": 0.388
+    },
+    "mid": {
+     "pit": 77,
+     "bip": 27,
+     "xw": 0.425
+    },
+    "dn": {
+     "pit": 54,
+     "bip": 18,
+     "xw": 0.466
+    }
+   },
+   "mix": [
+    {
+     "code": "FF",
+     "name": "4-Seam UP",
+     "pct": 45,
+     "color": "#ef4444"
+    },
+    {
+     "code": "CH",
+     "name": "Changeup",
+     "pct": 25,
+     "color": "#22c55e"
+    },
+    {
+     "code": "SI",
+     "name": "Sinker",
+     "pct": 20,
+     "color": "#f97316"
+    },
+    {
+     "code": "CU",
+     "name": "Curve",
+     "pct": 10,
+     "color": "#14b8a6"
+    }
+   ],
+   "swing": {
+    "bat_speed": 67.2,
+    "bat_speed_90": 73.4,
+    "bs_lab": "below avg",
+    "fast_pct": 5.4,
+    "attack_angle": 5.7,
+    "aa_lab": "flat",
+    "aa_up": 0.9,
+    "aa_dn": 7.6,
+    "tilt": 41.3
+   },
+   "swingnote": "73.4 bat speed and <b>5.4% max-effort swings</b> &mdash; among the least force you'll see. A modest uppercut that lives down (.466) and offers almost nothing up (.388, with no power behind it). Climb the ladder and take the out."
   }
  ],
  "score": {
   "OFF": {
    "lab": "Changeup / Offspeed",
-   "mean": 0.353
+   "mean": 0.338
   },
   "SPIN": {
    "lab": "Spin (SL/ST/CU)",
-   "mean": 0.348
+   "mean": 0.389
   },
   "FBhi96": {
    "lab": "Four-Seam UP (96+)",
-   "mean": 0.377
+   "mean": 0.402
   },
   "FB": {
    "lab": "Fastball in zone",
-   "mean": 0.382
+   "mean": 0.372
   }
  },
  "arsenal": [
   {
    "code": "FF",
    "name": "4-Seam Fastball",
-   "role": "USE IT DIFFERENTLY",
+   "role": "GET AHEAD — NOT THE OUT",
    "color": "#ef4444",
-   "usage": 48.3,
-   "velo": 98.5,
+   "usage": 47.9,
+   "velo": 98.4,
    "ivb": 17.5,
-   "hb": -8.3,
-   "whiff": 18.7,
-   "xwoba": 0.361,
-   "use3": 54.2,
-   "velo3": 98.1,
-   "whiff3": 14.8,
-   "note": "<b>The velocity is fine — the shape is what changed.</b> You threw <b>99.6 last start, your hardest of the year</b>. But your ride is down: <b>18.4\" over your first eight starts, 15.9\" over your last three</b> at the same velocity. That matters because elevated four-seam contact against you has gone from <b>.253 before July to .392 since</b>. Here, only <b>France (.276 up), Rengifo (.235), Cronenworth (.289)</b> are weak up. Everyone else is .41 or hotter up there. <b>Live down and on the edges; use the heater up as a chase, not a strike.</b>"
+   "hb": -8.4,
+   "whiff": 18.5,
+   "xwoba": 0.37,
+   "use3": 45.0,
+   "velo3": 97.9,
+   "whiff3": 8.0,
+   "note": "Seven days rest should have this at full strength, and the <b>ride is recovering</b> &mdash; 17.0&Prime; last start, up from 15.9&Prime; across the three before it. But be honest about what it's doing right now: <b>8% whiff over your last three starts</b>. Use it to <b>get ahead</b>, not to get outs. It plays as weak contact against <b>Lee (.290, and he only misses 6% of it)</b>, and it's the right pitch to <b>Eldridge (.341 up), Cavanaugh, Whitcomb</b>. Against <b>Devers it lives above the zone only</b> &mdash; he whiffs 33% chasing it and slugs .501 when it's a strike."
   },
   {
    "code": "SI",
    "name": "Sinker",
-   "role": "UNDERUSED — 25% WHIFF",
+   "role": "GROUNDER",
    "color": "#f97316",
-   "usage": 6.7,
-   "velo": 98.1,
+   "usage": 7.2,
+   "velo": 97.9,
    "ivb": 12.4,
-   "hb": -14.2,
-   "whiff": 11.7,
-   "xwoba": 0.31,
-   "use3": 6.5,
-   "velo3": 98.8,
-   "whiff3": 25.0,
-   "note": "<b>Quietly one of your best pitches right now</b> — 25% whiff over your last three starts (season 11.7%) and you're only throwing it 6.5%. Down for grounders, and it stays out of the elevated zone this lineup punishes. Good to Rengifo, Cronenworth, and the bottom."
+   "hb": -14.3,
+   "whiff": 10.4,
+   "xwoba": 0.267,
+   "use3": 12.8,
+   "velo3": 97.7,
+   "whiff3": 10.0,
+   "note": "Down for grounders and a clean strike-one option, especially to the bats whose damage is up (Koss, Basabe, Gilbert). Twenty percent usage last start produced five weak-contact outs and no hits &mdash; hold it there."
   },
   {
    "code": "CH",
    "name": "Changeup",
-   "role": "YOUR BEST PITCH RIGHT NOW",
+   "role": "THROW IT MORE",
    "color": "#22c55e",
-   "usage": 15.4,
-   "velo": 91.7,
-   "ivb": 6.8,
-   "hb": -16.8,
-   "whiff": 24.3,
+   "usage": 15.2,
+   "velo": 91.6,
+   "ivb": 6.7,
+   "hb": -16.7,
+   "whiff": 24.5,
    "xwoba": 0.319,
-   "use3": 8.8,
-   "velo3": 91.0,
-   "whiff3": 30.0,
-   "note": "<b>The pitch this start, and the numbers are emphatic.</b> It beats <b>five of their nine</b>: Bogaerts (<b>48% whiff</b>), Cronenworth (.207, 37% whiff), Sheets (.261), Machado (.338), Merrill (.362). It's also <b>your best-missing pitch right now</b> — 30% whiff over your last three, and 75% (6 of 8) at Dodger Stadium. You're throwing it <b>8.8%</b>. That has to change tonight. Two exceptions: Campusano (.638) and Tatis (below the zone only)."
+   "use3": 8.9,
+   "velo3": 90.3,
+   "whiff3": 40.0,
+   "note": "<b>Throw it more. This is now a three-start pattern, not a suggestion.</b> Over your last three the changeup has a <b>40% whiff rate</b> &mdash; the best in your arsenal &mdash; at <b>8.9% usage</b>. It's also the matchup pitch: <b>Gilbert (.311), McCray, Whitcomb, Furman</b>, and it's the least-bad strike to <b>Devers</b>. Sixteen inches of arm-side fade against five lefty bats. There is no argument left for leaving it in the bag."
   },
   {
    "code": "SL",
    "name": "Slider",
-   "role": "MACHADO PITCH",
+   "role": "BELOW ZONE",
    "color": "#3b82f6",
-   "usage": 20.9,
-   "velo": 91.0,
+   "usage": 21.1,
+   "velo": 90.9,
    "ivb": 3.7,
    "hb": 1.5,
-   "whiff": 25.5,
-   "xwoba": 0.322,
-   "use3": 22.7,
-   "velo3": 92.8,
-   "whiff3": 12.1,
-   "note": "<b>The Machado pitch.</b> He's at <b>.243 with a 34.5% whiff rate on 581 pitches</b> — the clearest single matchup in this report. Also works on Campusano (.299), Cronenworth (.311), France (.335). But your slider whiff has fallen to <b>12% over the last three</b> (season 25.5%) — it has to be <b>below the zone</b> to play, not a get-me-over strike."
+   "whiff": 24.3,
+   "xwoba": 0.315,
+   "use3": 21.7,
+   "velo3": 93.1,
+   "whiff3": 6.9,
+   "note": "Below the zone to the chase group &mdash; <b>Whitcomb (42% chase), Koss (39%), Basabe (37%)</b> &mdash; and it's part of the spin plan for <b>Eldridge (.349, 31% whiff)</b>. But note the trend: <b>7% whiff over your last three</b> against 24% for the season. It has to finish out of the zone to play right now."
   },
   {
    "code": "ST",
    "name": "Sweeper",
-   "role": "PAIR WITH SLIDER",
+   "role": "BELOW ZONE",
    "color": "#a855f7",
-   "usage": 4.7,
+   "usage": 4.6,
    "velo": 87.7,
-   "ivb": 1.1,
-   "hb": 8.8,
-   "whiff": 26.3,
+   "ivb": 1.2,
+   "hb": 8.7,
+   "whiff": 27.5,
    "xwoba": 0.271,
    "use3": null,
    "velo3": null,
    "whiff3": null,
-   "note": "Pair it with the slider to the right-handed side (Machado, Campusano, France) so they aren't timing one shape. Below the zone."
+   "note": "Second below-zone look to pair with the slider, same targets. Keeps the chase group from timing one shape."
   },
   {
    "code": "CU",
    "name": "Curveball",
-   "role": "UNDERUSED — 40% WHIFF",
+   "role": "THROW IT MORE",
    "color": "#14b8a6",
-   "usage": 3.7,
-   "velo": 86.2,
-   "ivb": -3.1,
-   "hb": 0.9,
-   "whiff": 10.3,
-   "xwoba": 0.281,
-   "use3": 7.7,
-   "velo3": 88.0,
+   "usage": 3.6,
+   "velo": 86.5,
+   "ivb": -2.7,
+   "hb": 1.0,
+   "whiff": 17.2,
+   "xwoba": 0.31,
+   "use3": 11.6,
+   "velo3": 88.4,
    "whiff3": 40.0,
-   "note": "<b>40% whiff over your last three starts</b> at just 7.7% usage — the best whiff rate in your arsenal right now. Against a lineup with no clear velocity hole, a genuine speed change is worth more than usual. Steal strike one with it and use it as a second look to the lefties."
+   "note": "<b>The other pitch to throw more.</b> 40% whiff over your last three at 11.6% usage &mdash; both career-best territory. It's a genuine speed change off a 98 mph fastball, and it's spin, which is the plan against <b>Eldridge and Lee</b>. Steal strike one with it and finish with it."
   }
  ],
  "hand": {
@@ -1412,7 +1411,7 @@ const D = {
   }
  },
  "splits": {
-  "season_FBpct": 55.0
+  "season_FBpct": 55.1
  }
 };
 
@@ -1429,53 +1428,53 @@ const BK=[['FB','Fastball (in zone)'],['FBhi96','4-Seam UP · 96+'],['SPIN','Spi
 /* ---------------- BRIEFING ---------------- */
 document.getElementById('page-brief').innerHTML = `
 <div class="brief-intro">
-  <div class="hi">Your velocity is fine. Your <span>ride</span> is what changed &mdash; so change where you live.</div>
-  <p>Honest read on Los Angeles: <b>the strikeouts came back (6 in 4 innings)</b> and you threw <b>99.6 &mdash; your hardest of the season</b>. Velocity was never the problem. But <b>eight of the ten balls they put in play were hit 95+</b>, and the two that hurt most were <b>elevated four-seams</b> &mdash; Muncy's homer at the top of the zone and a double above it. Here's why: your four-seam ride is down from <b>18.4&Prime; over your first eight starts to 15.9&Prime; over your last three</b>, at the same velocity. Same speed, two and a half inches less carry. And the results follow &mdash; elevated four-seam contact against you has gone from <b>.253 before July to .392 since</b>. So tonight the plan changes: <b>live down and on the edges</b>, use the heater up as a <b>chase pitch, not a strike</b>, and lean on the three pitches that are actually missing bats right now &mdash; <b>changeup (30% whiff), curveball (40%), sinker (25%)</b> &mdash; which together are only about a quarter of what you throw. Good news: the matchup agrees, and <b>Petco is the best pitcher's park you'll see all year</b>.</p>
+  <div class="hi">Seven days rest, a depleted lineup, and two pitches you already know work. <span>Throw them.</span></div>
+  <p>This is the best set-up you've had in a month. San Francisco is <b>gutted</b> &mdash; Chapman and Schmitt are out for the season, Adames is on the IL, and they're filling five or six spots with Triple-A callups. There are <b>three real bats</b> (Devers, Lee, Eldridge) plus Gilbert, and then a group with almost no big-league book and strikeout rates in the 26&ndash;36% range. You get them at home on <b>seven days rest</b>, and the four-seam ride is coming back (17.0&Prime; last start, up from 15.9&Prime;). Now the part that matters most: over your last three starts your <b>changeup and curveball have each missed bats at 40%</b> &mdash; the two best rates in your arsenal &mdash; while making up just <b>20% of your pitches</b>. Meanwhile the four-seam and slider are <b>67% of what you throw at 8% and 7% whiff</b>. That's three starts now, not one. It's a trend, and this lineup's weakest pitch is the changeup (<span class="g">.338</span>). Throw them more.</p>
 </div>
 <div class="sect">The game plan — three times through</div>
 <div class="tto">
   <div class="tto-card">
     <div class="tto-n">1st time through</div>
-    <div class="tto-h">Establish the changeup</div>
-    <div class="tto-p">It beats <b>five of their nine</b> and it's your best swing-and-miss pitch right now &mdash; but you're throwing it under 9%. Get it going in the first inning.</div>
+    <div class="tto-h">Establish the soft stuff early</div>
+    <div class="tto-p">Changeup and curveball for strikes in the first inning. They're your two best swing-and-miss pitches right now, and five of these nine bat left-handed. Don't save them.</div>
   </div>
   <div class="tto-card">
     <div class="tto-n">2nd time through</div>
-    <div class="tto-h">Down and away, not up</div>
-    <div class="tto-p">Only <b>three</b> of them are weak up (France, Cronenworth, Rengifo). Everyone else is .41 or hotter in the upper third. Sinkers, spin down, cambio away.</div>
+    <div class="tto-h">Three bats, then breathe</div>
+    <div class="tto-p">Devers, Lee and Eldridge get the full plan. The 5&ndash;9 spots chase 25&ndash;42% with no power &mdash; get ahead, expand, and save pitches for the top.</div>
   </div>
   <div class="tto-card">
     <div class="tto-n">3rd time / late</div>
-    <div class="tto-h">Spin Machado, expand Merrill</div>
-    <div class="tto-p">The two clearest edges on the card, and they hold all game: breaking balls to Machado, and nothing in the zone to Merrill &mdash; he chases 38%.</div>
+    <div class="tto-h">Devers is the whole game</div>
+    <div class="tto-p">He has no cold zone. Late, with a base open, the walk is a fine outcome. Make the callups beat you &mdash; that's a trade you win every time.</div>
   </div>
 </div>
 <div class="keys">
-  <div class="kh">The book on San Diego, in one line</div>
-  <div class="key"><div class="kn">★</div><p><b>Changeup is the pitch</b> &mdash; it beats five of nine (Bogaerts <span class="g">48% whiff</span>, Cronenworth .207, Sheets .261, Machado, Merrill). <b>Spin Machado</b> (<span class="g">.243, 34% whiff on 581 pitches</span> &mdash; the clearest matchup on the card). <b>Ladder only:</b> France and Cronenworth (Rengifo up too, but for contact). Everyone else, keep it <b>down</b>.</p></div>
+  <div class="kh">The book on San Francisco, in one line</div>
+  <div class="key"><div class="kn">★</div><p><b>Changeup and curveball &mdash; 40% whiff each over your last three, and the changeup is their weakest pitch</b> (<span class="g">.338</span>). Three bats to respect: <span class="r">Devers</span> (no cold zone &mdash; 98 above the zone only), <b>Lee</b> (elevate for weak contact, not whiffs), <b>Eldridge</b> (spin, and never let one get down). The rest chase and strike out.</p></div>
 </div>
 <div class="sect">The lineup — how to beat them</div>
 <div class="qh">
-  <div class="qh-row warn"><div class="qh-num">1 · RF</div><div class="qh-txt"><b>⚠ Tatis (R)</b> — Locked in, most violent bat here. <b>No cold zone</b> (.48/.48/.45). Changeup <b>below</b> the zone only; edges.</div></div>
-  <div class="qh-row"><div class="qh-num">2 · 2B</div><div class="qh-txt"><b>Cronenworth (L)</b> — Best matchup up top. Chops under high pitches (&minus;5&deg;), <b>.289 up</b>, <b>changeup .207</b>. Both work.</div></div>
-  <div class="qh-row"><div class="qh-num">3 · 3B</div><div class="qh-txt"><b>Machado (R)</b> — <b>Cleanest read on the card: spin (.243, 34% whiff)</b>. Never up or middle (.416 / .445).</div></div>
-  <div class="qh-row"><div class="qh-num">4 · 1B</div><div class="qh-txt"><b>France (R)</b> — Hot, but <b>weak up (.276)</b> and strong down (.456). <b>Elevate</b>; chases 32%.</div></div>
-  <div class="qh-row"><div class="qh-num">5 · CF</div><div class="qh-txt"><b>Merrill (L)</b> — <b>Chases 38%</b> — but hot <i>in</i> the zone (.514 up). Expand; don't throw him strikes.</div></div>
-  <div class="qh-row warn"><div class="qh-num">6 · C</div><div class="qh-txt"><b>⚠ Campusano (R)</b> — Red hot (.419). <b>Spin down</b> (.299); <b>no changeup</b>. Nothing middle (.483).</div></div>
-  <div class="qh-row"><div class="qh-num">7 · DH</div><div class="qh-txt"><b>Sheets (L)</b> — Real power (44% max-effort). <b>Changeup (.261)</b>; stay off the middle (.480).</div></div>
-  <div class="qh-row"><div class="qh-num">8 · SS</div><div class="qh-txt"><b>Bogaerts (R)</b> — <b>Whiffs on 48% of changeups</b> — highest on the card. Bury it. <b>Don't elevate</b> (.500 up).</div></div>
-  <div class="qh-row"><div class="qh-num">9 · LF</div><div class="qh-txt"><b>Rengifo (S)</b> — 9.5% K, no power. <b>Throw strikes</b> (.263 on fastballs); not a strikeout bat — take the weak contact.</div></div>
+  <div class="qh-row"><div class="qh-num">1 · CF</div><div class="qh-txt"><b>Gilbert (L)</b> — No power (6% max-effort). <b>Changeup (.311)</b> is the hole; he won't chase, so throw it for strikes.</div></div>
+  <div class="qh-row warn"><div class="qh-num">2 · 1B</div><div class="qh-txt"><b>⚠ Devers (L)</b> — <b>No cold zone</b> (.472 / <b>.525</b> / .481). But 33% whiff on velo — <b>98 above the zone only</b>. Edges, expand, walk him.</div></div>
+  <div class="qh-row"><div class="qh-num">3 · RF</div><div class="qh-txt"><b>Lee (L)</b> — <b>8.5% K</b>, elite contact, no power. <b>Elevate for weak contact</b> (.290) — not a strikeout bat. No changeup.</div></div>
+  <div class="qh-row warn"><div class="qh-num">4 · DH</div><div class="qh-txt"><b>⚠ Eldridge (L)</b> — Hot (4-for-5, 4 RBI Sat). Steep uppercut. <b>Spin (31% whiff)</b>, elevate; <b>NOTHING down</b> (.467).</div></div>
+  <div class="qh-row"><div class="qh-num">5 · SS</div><div class="qh-txt"><b>Koss (R)</b> — 30.8% K, chases 38.9%. Keep it <b>down</b> (.308) and expand; don't elevate.</div></div>
+  <div class="qh-row"><div class="qh-num">6 · 3B</div><div class="qh-txt"><b>Whitcomb (R)</b> — <b>.191, 36% K, 42% chase</b> — the softest bat here. Attack and expand; his splits are noise.</div></div>
+  <div class="qh-row"><div class="qh-num">7 · LF</div><div class="qh-txt"><b>McCray (L)</b> — Extreme pull tilt. <b>Never middle</b> (.482); spin <b>below the zone only</b> (40% whiff, but he punishes it in the zone).</div></div>
+  <div class="qh-row"><div class="qh-num">8 · 2B</div><div class="qh-txt"><b>Basabe (R)</b> — Chases 36.8%. Keep it <b>down</b> (.288); careful elevating — he doesn't miss velocity.</div></div>
+  <div class="qh-row"><div class="qh-num">9 · C</div><div class="qh-txt"><b>Cavanaugh (L)</b> — No bat speed at all. <b>Elevate + changeup</b>; no spin (.442), nothing down (.466).</div></div>
 </div>
 <div style="margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:5px;background:rgba(253,184,39,.06)">
-  <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px">⟳ Lineup watch — this manager tinkers (card ~2 hrs pre-game)</div>
-  <p style="font-size:13.5px;line-height:1.5;margin:0;color:#cfcfd8">San Diego shuffles its order more than most, so treat the sequence as likely rather than fixed &mdash; the <b>personnel</b> is what matters and it's been consistent. Rotating pieces: <b>Austin Hays</b> (R) starts in LF/DH some days &mdash; he <b>chases 43%</b>, so expand on him, and he's cold (.202). <b>Freddy Fermin</b> (R) splits catching with Campusano &mdash; a much softer bat: <b>can't handle velocity (.192)</b>, so that's the one spot where you <i>can</i> elevate, and the changeup works too (.201). <b>Jase Bowen</b> (R) fills in on the corners &mdash; 38% K, chases 52%, just attack the zone. Also note this is a <b>day game after a night game</b>, the finale of a three-game set, so a regular or two may get a breather.</p>
+  <div style="font-family:'Oswald';font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px">⟳ Lineup watch — a patched-together roster (card ~2 hrs pre-game)</div>
+  <p style="font-size:13.5px;line-height:1.5;margin:0;color:#cfcfd8">Treat the <b>order</b> as a projection and the <b>personnel</b> as the real information &mdash; San Francisco has used a different card almost nightly. Out: <b>Matt Chapman</b> and <b>Casey Schmitt</b> (both done for the season), <b>Willy Adames</b> (elbow, IL since Aug 24 &mdash; a moderate strain expected to run past the minimum, though they think he's back before season's end), plus Arraez, Ramos, Bailey and Bader all absent from recent cards. <b>Bryce Eldridge</b> returned from bereavement leave Aug 27 and homered into a 4-for-5, four-RBI night Saturday &mdash; he is their hottest bat, treat him as a lock. Others who rotate in: <b>Jonah Cox</b> (R &mdash; <b>47% strikeout rate</b>, just attack him), <b>Nate Furman</b> (L &mdash; hasn't handled a fastball at all, .180), <b>Andrew Knizner</b> (R &mdash; six plate appearances, no book), and <b>Turner Hill</b> (L). All of them are attack-the-zone at-bats.</p>
 </div>
 <p style="font-size:13px;color:var(--mut);font-family:'JetBrains Mono';margin-top:14px;line-height:1.6"><b style="color:var(--gold)">&rarr; Tap any hitter</b> on the <b>Hitters</b> tab for their full breakdown: a specific attack plan, a recommended pitch mix, their heat map, and a <b>bat-path read</b> (how their swing matches up against your shapes). Green = go, red = stay away; lower number = less damage.</p>`;
 document.getElementById('cond').innerHTML = `
-  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">@ ${D.game.opp}</div><p>${D.game.venue}, San Diego — <b>away</b>. ${D.game.date}, ${D.game.time}. Series finale, day game.</p></div>
-  <div class="cond-card"><div class="lbl">The opponent</div><div class="big">${D.game.rec}</div><p>Balanced and deep — <b>four of nine bat left-handed</b> — with two hot bats (Tatis, Campusano) and two clear soft spots (Cronenworth, Rengifo). No single pitch beats them all, but the changeup comes closest.</p></div>
-  <div class="cond-card"><div class="lbl">Your last start</div><div class="big">6 K in 4 innings — and 99.6 mph</div><p>${D.game.last}. Read it carefully: the stuff showed up. What beat you was <b>where</b> the fastball went, not how hard it was thrown.</p></div>
-  <div class="cond-card"><div class="lbl">Park — a real advantage</div><div class="big">Petco Park — the best you'll throw in</div><p>One of the most pitcher-friendly yards in baseball: it <b>suppresses runs and home runs for both left- and right-handed hitters</b>. Fly balls that leave Dodger Stadium die here. It rewards exactly the down-and-away plan below.</p></div>`;
+  <div class="cond-card"><div class="lbl">Matchup</div><div class="big">vs ${D.game.opp}</div><p>${D.game.venue}, Pittsburgh — <b>home</b>. ${D.game.date}, ${D.game.time}. Middle game of three.</p></div>
+  <div class="cond-card"><div class="lbl">The opponent</div><div class="big">${D.game.rec}</div><p>Chapman and Schmitt are done for the year, Adames is on the IL, and five or six spots are Triple-A callups. <b>Five of nine bat left-handed.</b> Three bats can hurt you; the rest strike out 26–36% of the time.</p></div>
+  <div class="cond-card"><div class="lbl">Your last start</div><div class="big">1 ER in 5.2 — and 7 days rest</div><p>${D.game.last}. The extra rest matters: velocity dipped to 96.8 in San Diego while the ride recovered to 17.0&Prime;. This is the start where both should show up together.</p></div>
+  <div class="cond-card"><div class="lbl">Park</div><div class="big">PNC Park — your yard</div><p>Deep to right-center against a <b>lefty-heavy</b> lineup, and their two real power bats (Devers, Eldridge) both pull. The big outfield turns their fly balls into outs — attack the zone.</p></div>`;
 
 document.getElementById('lineup').innerHTML = D.hitters.map((h,i)=>`
   <div class="card" onclick="showHitter(${i},true)">
@@ -1589,23 +1588,22 @@ const S=D.score;
 function scRow(k){ const v=S[k].mean; const wd=Math.max(8,Math.min(100,(v/.55)*100));
   return `<div class="sc-row"><div class="sc-name">${S[k].lab}</div>
     <div class="sc-bar"><div class="sc-fill" style="width:${wd}%;background:${dc(v)}">${xw(v)}</div></div>
-    <div class="sc-tag">${k==='SPIN'?'Machado alone makes this work':k==='OFF'?'beats 5 of 9':''}</div></div>`; }
+    <div class="sc-tag">${k==='OFF'?'their weakest — and your best':k==='FBhi96'?'Devers & Eldridge drive this':''}</div></div>`; }
 document.getElementById('page-plan').innerHTML = `
   <div class="scorecard">
     <div class="t" style="font-family:'Oswald';font-size:13px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:4px">Lineup scorecard — avg expected damage by pitch type</div>
-    <div class="legend"><span>Average xwOBACON vs RHP. It's a <b>flat card</b> (.348&ndash;.382) — no single pitch dominates this lineup, which is why the per-hitter plan matters more than usual tonight. But note the fastball buckets are the <b>two hottest</b>, and that is the pitch whose shape has changed. Work down; win with the changeup and the breaking ball.</span></div>
-    ${['SPIN','OFF','FBhi96','FB'].map(scRow).join('')}
+    <div class="legend"><span>Average xwOBACON vs RHP. The <b>changeup is their weakest bucket (.338)</b> — which happens to be the pitch missing the most bats for you right now. That alignment is the whole report. The elevated four-seam grades hottest (.402), but it's carried almost entirely by two bats: Devers (.501) and Eldridge (.488).</span></div>
+    ${['OFF','FB','SPIN','FBhi96'].map(scRow).join('')}
   </div>
-  <div class="gp"><h3><span class="no">1</span>What actually happened at Dodger Stadium</h3><p>Don't read that line as a step back. You struck out <span class="hl">six in four innings</span> and threw <span class="hl">99.6 mph — your hardest of the season</span>. The stuff was there. What wasn't: <b>eight of ten balls in play were hit 95+</b>, and the two biggest — Muncy's home run and a double — were both <b>elevated four-seams</b>. That's the pattern to fix, and it isn't about effort.</p></div>
-  <div class="gp"><h3><span class="no">2</span>The real finding — it's ride, not velocity</h3><p>Your velocity is <b>identical</b> to April: 98.5 average over your first eight starts, 98.5 over your last eight. But your four-seam <b>ride has dropped from 18.4&Prime; to 15.9&Prime;</b> over your last three. Same speed, <b>two and a half inches less carry</b> — and hitters have found it. Elevated four-seam contact against you: <span class="g">.253 before July 1</span> &rarr; <span class="r">.392 since</span>. A 15.9&Prime; fastball at the top of the zone doesn't get above barrels the way an 18.4&Prime; one did. Until that shape comes back, <b>the top of the zone is a chase location, not a strike location</b>.</p></div>
-  <div class="gp"><h3><span class="no">3</span>Your usage is upside down</h3><p>Over your last three starts: <b>four-seam 54% usage / 15% whiff</b> and <b>slider 23% / 12% whiff</b> — that's <b>77% of your pitches</b> generating your two worst miss rates. Meanwhile <b>changeup 30% whiff, curveball 40%, sinker 25%</b> — and those three combined are about <b>23%</b> of what you throw. You don't need new stuff. You need to throw more of what's already working.</p></div>
-  <div class="gp"><h3><span class="no">4</span>The changeup beats five of nine</h3><p><span class="hl">Bogaerts (48% whiff — highest on the card), Cronenworth (.207, 37% whiff), Sheets (.261), Machado (.338), Merrill (.362)</span>. It's also your best-missing pitch right now (30% over three starts, and 6 whiffs on 8 changeups at Dodger Stadium). <b>Establish it in the first inning.</b> Two exceptions: <b>Campusano</b> punishes it (.638) and <b>Tatis</b> only sees it <b>below the zone</b>.</p></div>
-  <div class="gp"><h3><span class="no">5</span>Machado is the cleanest matchup you'll get</h3><p><span class="g">.243 with a 34.5% whiff rate on 581 pitches</span> against spin — that's an enormous sample and an unambiguous read. His damage is <b>up (.416) and middle (.445)</b>, dropping to .273 down. So the entire at-bat is <b>slider and sweeper, down and away</b>. Don't challenge him with the fastball, and never elevate it.</p></div>
-  <div class="gp"><h3><span class="no">6</span>The ladder list — only three names</h3><p><b>France (.276 up)</b> and <b>Cronenworth (.289 up)</b> are the two real ladder targets; <b>Rengifo</b> is weakest up too (.235) but rarely misses, so with him it's about weak contact rather than a strikeout. That's the whole list. Everyone else is <b>.41 or hotter</b> in the upper third — Merrill .514, Bogaerts .500, Tatis .482, Campusano .412. Given where your ride is, that's a comfortable trade: work down, and save the elevated heater for two-strike chases above the zone.</p></div>
-  <div class="gp"><h3><span class="no">7</span>Count logic</h3><p><b>Ahead/early:</b> changeup for strikes, sinker at the knees, curveball to steal 0-1 — it's your best whiff pitch right now. <b>Two strikes:</b> cambio to the lefties and Bogaerts, spin below to Machado and Campusano, ladder France and Cronenworth. <b>Behind:</b> throw the changeup or a sinker, not a fastball up. And remember where you are — <b>Petco turns their fly balls into outs</b>. Trust the park, keep it down, and let them hit it.</p></div>`;
+  <div class="gp"><h3><span class="no">1</span>The trend is now three starts old</h3><p>This isn't a suggestion anymore. Over your last three starts: <b>changeup 40% whiff, curveball 40% whiff</b> — the two best rates in your arsenal — at a combined <span class="r">20% of your pitches</span>. Over the same span: <b>four-seam 8% whiff, slider 7%</b> — at a combined <span class="r">67% of your pitches</span>. Three starts is the threshold where a pattern stops being noise. Your two best swing-and-miss pitches are your two least-used, and the gap is now the single biggest thing standing between you and more strikeouts.</p></div>
+  <div class="gp"><h3><span class="no">2</span>And the matchup agrees</h3><p>The changeup is <b>this lineup's weakest pitch (.338)</b>. It's the hole for <span class="hl">Gilbert (.311, 27% whiff)</span>, the early read on <span class="hl">McCray</span> and <span class="hl">Furman</span>, the softest strike available to <span class="hl">Devers</span>, and one of two soft spots for <span class="hl">Cavanaugh</span>. Five of their nine bat left-handed, and you throw the changeup a quarter of the time to lefties with sixteen inches of arm-side fade. There is no reason to be at 9%.</p></div>
+  <div class="gp"><h3><span class="no">3</span>Devers is the game — and he has one crack</h3><p>.408 wOBA with <b>no cold zone</b>: .472 up, <span class="r">.525 middle</span>, .481 down. You will not find a location that beats him. What you <i>can</i> use: he <b>whiffs on 33% of premium velocity</b> across 308 pitches while slugging .501 on the ones he squares. That makes the 98 a <b>chase pitch above the zone and nothing else</b> — never a strike. Expand, work the edges, and if it gets to 3-2 with a base open, put him on and pitch to the callups.</p></div>
+  <div class="gp"><h3><span class="no">4</span>Two more you have to plan for</h3><p><b>Eldridge (#4)</b> is their hottest bat — 4-for-5 with four RBI Saturday in his second game back. A <b>steep 12&deg; uppercut reaching 18&deg; on pitches down</b> means his damage lives at the bottom (.467) and dies up (.341), and he <b>whiffs 31% against spin</b>. Elevate and spin him; never let one get to the knees. <b>Lee (#3)</b> is the opposite problem: an <b>8.5% strikeout rate</b>, the lowest you'll face all season. Stop hunting a whiff — premium velocity gets you <b>weak contact</b> (.290) and he only misses 6% of it. Elevate, let him hit it, trust the outfield.</p></div>
+  <div class="gp"><h3><span class="no">5</span>The bottom five is where you save your night</h3><p><b>Koss</b> (30.8% K, 38.9% chase), <b>Whitcomb</b> (36.1% K, 42.3% chase, .191), <b>McCray</b>, <b>Basabe</b> (36.8% chase), <b>Cavanaugh</b> (5.4% max-effort swings). Not one of them has both power and plate discipline. <b>Get ahead and expand</b> — that's five efficient at-bats a turn, which is how you get deep enough to hand this to the bullpen with a lead.</p></div>
+  <div class="gp"><h3><span class="no">6</span>Two location rules worth memorizing</h3><p><b>Nothing over the middle to McCray</b> — he's the most pull-committed swing in the lineup (&minus;11.2&deg;), with nothing up (.126) and nothing down (.268) but a .482 in the heart. And <b>nothing down to Eldridge or Cavanaugh</b>, whose damage both lives at the knees (.467 and .466). Those two rules cover most of the ways this lineup can actually hurt you.</p></div>
+  <div class="gp"><h3><span class="no">7</span>Count logic</h3><p><b>Ahead/early:</b> changeup and curveball for strikes — establish them in the first inning, not the fifth. Sinkers at the knees to the chase group. <b>Two strikes:</b> cambio to the lefties, spin below the zone to Eldridge and the chasers, and the 98 above the zone to Devers. <b>Behind:</b> throw the changeup. It's your most reliable strike right now and it's their softest pitch. The only mistake that really costs you tonight is a fastball over the middle to Devers or Eldridge.</p></div>`;
 
-document.getElementById('foot').innerHTML =
-  `Lineup reflects San Diego's recurring order against right-handed starters and matches their most recent vs-RHP card; this manager shuffles the batting order frequently, so treat the sequence as likely rather than fixed — the personnel has been stable. Re-verify when the official card posts ~2 hrs pre-game, and note it's a day game following a night game in the series finale, so a regular or two may rest. <b>Small samples:</b> Campusano (129 vs-RHP plate appearances) and the bench bats (Hays, Bowen) are directional reads only; Bogaerts' changeup verdict rests on his <b>48% whiff rate</b> rather than the contact figure behind it, and Tatis' changeup read is framed the same way — he misses it often but punishes what he squares. Per the standing rule, nothing here is credited as fixed: the strikeout rebound at Dodger Stadium is noted as a positive sign, the four-seam ride decline is presented as a <b>measured, sustained shape change across roughly ten starts</b> — the clearest trend in the data — and the pitch-usage recommendation follows from whiff rates over the last three starts, which is a short window and should be re-checked after this outing.`;
+
 
 document.querySelectorAll('.nav-tab[data-p]').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.nav-tab[data-p]').forEach(x=>x.classList.remove('active'));
